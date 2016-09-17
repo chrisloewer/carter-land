@@ -1,0 +1,109 @@
+body {
+  padding: 0;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.9);
+  font-family: 'Noto Serif', serif;
+  line-height: 1.5;
+  font-size: 14px; }
+
+h1 {
+  font-family: montserratbold, sans-serif;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.9); }
+
+h2 {
+  font-family: montserratbold, sans-serif;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #414042; }
+
+h4 {
+  font-family: montserratregular, sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #414042; }
+
+p {
+  text-align: justify; }
+
+p.center {
+  text-align: center; }
+
+.splash-fullscreen-fixed {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  text-align: center; }
+
+.splash-fullscreen-fixed.vc-container::before {
+  height: 100%; }
+
+.splash-fullscreen {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  text-align: center; }
+
+.splash-fullscreen.vc-container::before {
+  height: 100%; }
+
+.vc-container img.bg, .vc-container video.bg {
+  height: inherit;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin: auto;
+  transform: translate(-50%, 0);
+  z-index: -1; }
+.vc-container .vc-content {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 90%;
+  max-width: 1000px;
+  overflow: hidden;
+  margin: 50px 0;
+  z-index: 5; }
+  .vc-container .vc-content h2, .vc-container .vc-content h3 {
+    margin-top: 0; }
+.vc-container .vc-blurb {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 60%;
+  max-height: 80%;
+  overflow: hidden;
+  padding: 50px;
+  background-color: #BBBBBB; }
+  .vc-container .vc-blurb h2, .vc-container .vc-blurb h3 {
+    margin-top: 0; }
+
+.vc-container::before {
+  content: '';
+  display: inline-block;
+  height: 650px;
+  vertical-align: middle; }
+
+.section {
+  position: relative;
+  min-height: 650px;
+  text-align: center;
+  background-color: #FFFFFF; }
+
+@media (min-width: 720px) {
+  h1 {
+    font-size: 42px; }
+
+  h2 {
+    font-size: 36px; } }
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 48px; }
+
+  h2 {
+    font-size: 42px; } }
+
+/*# sourceMappingURL=index.css.map */

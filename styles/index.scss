@@ -1,0 +1,163 @@
+// Colors
+$white-tp-light: rgba(255,255,255,0.4);
+$white-tp-dark: rgba(255,255,255,0.9);
+$neutral: #DDDDDD;
+$primary-1: #b1e1e6;
+$medium-gray: #BBBBBB;
+$dark-gray: #414042;
+$black-gray: #323133;
+$off-black: rgba(0,0,0,0.9);
+
+// Layout Sizing
+$section-height: 650px;
+
+@mixin transition($t, $time) {
+  -webkit-transition: $t $time;
+  -moz-transition: $t $time;
+  -ms-transition: $t $time;
+  -o-transition: $t $time;
+  transition: $t $time;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  color: $off-black;
+  font-family: 'Noto Serif', serif;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+h1 {
+  font-family: montserratbold, sans-serif;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: $off-black;
+}
+h2 {
+  font-family: montserratbold, sans-serif;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: $dark-gray;
+}
+h4 {
+  font-family: montserratregular, sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: $dark-gray;
+}
+
+p {
+  text-align: justify;
+}
+
+p.center {
+  text-align: center;
+}
+
+
+
+.splash-fullscreen-fixed {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+}
+.splash-fullscreen-fixed.vc-container::before {
+  height: 100%;
+}
+
+.splash-fullscreen {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+}
+.splash-fullscreen.vc-container::before {
+  height: 100%;
+}
+
+// Vertical Centered Container
+.vc-container {
+
+  img.bg, video.bg {
+    height: inherit;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    left:50%;
+    top:0;
+    margin:auto;
+    transform: translate(-50%, 0);
+    z-index: -1;
+  }
+
+  .vc-content {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 90%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: 50px 0;
+    z-index: 5;
+
+    h2, h3 {
+      margin-top: 0;
+    }
+  }
+
+  .vc-blurb {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 60%;
+    max-height: 80%;
+    overflow: hidden;
+    padding: 50px;
+    background-color: $medium-gray;
+
+    h2, h3 {
+      margin-top: 0;
+    }
+  }
+}
+.vc-container::before {
+  content: '';
+  display: inline-block;
+  height: $section-height;
+  vertical-align: middle;
+}
+
+// Sections Containers for content
+.section {
+  position: relative;
+  min-height: $section-height;
+  text-align: center;
+  background-color: #FFFFFF;
+}
+
+
+
+// Tablet and bigger
+// --------------------------------------------------------------------------------------------------------------
+@media (min-width: 720px) {
+  h1{
+    font-size: 42px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+}
+
+
+// Laptops and bigger
+// --------------------------------------------------------------------------------------------------------------
+@media (min-width: 1000px) {
+  h1{
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 42px;
+  }
+}
