@@ -8,9 +8,9 @@ body {
 
 h1 {
   font-family: montserratbold, sans-serif;
-  font-size: 36px;
+  font-size: 42px;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.9); }
+  color: #323133; }
 
 h2 {
   font-family: montserratbold, sans-serif;
@@ -49,12 +49,15 @@ p.center {
   height: 100%; }
 
 .vc-container img.bg, .vc-container video.bg {
-  height: inherit;
-  width: 100%;
   object-fit: cover;
   position: absolute;
-  left: 50%;
-  top: 0;
+  height: inherit;
+  height: calc(100% + 50px);
+  width: 100%;
+  width: calc(100% + 50px);
+  left: 48%;
+  left: calc(50% - 25px);
+  top: -25px;
   margin: auto;
   transform: translate(-50%, 0);
   z-index: -1; }
@@ -95,13 +98,13 @@ p.center {
 
 @media (min-width: 720px) {
   h1 {
-    font-size: 42px; }
+    font-size: 52px; }
 
   h2 {
     font-size: 36px; } }
 @media (min-width: 1000px) {
   h1 {
-    font-size: 48px; }
+    font-size: 64px; }
 
   h2 {
     font-size: 42px; } }
