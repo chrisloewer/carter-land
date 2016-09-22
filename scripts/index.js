@@ -1,22 +1,29 @@
 
 var mousePageX = 0;
 var mousePageY = 0;
+var headerNav;
 
 
 // Initial Page Load
 window.addEventListener('load', function () {
   console.log('window load');
 
-  // shift background image focus on mouse move
+  // Shift background image focus on mouse move
   document.addEventListener('mousemove', adjustBg, false);
   window.addEventListener('resize', adjustBg, false);
 
   // Add parallax on bg image
   var bgImg = document.getElementById('bg-image');
   setScrollSpeed(bgImg, 0.5);
+
+  // Resize nav menu on scroll
+  // headerNav = document.getElementById('header-nav');
+  // document.addEventListener('scroll', headerController, false);
+  // headerController();
 });
 
 
+// -------------------------------------------------------------------------------------------------------
 // Adjust background position on mouse move
 function adjustBg(e) {
   var bgImage = document.getElementById('bg-image');
@@ -41,6 +48,7 @@ function adjustBg(e) {
 }
 
 
+// -------------------------------------------------------------------------------------------------------
 // Parallax scrolling
 function setScrollSpeed(element, speedMultiplier) {
   var ticking = false;
@@ -75,3 +83,19 @@ function setScrollSpeed(element, speedMultiplier) {
 
   window.addEventListener('scroll', doScroll, false);
 }
+
+
+// -------------------------------------------------------------------------------------------------------
+// Menu Resizing
+function headerController() {
+  var breakpoint = 400;
+  var currentPosition = window.scrollY;
+
+  if(currentPosition > breakpoint) {
+    addClass(headerNav, 'icon');
+  }
+  else {
+    removeClass(headerNav, 'icon');
+  }
+}
+

@@ -20,6 +20,12 @@ $section-height: 650px;
   transition: $t $time;
 }
 
+@mixin border-radius($r) {
+  -webkit-border-radius: $r;
+  -moz-border-radius: $r;
+  border-radius: $r;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -57,7 +63,30 @@ p.center {
 }
 
 
+// Header
+.header {
+  color: white;
+  background-color: $black-gray;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  @include border-radius(50%);
+  @include transition(all, 0.2s);
 
+  .menu-item {
+    display: none;
+  }
+}
+
+
+// Splash (above fold)
 .splash-fullscreen-fixed {
   position: fixed;
   height: 100vh;
@@ -151,6 +180,27 @@ p.center {
   }
   h2 {
     font-size: 36px;
+  }
+
+  .header {
+    color: white;
+    background-color: $black-gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    @include transition(all, 0.2s);
+    border-radius: 0;
+
+    .menu-item {
+      padding: 5px;
+      @include transition(all, 0.3s);
+    }
   }
 }
 

@@ -30,6 +30,30 @@ p {
 p.center {
   text-align: center; }
 
+.header {
+  color: white;
+  background-color: #323133;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s; }
+  .header .menu-item {
+    display: none; }
+
 .splash-fullscreen-fixed {
   position: fixed;
   height: 100vh;
@@ -101,7 +125,33 @@ p.center {
     font-size: 52px; }
 
   h2 {
-    font-size: 36px; } }
+    font-size: 36px; }
+
+  .header {
+    color: white;
+    background-color: #323133;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    border-radius: 0; }
+    .header .menu-item {
+      padding: 5px;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; } }
 @media (min-width: 1000px) {
   h1 {
     font-size: 64px; }
