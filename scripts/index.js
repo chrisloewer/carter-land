@@ -15,12 +15,47 @@ window.addEventListener('load', function () {
   // Add parallax on bg image
   var bgImg = document.getElementById('bg-image');
   setScrollSpeed(bgImg, 0.5);
+  // TODO Disable parallax if IE and garbage
+
+  // Make hamburger toggle open menu
+  var menuIcon = document.getElementById('hamburger-icon-body');
+  var popupIcon = document.getElementById('hamburger-icon-popup');
+  menuIcon.addEventListener('click', toggleMenuPopup, false);
+  popupIcon.addEventListener('click', toggleMenuPopup, false);
 
   // Resize nav menu on scroll
   // headerNav = document.getElementById('header-nav');
   // document.addEventListener('scroll', headerController, false);
   // headerController();
 });
+
+
+
+// -------------------------------------------------------------------------------------------------------
+// Menu Resizing
+function headerController() {
+  var breakpoint = 400;
+  var currentPosition = window.scrollY;
+
+  if(currentPosition > breakpoint) {
+    addClass(headerNav, 'icon');
+  }
+  else {
+    removeClass(headerNav, 'icon');
+  }
+}
+
+
+// -------------------------------------------------------------------------------------------------------
+// Hamburger Menu
+function toggleMenuPopup() {
+  var menu = document.getElementById('menu-popup');
+  var body = document.getElementById('body-container');
+  if (menu !== undefined && body !== undefined) {
+    toggleClass(menu, 'open');
+    toggleClass(body, 'popup-open');
+  }
+}
 
 
 // -------------------------------------------------------------------------------------------------------
@@ -82,20 +117,5 @@ function setScrollSpeed(element, speedMultiplier) {
   }
 
   window.addEventListener('scroll', doScroll, false);
-}
-
-
-// -------------------------------------------------------------------------------------------------------
-// Menu Resizing
-function headerController() {
-  var breakpoint = 400;
-  var currentPosition = window.scrollY;
-
-  if(currentPosition > breakpoint) {
-    addClass(headerNav, 'icon');
-  }
-  else {
-    removeClass(headerNav, 'icon');
-  }
 }
 
