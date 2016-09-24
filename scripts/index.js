@@ -20,8 +20,8 @@ window.addEventListener('load', function () {
   // Make hamburger toggle open menu
   var menuIcon = document.getElementById('hamburger-icon-body');
   var popupIcon = document.getElementById('hamburger-icon-popup');
-  menuIcon.addEventListener('click', toggleMenuPopup, false);
-  popupIcon.addEventListener('click', toggleMenuPopup, false);
+  menuIcon.addEventListener('click', openMenuPopup, false);
+  popupIcon.addEventListener('click', closeMenuPopup, false);
 
   // Resize nav menu on scroll
   // headerNav = document.getElementById('header-nav');
@@ -54,6 +54,30 @@ function toggleMenuPopup() {
   if (menu !== undefined && body !== undefined) {
     toggleClass(menu, 'open');
     toggleClass(body, 'popup-open');
+  }
+}
+
+function closeMenuPopup() {
+  var menu = document.getElementById('menu-popup');
+  var body = document.getElementById('body-container');
+  if (menu !== undefined && body !== undefined) {
+    removeClass(menu, 'open');
+    removeClass(body, 'popup-open');
+    var bodyContainer = document.getElementById('body-container');
+    bodyContainer.removeEventListener('click', closeMenuPopup);
+  }
+}
+
+function openMenuPopup() {
+  var menu = document.getElementById('menu-popup');
+  var body = document.getElementById('body-container');
+  if (menu !== undefined && body !== undefined) {
+    addClass(menu, 'open');
+    addClass(body, 'popup-open');
+
+    var bodyContainer = document.getElementById('body-container');
+    // bodyContainer.addEventListener('click', closeMenuPopup, false);
+    //  TODO Allow clicking minimized body to reopen body
   }
 }
 

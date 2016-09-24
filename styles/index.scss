@@ -36,6 +36,7 @@ $section-height: 650px;
 }
 
 body {
+  height: 100vh;
   padding: 0;
   margin: 0;
   color: $off-black;
@@ -84,6 +85,7 @@ p.center {
   @include transform(scale(0.9));
   @include transform( translateZ(-1500px) rotateX(80deg));
   @include transition(all, 0.5s);
+  cursor: pointer;
 }
 
 
@@ -97,6 +99,16 @@ p.center {
   bottom: 0;
   //z-index: 10;
   //background-color: $black-gray-transluscent;
+
+  .popup-content {
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+
+    .menu-item {
+      padding: 10px 0;
+    }
+  }
 }
 
 .popup {
