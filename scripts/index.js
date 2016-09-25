@@ -11,10 +11,14 @@ window.addEventListener('load', function () {
   // Shift background image focus on mouse move
   document.addEventListener('mousemove', adjustBg, false);
   window.addEventListener('resize', adjustBg, false);
+  // TODO Optimize movement by using bg image and positioning instead of top and left (restructure to allow parallax)
 
   // Add parallax on bg image
   var bgImg = document.getElementById('bg-image');
+  var aboutUsImg = document.getElementById('about-us-img');
   setScrollSpeed(bgImg, 0.5);
+  //setScrollSpeed(aboutUsImg, 0.5);
+  // TODO Rework parallax to account for position of parent element (don't just assume top of page)
   // TODO Disable parallax if IE and garbage
 
   // Make hamburger toggle open menu

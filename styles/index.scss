@@ -4,6 +4,7 @@ $white-tp-dark: rgba(255,255,255,0.9);
 $neutral: #DDDDDD;
 $primary-1: #b1e1e6;
 $medium-gray: #BBBBBB;
+$medium-gray-transluscent: rgba(187,187,187,0.8);
 $dark-gray: #414042;
 $black-gray: #323133;
 $black-gray-transluscent: rgba(50,49,51, 0.9);
@@ -11,7 +12,7 @@ $off-black: rgba(0,0,0,0.9);
 
 // Layout Sizing
 $section-height: 650px;
-//TODO make offset apply
+$footer-height: 300px;
 
 @mixin transition($t, $time) {
   -webkit-transition: $t $time;
@@ -206,7 +207,7 @@ p.center {
     max-height: 80%;
     overflow: hidden;
     padding: 50px;
-    background-color: $medium-gray;
+    background-color: $medium-gray-transluscent;
 
     h2, h3 {
       margin-top: 0;
@@ -226,6 +227,33 @@ p.center {
   min-height: $section-height;
   text-align: center;
   background-color: #FFFFFF;
+}
+
+.section#about-us{
+  background: none;
+}
+
+// Footer
+.footer {
+  background-color: $dark-gray;
+  position: relative;
+  overflow: hidden;
+
+  .footer-spacer {
+    height: $footer-height;
+  }
+
+  .footer-body {
+    position: fixed;
+    height: 200px;
+    bottom: 50px;
+  }
+
+  .footer-banner {
+    height: 20px;
+    width: 100%;
+    background-color: $off-black;
+  }
 }
 
 

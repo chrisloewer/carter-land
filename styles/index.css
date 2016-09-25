@@ -159,7 +159,7 @@ p.center {
   max-height: 80%;
   overflow: hidden;
   padding: 50px;
-  background-color: #BBBBBB; }
+  background-color: rgba(187, 187, 187, 0.8); }
   .vc-container .vc-blurb h2, .vc-container .vc-blurb h3 {
     margin-top: 0; }
 
@@ -174,6 +174,24 @@ p.center {
   min-height: 650px;
   text-align: center;
   background-color: #FFFFFF; }
+
+.section#about-us {
+  background: none; }
+
+.footer {
+  background-color: #414042;
+  position: relative;
+  overflow: hidden; }
+  .footer .footer-spacer {
+    height: 300px; }
+  .footer .footer-body {
+    position: fixed;
+    height: 200px;
+    bottom: 50px; }
+  .footer .footer-banner {
+    height: 20px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9); }
 
 @media (min-width: 720px) {
   h1 {
