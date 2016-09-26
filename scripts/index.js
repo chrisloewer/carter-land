@@ -53,33 +53,38 @@ function headerController() {
 // -------------------------------------------------------------------------------------------------------
 // Hamburger Menu
 function toggleMenuPopup() {
+  var body = document.getElementById('body');
   var menu = document.getElementById('menu-popup');
-  var body = document.getElementById('body-container');
-  if (menu !== undefined && body !== undefined) {
+  var bodyContainer = document.getElementById('body-container');
+  if (menu !== undefined && body !== undefined && bodyContainer !== undefined) {
     toggleClass(menu, 'open');
     toggleClass(body, 'popup-open');
+    toggleClass(bodyContainer, 'popup-open');
   }
 }
 
 function closeMenuPopup() {
+  var body = document.getElementById('body');
   var menu = document.getElementById('menu-popup');
-  var body = document.getElementById('body-container');
-  if (menu !== undefined && body !== undefined) {
+  var bodyContainer = document.getElementById('body-container');
+  if (menu !== undefined && body !== undefined && bodyContainer !== undefined) {
     removeClass(menu, 'open');
     removeClass(body, 'popup-open');
-    var bodyContainer = document.getElementById('body-container');
-    bodyContainer.removeEventListener('click', closeMenuPopup);
+    removeClass(bodyContainer, 'popup-open');
+    // bodyContainer.removeEventListener('click', closeMenuPopup);
+    // TODO Remove listener that listens for minified body click
   }
 }
 
 function openMenuPopup() {
+  var body = document.getElementById('body');
   var menu = document.getElementById('menu-popup');
-  var body = document.getElementById('body-container');
-  if (menu !== undefined && body !== undefined) {
+  var bodyContainer = document.getElementById('body-container');
+  if (menu !== undefined && body !== undefined && bodyContainer !== undefined) {
     addClass(menu, 'open');
     addClass(body, 'popup-open');
+    addClass(bodyContainer, 'popup-open');
 
-    var bodyContainer = document.getElementById('body-container');
     // bodyContainer.addEventListener('click', closeMenuPopup, false);
     //  TODO Allow clicking minimized body to reopen body
   }

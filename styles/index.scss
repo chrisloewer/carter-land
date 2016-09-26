@@ -37,7 +37,6 @@ $footer-height: 300px;
 }
 
 body {
-  height: 100vh;
   padding: 0;
   margin: 0;
   color: $off-black;
@@ -45,8 +44,12 @@ body {
   line-height: 1.5;
   font-size: 14px;
   background-color: $dark-gray;
+}
+body.popup-open {
+  height: 90vh;
   perspective: 1500px;
 }
+
 h1 {
   font-family: montserratbold, sans-serif;
   font-size: 42px;
@@ -78,12 +81,12 @@ p.center {
 .body-container {
   overflow: hidden;
   background-color: white;
-  @include transform(scale(1));
+  //@include transform(scale(1));
   @include transition(all, 0.5s);
 }
 
 .body-container.popup-open {
-  @include transform(scale(0.9));
+  //@include transform(scale(0.9));
   @include transform( translateZ(-1500px) rotateX(80deg));
   @include transition(all, 0.5s);
   cursor: pointer;
@@ -152,6 +155,7 @@ p.center {
   height: 100vh;
   width: 100%;
   text-align: center;
+  z-index: 2;
 }
 .splash-fullscreen-fixed.vc-container::before {
   height: 100%;
@@ -162,6 +166,7 @@ p.center {
   height: 100vh;
   width: 100%;
   text-align: center;
+  z-index: 2;
 }
 .splash-fullscreen.vc-container::before {
   height: 100%;
@@ -227,6 +232,7 @@ p.center {
   min-height: $section-height;
   text-align: center;
   background-color: #FFFFFF;
+  z-index: 5;
 }
 
 .section#about-us{
@@ -246,13 +252,25 @@ p.center {
   .footer-body {
     position: fixed;
     height: 200px;
+    width: 100%;
     bottom: 50px;
+    color: white;
+    text-align: center;
   }
 
   .footer-banner {
-    height: 20px;
     width: 100%;
-    background-color: $off-black;
+    background-color: $black-gray;
+    color: white;
+    text-align: right;
+    font-family: montserratultra_light, sans-serif;
+    font-size: 12px;
+    position: fixed;
+    bottom: 0;
+
+    .content {
+      padding: 5px 10px;
+    }
   }
 }
 
