@@ -14,12 +14,12 @@ $off-black: rgba(0,0,0,0.9);
 $section-height: 650px;
 $footer-height: 300px;
 
-@mixin transition($t, $time) {
-  -webkit-transition: $t $time;
-  -moz-transition: $t $time;
-  -ms-transition: $t $time;
-  -o-transition: $t $time;
-  transition: $t $time;
+@mixin transition($arg...) {
+  -webkit-transition: $arg;
+  -moz-transition: $arg;
+  -ms-transition: $arg;
+  -o-transition: $arg;
+  transition: $arg;
 }
 
 @mixin border-radius($r) {
@@ -28,7 +28,7 @@ $footer-height: 300px;
   border-radius: $r;
 }
 
-@mixin transform($arg) {
+@mixin transform($arg...) {
   -webkit-transform: $arg;
   -moz-transform: $arg;
   -ms-transform: $arg;
@@ -44,10 +44,7 @@ body {
   line-height: 1.5;
   font-size: 14px;
   background-color: $dark-gray;
-}
-body.popup-open {
-  height: 90vh;
-  perspective: 1500px;
+  min-height: 100vh;
 }
 
 h1 {
@@ -81,42 +78,44 @@ p.center {
 .body-container {
   overflow: hidden;
   background-color: white;
-  //@include transform(scale(1));
-  @include transition(all, 0.5s);
-}
-
-.body-container.popup-open {
-  //@include transform(scale(0.9));
-  @include transform( translateZ(-1500px) rotateX(80deg));
-  @include transition(all, 0.5s);
-  cursor: pointer;
+  @include transition(all 0.5s);
 }
 
 
 // Popup menu
 .popup.open {
+  height: 100vh;
+  z-index: 10;
+  @include transition(height 0.5s);
+
+  .popup-content {
+    opacity: 1;
+    @include transition(all 0.5s);
+  }
+}
+
+.popup {
+  height: 0;
+  background-color: $dark-gray;
+  width: 100%;
   position: fixed;
-  display: block;
-  left: 0;
   top: 0;
-  right: 0;
   bottom: 0;
-  //z-index: 10;
-  //background-color: $black-gray-transluscent;
+  left: 0;
+  right: 0;
+  @include transition(height 0.5s, z-index 0.5s 0.5s);
 
   .popup-content {
     text-align: center;
     padding-top: 20px;
     color: white;
+    opacity: 0;
+    @include transition(all 0.5s);
 
     .menu-item {
       padding: 10px 0;
     }
   }
-}
-
-.popup {
-  display: none;
 }
 
 
@@ -136,7 +135,7 @@ p.center {
   align-items: center;
   overflow: hidden;
   @include border-radius(50%);
-  @include transition(all, 0.2s);
+  @include transition(all 0.2s);
 
   .menu-item {
     display: none;
@@ -298,13 +297,13 @@ p.center {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    @include transition(all, 0.2s);
+    @include transition(all 0.2s);
     border-radius: 0;
 
     .menu-item {
       display: inline-block;
       padding: 5px;
-      @include transition(all, 0.3s);
+      @include transition(all 0.3s);
     }
 
     .hamburger-icon {

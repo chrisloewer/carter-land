@@ -23,9 +23,7 @@ window.addEventListener('load', function () {
 
   // Make hamburger toggle open menu
   var menuIcon = document.getElementById('hamburger-icon-body');
-  var popupIcon = document.getElementById('hamburger-icon-popup');
-  menuIcon.addEventListener('click', openMenuPopup, false);
-  popupIcon.addEventListener('click', closeMenuPopup, false);
+  menuIcon.addEventListener('click', toggleMenuPopup, false);
 
   // Resize nav menu on scroll
   // headerNav = document.getElementById('header-nav');
@@ -53,40 +51,23 @@ function headerController() {
 // -------------------------------------------------------------------------------------------------------
 // Hamburger Menu
 function toggleMenuPopup() {
-  var body = document.getElementById('body');
   var menu = document.getElementById('menu-popup');
-  var bodyContainer = document.getElementById('body-container');
-  if (menu !== undefined && body !== undefined && bodyContainer !== undefined) {
+  if (menu !== undefined) {
     toggleClass(menu, 'open');
-    toggleClass(body, 'popup-open');
-    toggleClass(bodyContainer, 'popup-open');
   }
 }
 
 function closeMenuPopup() {
-  var body = document.getElementById('body');
   var menu = document.getElementById('menu-popup');
-  var bodyContainer = document.getElementById('body-container');
-  if (menu !== undefined && body !== undefined && bodyContainer !== undefined) {
+  if (menu !== undefined) {
     removeClass(menu, 'open');
-    removeClass(body, 'popup-open');
-    removeClass(bodyContainer, 'popup-open');
-    // bodyContainer.removeEventListener('click', closeMenuPopup);
-    // TODO Remove listener that listens for minified body click
   }
 }
 
 function openMenuPopup() {
-  var body = document.getElementById('body');
   var menu = document.getElementById('menu-popup');
-  var bodyContainer = document.getElementById('body-container');
-  if (menu !== undefined && body !== undefined && bodyContainer !== undefined) {
+  if (menu !== undefined) {
     addClass(menu, 'open');
-    addClass(body, 'popup-open');
-    addClass(bodyContainer, 'popup-open');
-
-    // bodyContainer.addEventListener('click', closeMenuPopup, false);
-    //  TODO Allow clicking minimized body to reopen body
   }
 }
 

@@ -5,11 +5,8 @@ body {
   font-family: 'Noto Serif', serif;
   line-height: 1.5;
   font-size: 14px;
-  background-color: #414042; }
-
-body.popup-open {
-  height: 90vh;
-  perspective: 1500px; }
+  background-color: #414042;
+  min-height: 100vh; }
 
 h1 {
   font-family: montserratbold, sans-serif;
@@ -44,35 +41,48 @@ p.center {
   -o-transition: all 0.5s;
   transition: all 0.5s; }
 
-.body-container.popup-open {
-  -webkit-transform: translateZ(-1500px) rotateX(80deg);
-  -moz-transform: translateZ(-1500px) rotateX(80deg);
-  -ms-transform: translateZ(-1500px) rotateX(80deg);
-  -o-transform: translateZ(-1500px) rotateX(80deg);
-  transform: translateZ(-1500px) rotateX(80deg);
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-  cursor: pointer; }
-
 .popup.open {
-  position: fixed;
-  display: block;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0; }
+  height: 100vh;
+  z-index: 10;
+  -webkit-transition: height 0.5s;
+  -moz-transition: height 0.5s;
+  -ms-transition: height 0.5s;
+  -o-transition: height 0.5s;
+  transition: height 0.5s; }
   .popup.open .popup-content {
-    text-align: center;
-    padding-top: 20px;
-    color: white; }
-    .popup.open .popup-content .menu-item {
-      padding: 10px 0; }
+    opacity: 1;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
 
 .popup {
-  display: none; }
+  height: 0;
+  background-color: #414042;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: height 0.5s, z-index 0.5s 0.5s;
+  -moz-transition: height 0.5s, z-index 0.5s 0.5s;
+  -ms-transition: height 0.5s, z-index 0.5s 0.5s;
+  -o-transition: height 0.5s, z-index 0.5s 0.5s;
+  transition: height 0.5s, z-index 0.5s 0.5s; }
+  .popup .popup-content {
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+    opacity: 0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
+    .popup .popup-content .menu-item {
+      padding: 10px 0; }
 
 .header {
   color: white;
