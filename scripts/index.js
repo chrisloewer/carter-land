@@ -25,7 +25,6 @@ window.addEventListener('load', function () {
   var menuIcon = document.getElementById('hamburger-icon-body');
   menuIcon.addEventListener('click', toggleMenuPopup, false);
 
-  // TODO Resize nav menu on scroll
   headerNav = document.getElementById('header-nav');
   document.addEventListener('scroll', headerController, false);
   headerController();

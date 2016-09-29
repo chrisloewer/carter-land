@@ -33,6 +33,17 @@ p {
 p.center {
   text-align: center; }
 
+img.quote {
+  max-width: 40px;
+  padding: 0 20px; }
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #323133;
+  width: 50%;
+  margin: 10px auto; }
+
 .body-container {
   overflow: hidden;
   background-color: white;
@@ -167,7 +178,8 @@ p.center {
   max-height: 80%;
   overflow: hidden;
   padding: 50px;
-  background-color: rgba(187, 187, 187, 0.8); }
+  margin: 90px 0;
+  background-color: rgba(255, 255, 255, 0.6); }
   .vc-container .vc-blurb h2, .vc-container .vc-blurb h3 {
     margin-top: 0; }
 
@@ -185,17 +197,31 @@ p.center {
   overflow: hidden;
   z-index: 5; }
 
+.slideshow {
+  display: inline-block;
+  height: 300px;
+  width: 600px;
+  max-width: 80%;
+  background-color: #414042;
+  margin: 30px; }
+
+.slideshow#featured-slideshow {
+  background-image: url(../resources/field2.jpg);
+  background-size: cover;
+  background-position: center center; }
+
 .footer {
   background-color: #414042;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  font-size: 14px; }
   .footer .footer-spacer {
-    height: 300px; }
+    height: 360px; }
   .footer .footer-body {
     position: fixed;
     height: 200px;
     width: 100%;
-    bottom: 50px;
+    bottom: 100px;
     color: white;
     text-align: center; }
     .footer .footer-body .logo {

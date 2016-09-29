@@ -13,7 +13,7 @@ $off-black: rgba(0,0,0,0.9);
 
 // Layout Sizing
 $section-height: 650px;
-$footer-height: 300px;
+$footer-height: 360px;
 
 @mixin transition($arg...) {
   -webkit-transition: $arg;
@@ -77,11 +77,22 @@ h4 {
 p {
   text-align: justify;
 }
-
 p.center {
   text-align: center;
 }
 
+img.quote {
+  max-width: 40px;
+  padding: 0 20px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: $black-gray;
+  width: 50%;
+  margin: 10px auto;
+}
 
 .body-container {
   overflow: hidden;
@@ -224,7 +235,8 @@ p.center {
     max-height: 80%;
     overflow: hidden;
     padding: 50px;
-    background-color: $medium-gray-transluscent;
+    margin: 90px 0;
+    background-color: transparentize(white, 0.4);
 
     h2, h3 {
       margin-top: 0;
@@ -248,15 +260,28 @@ p.center {
   z-index: 5;
 }
 
-.section#about-us{
-  //background: none;
+
+.slideshow {
+  display: inline-block;
+  height: 300px;
+  width: 600px;
+  max-width: 80%;
+  background-color: $dark-gray;
+  margin: 30px;
 }
+.slideshow#featured-slideshow {
+  background-image: url(../resources/field2.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
 
 // Footer
 .footer {
   background-color: $dark-gray;
   position: relative;
   overflow: hidden;
+  font-size: 14px;
 
   .footer-spacer {
     height: $footer-height;
@@ -266,7 +291,7 @@ p.center {
     position: fixed;
     height: 200px;
     width: 100%;
-    bottom: 50px;
+    bottom: 100px;
     color: white;
     text-align: center;
 
