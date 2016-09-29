@@ -46,6 +46,7 @@ $footer-height: 300px;
 body {
   padding: 0;
   margin: 0;
+  min-width: 300px;
   color: $off-black;
   font-family: 'Noto Serif', serif;
   line-height: 1.5;
@@ -122,6 +123,11 @@ p.center {
     .menu-item {
       padding: 10px 0;
     }
+
+    .logo {
+       max-width: 250px;
+       padding: 50px;
+     }
   }
 }
 
@@ -263,6 +269,10 @@ p.center {
     bottom: 50px;
     color: white;
     text-align: center;
+
+    .logo {
+      max-width: 250px;
+    }
   }
 
   .footer-banner {
@@ -312,7 +322,8 @@ p.center {
 
     .menu-item {
       display: inline-block;
-      padding: 5px;
+      padding: 5px 15px;
+      max-height: 70px;
       @include transition(all 0.3s);
     }
 
@@ -325,6 +336,11 @@ p.center {
     height: 50px;
     background-color: $black-gray;
     @include transition(all 0.5s);
+
+    .menu-item {
+      max-height: 40px;
+      @include transition(all 0.3s);
+    }
   }
 
   .popup.open {
@@ -345,5 +361,20 @@ p.center {
   }
   h2 {
     font-size: 42px;
+  }
+
+  .header {
+    height: 100px;
+
+    .menu-item {
+      max-height: 75px;
+    }
+  }
+  .header.mini {
+    height: 70px;
+
+    .menu-item {
+      max-height: 55px;
+    }
   }
 }
