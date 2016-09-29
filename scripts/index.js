@@ -12,12 +12,13 @@ window.addEventListener('load', function () {
   // Shift background image focus on mouse move
   document.addEventListener('mousemove', adjustBg, false);
   window.addEventListener('resize', adjustBg, false);
+  // TODO add fallback for object-fit on Edge and IE
 
   // Add parallax on bg image
   var bgImg = document.getElementById('bg-image');
   var aboutUsImg = document.getElementById('about-us-img');
   setScrollSpeed(bgImg, 0.5, bodyContainer, {});
-  setScrollSpeed(aboutUsImg, 0.1, aboutUsContainer, {});
+  setScrollSpeed(aboutUsImg, 0.15, aboutUsContainer, {});
   // TODO Disable parallax if IE and garbage
 
   // Make hamburger toggle open menu
@@ -25,9 +26,9 @@ window.addEventListener('load', function () {
   menuIcon.addEventListener('click', toggleMenuPopup, false);
 
   // TODO Resize nav menu on scroll
-  // headerNav = document.getElementById('header-nav');
-  // document.addEventListener('scroll', headerController, false);
-  // headerController();
+  headerNav = document.getElementById('header-nav');
+  document.addEventListener('scroll', headerController, false);
+  headerController();
 });
 
 
@@ -39,10 +40,10 @@ function headerController() {
   var currentPosition = window.scrollY;
 
   if(currentPosition > breakpoint) {
-    addClass(headerNav, 'icon');
+    addClass(headerNav, 'mini');
   }
   else {
-    removeClass(headerNav, 'icon');
+    removeClass(headerNav, 'mini');
   }
 }
 
@@ -106,14 +107,6 @@ function setScrollSpeed(element, speedMultiplier, parentElement, context) {
 
   function updatePosition() {
     var translateValue = Math.abs(context.lastScrollY * speedMultiplier);
-
-    console.log(translateValue + ' -- ' + context.lastScrollY);
-
-    // if (translateValue < 0) {
-    //   translateValue = 0;
-    // }
-
-    // console.log('last scroll: ' + context.lastScrollY + ' -- parentElementY: ' + parentElementY);
 
     ticking = false;
 

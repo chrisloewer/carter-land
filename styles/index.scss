@@ -6,6 +6,7 @@ $primary-1: #b1e1e6;
 $medium-gray: #BBBBBB;
 $medium-gray-transluscent: rgba(187,187,187,0.8);
 $dark-gray: #414042;
+$dark-gray-transluscent: rgba(65,64,66, 0.8);
 $black-gray: #323133;
 $black-gray-transluscent: rgba(50,49,51, 0.9);
 $off-black: rgba(0,0,0,0.9);
@@ -34,6 +35,12 @@ $footer-height: 300px;
   -ms-transform: $arg;
   -o-transform: $arg;
   transform: $arg;
+}
+
+@mixin shadow($args...) {
+  -webkit-box-shadow: $args;
+  -moz-box-shadow: $args;
+  box-shadow: $args;
 }
 
 body {
@@ -288,18 +295,20 @@ p.center {
 
   .header {
     color: white;
-    background-color: $black-gray;
+    background-color: $black-gray-transluscent;
     position: fixed;
     top: 0;
     left: 0;
+    height: 80px;
     width: 100%;
     padding: 10px 0;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    @include transition(all 0.2s);
     border-radius: 0;
+    @include transition(all 0.2s);
+    @include shadow(0 -1px 10px 2px transparentize($black-gray, 0.4));
 
     .menu-item {
       display: inline-block;
@@ -310,6 +319,12 @@ p.center {
     .hamburger-icon {
       display: none;
     }
+  }
+
+  .header.mini {
+    height: 50px;
+    background-color: $black-gray;
+    @include transition(all 0.5s);
   }
 
   .popup.open {
