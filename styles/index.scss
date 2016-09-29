@@ -122,6 +122,7 @@ hr {
   bottom: 0;
   left: 0;
   right: 0;
+  @include shadow(0 6px 10px -1px $black-gray);
   @include transition(height 0.5s, z-index 0.5s 0.5s);
 
   .popup-content {
@@ -258,6 +259,12 @@ hr {
   background-color: white;
   overflow: hidden;
   z-index: 5;
+}
+.section.top {
+  @include shadow(0 1px 18px -1px $black-gray);
+}
+.section.bottom {
+  @include shadow(0 6px 10px -1px $black-gray);
 }
 
 
