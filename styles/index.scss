@@ -94,6 +94,10 @@ hr {
   margin: 10px auto;
 }
 
+.background {
+  z-index: -100 !important;
+}
+
 .body-container {
   overflow: hidden;
   background-color: white;

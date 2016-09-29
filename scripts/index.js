@@ -2,11 +2,12 @@
 var mousePageX = 0;
 var mousePageY = 0;
 var headerNav;
-
+var mainSplash;
 
 // Initial Page Load
 window.addEventListener('load', function () {
   var bodyContainer = document.getElementById('body-container');
+  mainSplash = document.getElementById('main-splash');
   var aboutUsContainer = document.getElementById('about-us');
 
   // Shift background image focus on mouse move
@@ -27,7 +28,10 @@ window.addEventListener('load', function () {
 
   headerNav = document.getElementById('header-nav');
   document.addEventListener('scroll', headerController, false);
+  document.addEventListener('scroll', splashController, false);
   headerController();
+
+  // TODO Hide splash with .background after user scrolls more that 120vh (it was covering footer)
 });
 
 
@@ -43,6 +47,20 @@ function headerController() {
   }
   else {
     removeClass(headerNav, 'mini');
+  }
+}
+
+// -------------------------------------------------------------------------------------------------------
+// Splash Screen Hiding
+function splashController() {
+  var breakpoint = window.innerHeight + 650;
+  var currentPosition = window.scrollY;
+
+  if(currentPosition > breakpoint) {
+    addClass(mainSplash, 'background');
+  }
+  else {
+    removeClass(mainSplash, 'background');
   }
 }
 
