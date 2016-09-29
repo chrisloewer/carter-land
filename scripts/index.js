@@ -6,26 +6,25 @@ var headerNav;
 
 // Initial Page Load
 window.addEventListener('load', function () {
-  console.log('window load');
+  var bodyContainer = document.getElementById('body-container');
+  var aboutUsContainer = document.getElementById('about-us');
 
   // Shift background image focus on mouse move
   document.addEventListener('mousemove', adjustBg, false);
   window.addEventListener('resize', adjustBg, false);
-  // TODO Optimize movement by using bg image and positioning instead of top and left (restructure to allow parallax)
 
   // Add parallax on bg image
   var bgImg = document.getElementById('bg-image');
   var aboutUsImg = document.getElementById('about-us-img');
-  setScrollSpeed(bgImg, 0.5);
-  //setScrollSpeed(aboutUsImg, 0.5);
-  // TODO Rework parallax to account for position of parent element (don't just assume top of page)
+  setScrollSpeed(bgImg, 0.5, bodyContainer, {});
+  setScrollSpeed(aboutUsImg, 0.1, aboutUsContainer, {});
   // TODO Disable parallax if IE and garbage
 
   // Make hamburger toggle open menu
   var menuIcon = document.getElementById('hamburger-icon-body');
   menuIcon.addEventListener('click', toggleMenuPopup, false);
 
-  // Resize nav menu on scroll
+  // TODO Resize nav menu on scroll
   // headerNav = document.getElementById('header-nav');
   // document.addEventListener('scroll', headerController, false);
   // headerController();
@@ -99,21 +98,26 @@ function adjustBg(e) {
 
 // -------------------------------------------------------------------------------------------------------
 // Parallax scrolling
-function setScrollSpeed(element, speedMultiplier) {
+function setScrollSpeed(element, speedMultiplier, parentElement, context) {
   var ticking = false;
-  var lastScrollY = 0;
+  context.lastScrollY = 0;
+  var parentElementY = parentElement.getBoundingClientRect().top;
   doScroll();
 
   function updatePosition() {
-    var translateValue = lastScrollY * speedMultiplier;
+    var translateValue = Math.abs(context.lastScrollY * speedMultiplier);
 
-    if (translateValue < 0) {
-      translateValue = 0;
-    }
+    console.log(translateValue + ' -- ' + context.lastScrollY);
+
+    // if (translateValue < 0) {
+    //   translateValue = 0;
+    // }
+
+    // console.log('last scroll: ' + context.lastScrollY + ' -- parentElementY: ' + parentElementY);
 
     ticking = false;
 
-    var translate = 'translate3d(-50%, -' + translateValue + 'px, 0px)';
+    var translate = 'translate3d(-50%, ' + (-translateValue) + 'px, 0px)';
     element.style['-webkit-transform'] = translate;
     element.style['-moz-transform'] = translate;
     element.style['-ms-transform'] = translate;
@@ -122,14 +126,15 @@ function setScrollSpeed(element, speedMultiplier) {
   }
 
   function doScroll() {
-    lastScrollY = window.pageYOffset;
 
     if (!ticking) {
+      context.lastScrollY = parentElement.getBoundingClientRect().top;
       window.requestAnimationFrame(updatePosition);
       ticking = true;
     }
   }
 
   window.addEventListener('scroll', doScroll, false);
+  doScroll();
 }
 

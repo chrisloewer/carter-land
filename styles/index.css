@@ -135,8 +135,8 @@ p.center {
 .vc-container img.bg, .vc-container video.bg {
   object-fit: cover;
   position: absolute;
-  height: inherit;
-  height: calc(100% + 50px);
+  height: 120%;
+  height: calc(120% + 50px);
   width: 100%;
   width: calc(100% + 50px);
   left: 48%;
@@ -177,11 +177,9 @@ p.center {
   position: relative;
   min-height: 650px;
   text-align: center;
-  background-color: #FFFFFF;
+  background-color: white;
+  overflow: hidden;
   z-index: 5; }
-
-.section#about-us {
-  background: none; }
 
 .footer {
   background-color: #414042;
