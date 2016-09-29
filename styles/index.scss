@@ -48,27 +48,27 @@ body {
   margin: 0;
   min-width: 300px;
   color: $off-black;
-  font-family: 'Noto Serif', serif;
   line-height: 1.5;
-  font-size: 14px;
+  font-size: 18px;
   background-color: $dark-gray;
   min-height: 100vh;
+  font-family: 'Raleway', sans-serif;
 }
 
 h1 {
-  font-family: montserratbold, sans-serif;
+  font-family: 'Playfair Display SC', serif;
   font-size: 42px;
   text-transform: uppercase;
   color: $black-gray;
 }
 h2 {
-  font-family: montserratbold, sans-serif;
+  font-family: 'Playfair Display SC', serif;
   font-size: 32px;
   text-transform: uppercase;
   color: $dark-gray;
 }
 h4 {
-  font-family: montserratregular, sans-serif;
+  font-family: 'Playfair Display SC', serif;
   font-size: 16px;
   text-transform: uppercase;
   color: $dark-gray;
@@ -280,7 +280,8 @@ p.center {
     background-color: $black-gray;
     color: white;
     text-align: right;
-    font-family: montserratultra_light, sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
     font-size: 12px;
     position: fixed;
     bottom: 0;
@@ -339,6 +340,7 @@ p.center {
 
     .menu-item {
       max-height: 40px;
+      font-size: 14px;
       @include transition(all 0.3s);
     }
   }

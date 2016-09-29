@@ -3,26 +3,26 @@ body {
   margin: 0;
   min-width: 300px;
   color: rgba(0, 0, 0, 0.9);
-  font-family: 'Noto Serif', serif;
   line-height: 1.5;
-  font-size: 14px;
+  font-size: 18px;
   background-color: #414042;
-  min-height: 100vh; }
+  min-height: 100vh;
+  font-family: 'Raleway', sans-serif; }
 
 h1 {
-  font-family: montserratbold, sans-serif;
+  font-family: 'Playfair Display SC', serif;
   font-size: 42px;
   text-transform: uppercase;
   color: #323133; }
 
 h2 {
-  font-family: montserratbold, sans-serif;
+  font-family: 'Playfair Display SC', serif;
   font-size: 32px;
   text-transform: uppercase;
   color: #414042; }
 
 h4 {
-  font-family: montserratregular, sans-serif;
+  font-family: 'Playfair Display SC', serif;
   font-size: 16px;
   text-transform: uppercase;
   color: #414042; }
@@ -205,7 +205,8 @@ p.center {
     background-color: #323133;
     color: white;
     text-align: right;
-    font-family: montserratultra_light, sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
     font-size: 12px;
     position: fixed;
     bottom: 0; }
@@ -263,6 +264,7 @@ p.center {
     transition: all 0.5s; }
     .header.mini .menu-item {
       max-height: 40px;
+      font-size: 14px;
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       -ms-transition: all 0.3s;
