@@ -87,7 +87,7 @@ h4 {
 p {
   text-align: justify;
 }
-p.center {
+.center {
   text-align: center;
 }
 .no-margin {
@@ -113,6 +113,7 @@ hr {
 
 .body-container {
   overflow: hidden;
+  min-height: 100vh;
   background-color: white;
   @include transition(all 0.5s);
 }

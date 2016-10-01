@@ -1,0 +1,37 @@
+// Colors
+$white-tp-light: rgba(255,255,255,0.4);
+$white-tp-dark: rgba(255,255,255,0.9);
+$neutral: #DDDDDD;
+$primary-1: #b1e1e6;
+$medium-gray: #BBBBBB;
+$medium-gray-transluscent: rgba(187,187,187,0.8);
+$dark-gray: #414042;
+$dark-gray-transluscent: rgba(65,64,66, 0.8);
+$black-gray: #323133;
+$black-gray-transluscent: rgba(50,49,51, 0.9);
+$off-black: rgba(0,0,0,0.9);
+
+
+.body-container {
+  background-color: #EFEFEF;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  width: 80%;
+  max-width: 500px;
+  padding: 10px 20px;
+  margin: 0 auto 20px auto;
+  background-color: $dark-gray-transluscent;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid $off-black;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+}
+.button:hover {
+  background-color: $dark-gray;
+}
