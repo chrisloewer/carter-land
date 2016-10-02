@@ -154,7 +154,7 @@ hr {
       padding: 10px 0;
 
       img.awkward-icon {
-        width: 150px;
+        height: 150px;
         margin-top: 50px;
       }
     }
@@ -330,8 +330,8 @@ hr {
       max-width: 250px;
     }
     img.awkward-icon {
-      max-width: 120px;
-      margin: 20px 0;
+      height: 120px;
+      margin: 10px 0;
     }
   }
 
@@ -390,9 +390,12 @@ hr {
     .menu-item.awkward-icon {
       position: absolute;
       left: 20px;
-      top: 6px;
-      width: 50px;
+      top: 4px;
       opacity: 0;
+
+      img {
+        height: 50px;
+      }
     }
 
     .hamburger-icon {
@@ -453,8 +456,11 @@ hr {
       max-height: 55px;
     }
     .menu-item.awkward-icon {
-      width: 60px;
       top: 10px;
+
+      img {
+        height: 60px;
+      }
     }
   }
 

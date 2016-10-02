@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="styles/index.css" type="text/css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:700,900|Raleway:100,400" rel="stylesheet">
+  <!-- TODO Locally host fonts -->
+
+  <script type="application/javascript" src="scripts/index.js"></script>
+  <script type="application/javascript" src="scripts/helpers.js"></script>
+
+  <title>Carter Land</title>
+</head>
+
+<body id="body">
+  <!-- MENU POPUP -->
+  <div class="popup" id="menu-popup">
+    <div class="header">
+      <div class="hamburger-icon" id="hamburger-icon-popup">X</div>
+    </div>
+
+    <div class="popup-content">
+      <img class="menu-item logo" src="resources/icons/logo-white.svg">
+      <div class="menu-item">ONE</div>
+      <div class="menu-item">TWO</div>
+      <div class="menu-item">THREE</div>
+      <div class="menu-item">FOUR</div>
+      <div class="menu-item">
+        <img src="resources/icons/deer.svg" class="awkward-icon">
+      </div>
+    </div>
+  </div>
+
+  <div class="body-container" id="body-container">
+
+
+    <!-- HEADER -->
+    <div class="header" id="header-nav">
+      <div class="hamburger-icon" id="hamburger-icon-body">X</div>
+
+
+      <div class="menu-item awkward-icon">
+        <a href="#"><img src="resources/icons/deer-white.svg"></a>
+      </div>
+      <div class="menu-item">ONE</div>
+      <div class="menu-item">TWO</div>
+      <img class="menu-item logo" src="resources/icons/logo-white.svg">
+      <div class="menu-item">THREE</div>
+      <div class="menu-item">FOUR</div>
+    </div>
+
+
+    <!-- SPLASH SCREEN -->
+    <!-- TODO add fallback for no pseudo-element browsers -->
+    <div class="splash-fullscreen-fixed vc-container" id="main-splash">
+      <img class="bg" id="bg-image" src="resources/images/sunset-kubist.jpg">
+
+      <div class="vc-content">
+        <h1 class="no-margin">Linda Carter</h1>
+        <hr>
+        <p class="center">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+    </div>
+    <!-- Offsetting element -->
+    <div class="splash-fullscreen vc-container"></div>
+
+
+    <!-- FARMS RANCHES TIMBER -->
+    <div class="section vc-container top">
+      <div class="vc-content">
+        <h2>Farms, Ranches and Timber</h2>
+        <p class="center">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non rhoncus odio. Praesent gravida convallis turpis, et pretium leo laoreet a. Curabitur euismod hendrerit justo eget tincidunt. Proin laoreet nisi ac quam facilisis, non ullamcorper eros viverra. Cras suscipit non metus quis lobortis. Proin eget sodales massa, a tempor nibh. Curabitur aliquet, erat sed pharetra pharetra, ipsum sem consectetur lacus, eget efficitur sapien urna eget velit.
+        </p>
+        <h3 class="lg-margin">Featured Property</h3>
+        <div class="slideshow" id="featured-slideshow"></div>
+      </div>
+    </div>
+
+
+    <!-- ABOUT US -->
+    <div class="section vc-container" id="about-us">
+      <img class="bg" id="about-us-img" src="resources/images/letters.jpg">
+      <div class="vc-blurb">
+        <h2>A Personal Touch</h2>
+        <p class="center">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non rhoncus odio. Praesent gravida convallis turpis, et pretium leo laoreet a. Curabitur euismod hendrerit justo eget tincidunt. Proin laoreet nisi ac quam facilisis, non ullamcorper eros viverra. Cras suscipit non metus quis lobortis. Proin eget sodales massa, a tempor nibh. Curabitur aliquet, erat sed pharetra pharetra, ipsum sem consectetur lacus, eget efficitur sapien urna eget velit.
+        </p>
+        <p class="center">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non rhoncus odio. Praesent gravida convallis turpis, et pretium leo laoreet a. Curabitur euismod hendrerit justo eget tincidunt. Proin laoreet nisi ac quam facilisis, non ullamcorper eros viverra. Cras suscipit non metus quis lobortis.
+        </p>
+      </div>
+    </div>
+
+
+    <!-- OTHER SECTION -->
+    <div class="section vc-container bottom">
+      <div class="vc-content">
+        <h2>References</h2>
+        <p class="center">
+          <img class="quote" src="resources/icons/quotes-dark.svg">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non rhoncus odio. Praesent gravida convallis turpis, et pretium leo laoreet a.
+        </p>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <div class="footer-spacer"></div>
+
+      <div class="footer-body">
+        <img class="logo" src="resources/icons/logo-black-tp.svg">
+        <br/>
+        <img class="awkward-icon" src="resources/icons/deer.svg">
+        <hr>
+        <div class="menu-item">Phone: (903) 555 5555</div>
+        <div class="menu-item">Email: admin@yoursite.com</div>
+        <div class="menu-item">Mailing Address: Some Street</div>
+        <div class="menu-item">City, State. 12345</div>
+        <hr>
+        <div class="menu-item">Social Media Connections</div>
+
+      </div>
+      <div class="footer-banner">
+        <div class="content">&copy; Chris Loewer 2016</div>
+      </div>
+    </div>
+
+
+  </div>
+</body>
+</html>
