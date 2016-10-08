@@ -24,10 +24,8 @@
 
     <div class="popup-content">
       <img class="menu-item logo" src="resources/icons/logo-white.svg">
-      <div class="menu-item">ONE</div>
-      <div class="menu-item">TWO</div>
-      <div class="menu-item">THREE</div>
-      <div class="menu-item">FOUR</div>
+      <div class="menu-item">ABOUT US</div>
+      <div class="menu-item">LAND</div>
       <div class="menu-item">
         <img src="resources/icons/texas.svg" class="awkward-icon">
       </div>
@@ -43,12 +41,11 @@
 
       <div class="menu-item awkward-icon">
         <a href="#"><img src="resources/icons/texas-white.svg"></a>
+        <!-- TODO add effect to scroll to top of page (and check icon size/hover etc -->
       </div>
-      <div class="menu-item">ONE</div>
-      <div class="menu-item">TWO</div>
+      <div class="menu-item">ABOUT</div>
       <img class="menu-item logo" src="resources/icons/logo-white.svg">
-      <div class="menu-item">THREE</div>
-      <div class="menu-item">FOUR</div>
+      <div class="menu-item">LAND</div>
     </div>
 
 
@@ -100,11 +97,24 @@
     <!-- OTHER SECTION -->
     <div class="section vc-container bottom">
       <div class="vc-content">
-        <h2>References</h2>
+        <h2>Drop Us a Line</h2>
         <p class="center">
-          <img class="quote" src="resources/icons/quotes-dark.svg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non rhoncus odio. Praesent gravida convallis turpis, et pretium leo laoreet a.
+          Whether you are looking to buy or sell, we would love to hear from you.
         </p>
+        <div class="contact-form">
+          <h3>Email</h3>
+          <input type="text" name="email" placeholder="Your Email Address Here">
+          <h3>Subject</h3>
+          <select name="subject" title="title">
+            <option>Looking to BUY</option>
+            <option>Looking to SELL</option>
+            <option>Request for more information</option>
+            <option>Other</option>
+          </select>
+          <h3>Body</h3>
+          <textarea name="body" placeholder="Your Message Here"></textarea>
+          <input type="submit" value="Send">
+        </div>
       </div>
     </div>
 

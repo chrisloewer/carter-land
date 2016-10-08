@@ -30,8 +30,6 @@ window.addEventListener('load', function () {
   document.addEventListener('scroll', headerController, false);
   document.addEventListener('scroll', splashController, false);
   headerController();
-
-  // TODO Hide splash with .background after user scrolls more that 120vh (it was covering footer)
 });
 
 
