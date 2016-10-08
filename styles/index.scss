@@ -13,7 +13,7 @@ $off-black: rgba(0,0,0,0.9);
 
 // Layout Sizing
 $section-height: 650px;
-$footer-height: 360px;
+$footer-height: 500px;
 
 @mixin transition($arg...) {
   -webkit-transition: $arg;
@@ -87,7 +87,7 @@ h4 {
 p {
   text-align: justify;
 }
-p.center {
+.center {
   text-align: center;
 }
 .no-margin {
@@ -114,6 +114,7 @@ hr {
 .body-container {
   overflow: hidden;
   background-color: white;
+  min-height: 100vh;
   @include transition(all 0.5s);
 }
 
@@ -151,6 +152,11 @@ hr {
 
     .menu-item {
       padding: 10px 0;
+
+      img.awkward-icon {
+        height: 150px;
+        margin-top: 50px;
+      }
     }
 
     .logo {
@@ -316,12 +322,16 @@ hr {
     position: fixed;
     height: 200px;
     width: 100%;
-    bottom: 100px;
+    bottom: 250px;
     color: white;
     text-align: center;
 
     .logo {
       max-width: 250px;
+    }
+    img.awkward-icon {
+      height: 120px;
+      margin: 10px 0;
     }
   }
 
@@ -377,6 +387,16 @@ hr {
       max-height: 70px;
       @include transition(all 0.3s);
     }
+    .menu-item.awkward-icon {
+      position: absolute;
+      left: 20px;
+      top: 4px;
+      opacity: 0;
+
+      img {
+        height: 50px;
+      }
+    }
 
     .hamburger-icon {
       display: none;
@@ -392,6 +412,10 @@ hr {
       max-height: 40px;
       font-size: 14px;
       @include transition(all 0.3s);
+    }
+    .menu-item.awkward-icon {
+      opacity: 1;
+      @include transition(all 0.3s 0.3s);
     }
   }
 
@@ -430,6 +454,9 @@ hr {
 
     .menu-item {
       max-height: 55px;
+    }
+    .menu-item.awkward-icon {
+      top: 14px;
     }
   }
 

@@ -40,7 +40,7 @@ h4 {
 p {
   text-align: justify; }
 
-p.center {
+.center {
   text-align: center; }
 
 .no-margin {
@@ -63,6 +63,7 @@ hr {
 .body-container {
   overflow: hidden;
   background-color: white;
+  min-height: 100vh;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
@@ -114,6 +115,9 @@ hr {
     transition: all 0.5s; }
     .popup .popup-content .menu-item {
       padding: 10px 0; }
+      .popup .popup-content .menu-item img.awkward-icon {
+        height: 150px;
+        margin-top: 50px; }
     .popup .popup-content .logo {
       max-width: 250px;
       padding: 50px; }
@@ -248,16 +252,19 @@ hr {
   overflow: hidden;
   font-size: 14px; }
   .footer .footer-spacer {
-    height: 360px; }
+    height: 500px; }
   .footer .footer-body {
     position: fixed;
     height: 200px;
     width: 100%;
-    bottom: 100px;
+    bottom: 250px;
     color: white;
     text-align: center; }
     .footer .footer-body .logo {
       max-width: 250px; }
+    .footer .footer-body img.awkward-icon {
+      height: 120px;
+      margin: 10px 0; }
   .footer .footer-banner {
     width: 100%;
     background-color: #323133;
@@ -309,6 +316,13 @@ hr {
       -ms-transition: all 0.3s;
       -o-transition: all 0.3s;
       transition: all 0.3s; }
+    .header .menu-item.awkward-icon {
+      position: absolute;
+      left: 20px;
+      top: 4px;
+      opacity: 0; }
+      .header .menu-item.awkward-icon img {
+        height: 50px; }
     .header .hamburger-icon {
       display: none; }
 
@@ -328,6 +342,13 @@ hr {
       -ms-transition: all 0.3s;
       -o-transition: all 0.3s;
       transition: all 0.3s; }
+    .header.mini .menu-item.awkward-icon {
+      opacity: 1;
+      -webkit-transition: all 0.3s 0.3s;
+      -moz-transition: all 0.3s 0.3s;
+      -ms-transition: all 0.3s 0.3s;
+      -o-transition: all 0.3s 0.3s;
+      transition: all 0.3s 0.3s; }
 
   .popup.open {
     display: none; }
@@ -357,6 +378,8 @@ hr {
     height: 70px; }
     .header.mini .menu-item {
       max-height: 55px; }
+    .header.mini .menu-item.awkward-icon {
+      top: 14px; }
 
   .section {
     padding: 80px 0; } }
