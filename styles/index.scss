@@ -309,28 +309,35 @@ hr {
 
 .contact-form {
   position: relative;
-  background-color: $medium-gray;
+  //background-color: $medium-gray;
   width: 80%;
   padding: 30px;
   margin: 10px auto;
-  border-radius: 5px;
-  @include shadow(2px 2px 10px -1px $black-gray);
+  //border-radius: 5px;
+  //@include shadow(2px 2px 10px -1px $black-gray);
 
-  h3 {
-    margin: 15px;
+  h4 {
+    margin: 10px;
+    text-align: left;
   }
-  h3:first-of-type {
+  h4:first-of-type {
     margin-top: 0;
   }
 
   input, select, textarea {
     padding: 15px;
     color: inherit;
-    font-size: inherit;
+    font: inherit;
+    font-size: smaller;
     width: 95%;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-bottom: 5px;
   }
   textarea {
     resize: vertical;
+    min-height: 200px;
   }
   input[type=submit] {
     background-color: $dark-gray;
