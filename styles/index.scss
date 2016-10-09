@@ -10,6 +10,10 @@ $dark-gray-transluscent: rgba(65,64,66, 0.8);
 $black-gray: #323133;
 $black-gray-transluscent: rgba(50,49,51, 0.9);
 $off-black: rgba(0,0,0,0.9);
+$teal: #62C3A6;
+$teal-medium: #5CB89C;
+$teal-dark: #51a289;
+
 
 // Layout Sizing
 $section-height: 650px;
@@ -105,6 +109,9 @@ hr {
   background-color: $black-gray;
   width: 50%;
   margin: 10px auto;
+}
+hr.white {
+  background-color: white;
 }
 
 .background {
@@ -203,7 +210,16 @@ hr {
   height: 100vh;
   width: 100%;
   text-align: center;
+  color: white;
+  text-shadow: 0 0 8px $dark-gray-transluscent;
   z-index: 2;
+
+  h1, h3 {
+    color: white;
+  }
+  hr {
+    @include shadow(0px 0px 8px $black-gray);
+  }
 }
 .splash-fullscreen-fixed.vc-container::before {
   height: 100%;
@@ -244,7 +260,6 @@ hr {
     vertical-align: middle;
     width: 90%;
     max-width: 1000px;
-    overflow: hidden;
     margin: 50px 0;
 
     h2 {
@@ -289,6 +304,25 @@ hr {
 }
 .section.bottom {
   @include shadow(0 6px 10px -1px $black-gray);
+}
+
+.button {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 15px 30px;
+  border: 1px solid $off-black;
+  border-radius: 10px;
+  text-decoration: none;
+  text-shadow: none;
+  color: $off-black;
+  background-color: $teal;
+  min-width: 140px;
+}
+.button:hover {
+  background-color: $teal-medium;
+}
+.button:active {
+  background-color: $teal-dark;
 }
 
 
@@ -340,13 +374,19 @@ hr {
     min-height: 200px;
   }
   input[type=submit] {
-    background-color: $dark-gray;
+    background-color: $teal;
     color: white;
     padding: 15px 30px;
     width: 150px;
     border: 1px solid black;
     border-radius: 10px;
     margin: 15px;
+  }
+  input[type=submit]:hover {
+    background-color: $teal-medium;
+  }
+  input[type=submit]:active {
+    background-color: $teal-dark;
   }
 }
 
