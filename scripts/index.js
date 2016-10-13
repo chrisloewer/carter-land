@@ -14,6 +14,7 @@ window.addEventListener('load', function () {
   document.addEventListener('mousemove', adjustBg, false);
   window.addEventListener('resize', adjustBg, false);
   // TODO add fallback for object-fit on Edge and IE
+  // TODO disable this effect if on a phone
 
   // Add parallax on bg image
   var bgImg = document.getElementById('bg-image');
@@ -67,8 +68,10 @@ function splashController() {
 // Hamburger Menu
 function toggleMenuPopup() {
   var menu = document.getElementById('menu-popup');
-  if (menu !== undefined) {
+  var icon = document.getElementById('hamburger-icon-body');
+  if (menu !== undefined && icon !== undefined) {
     toggleClass(menu, 'open');
+    toggleClass(icon, 'open');
   }
 }
 

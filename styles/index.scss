@@ -26,13 +26,6 @@ $footer-height: 500px;
   -o-transition: $arg;
   transition: $arg;
 }
-
-@mixin border-radius($r) {
-  -webkit-border-radius: $r;
-  -moz-border-radius: $r;
-  border-radius: $r;
-}
-
 @mixin transform($arg...) {
   -webkit-transform: $arg;
   -moz-transform: $arg;
@@ -40,6 +33,21 @@ $footer-height: 500px;
   -o-transform: $arg;
   transform: $arg;
 }
+
+@mixin transform-origin($args...) {
+  -webkit-transform-origin: $args;
+  -moz-transform-origin: $args;
+  -ms-transform-origin: $args;
+  -o-transform-origin: $args;
+  transform-origin: $args;
+}
+
+@mixin border-radius($r) {
+  -webkit-border-radius: $r;
+  -moz-border-radius: $r;
+  border-radius: $r;
+}
+
 
 @mixin shadow($args...) {
   -webkit-box-shadow: $args;
@@ -201,6 +209,35 @@ hr.white {
     display: inline-block;
     padding: 10px;
     cursor: pointer;
+    @include transition(all 0.5s);
+
+    span {
+      display: block;
+      position: relative;
+      height: 2px;
+      width: 22px;
+      background-color: white;
+      margin: 5px 0;
+      @include transform-origin(left center);
+      @include transition(all 0.5s);
+    }
+  }
+  .hamburger-icon.open {
+    @include transform(translateX(2.5px));
+    @include transition(all 0.5s);
+
+    span {
+      @include transition(all 0.5s);
+    }
+    span:nth-child(1) {
+      @include transform(rotate(41deg));
+    }
+    span:nth-child(2) {
+      opacity: 0;
+    }
+    span:nth-child(3) {
+      @include transform(rotate(-41deg));
+    }
   }
 }
 

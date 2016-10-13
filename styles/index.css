@@ -152,7 +152,60 @@ hr.white {
   .header .hamburger-icon {
     display: inline-block;
     padding: 10px;
-    cursor: pointer; }
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
+    .header .hamburger-icon span {
+      display: block;
+      position: relative;
+      height: 2px;
+      width: 22px;
+      background-color: white;
+      margin: 5px 0;
+      -webkit-transform-origin: left center;
+      -moz-transform-origin: left center;
+      -ms-transform-origin: left center;
+      -o-transform-origin: left center;
+      transform-origin: left center;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s; }
+  .header .hamburger-icon.open {
+    -webkit-transform: translateX(2.5px);
+    -moz-transform: translateX(2.5px);
+    -ms-transform: translateX(2.5px);
+    -o-transform: translateX(2.5px);
+    transform: translateX(2.5px);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s; }
+    .header .hamburger-icon.open span {
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s; }
+    .header .hamburger-icon.open span:nth-child(1) {
+      -webkit-transform: rotate(41deg);
+      -moz-transform: rotate(41deg);
+      -ms-transform: rotate(41deg);
+      -o-transform: rotate(41deg);
+      transform: rotate(41deg); }
+    .header .hamburger-icon.open span:nth-child(2) {
+      opacity: 0; }
+    .header .hamburger-icon.open span:nth-child(3) {
+      -webkit-transform: rotate(-41deg);
+      -moz-transform: rotate(-41deg);
+      -ms-transform: rotate(-41deg);
+      -o-transform: rotate(-41deg);
+      transform: rotate(-41deg); }
 
 .splash-fullscreen-fixed {
   position: fixed;
