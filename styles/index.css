@@ -383,6 +383,21 @@ hr.white {
     .footer .footer-body img.awkward-icon {
       height: 120px;
       margin: 10px 0; }
+  .footer .social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 8px; }
+  .footer .social-icon#fb {
+    background-image: url(../resources/icons/fb.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-position: center center;
+    background-size: 40px 40px; }
+  .footer .social-icon#fb:hover {
+    background-image: url(../resources/icons/fb-teal.svg); }
+  .footer .social-icon#fb:active {
+    background-image: url(../resources/icons/fb-teal-dark.svg); }
   .footer .footer-banner {
     width: 100%;
     background-color: #323133;

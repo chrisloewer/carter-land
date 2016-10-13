@@ -27,10 +27,12 @@ window.addEventListener('load', function () {
   var menuIcon = document.getElementById('hamburger-icon-body');
   menuIcon.addEventListener('click', toggleMenuPopup, false);
 
+  // Resize header and hide splash screen if scrolling past a certain point
   headerNav = document.getElementById('header-nav');
   document.addEventListener('scroll', headerController, false);
   document.addEventListener('scroll', splashController, false);
   headerController();
+  splashController();
 });
 
 
@@ -50,7 +52,7 @@ function headerController() {
 }
 
 // -------------------------------------------------------------------------------------------------------
-// Splash Screen Hiding
+// Splash Screen Hiding -- avoid overlap with footer
 function splashController() {
   var breakpoint = window.innerHeight + 650;
   var currentPosition = window.scrollY;

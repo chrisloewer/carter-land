@@ -456,6 +456,26 @@ hr.white {
     }
   }
 
+  .social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+  .social-icon#fb {
+    background-image: url(../resources/icons/fb.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-position: center center;
+    background-size: 40px 40px;
+  }
+  .social-icon#fb:hover {
+    background-image: url(../resources/icons/fb-teal.svg);
+  }
+  .social-icon#fb:active {
+    background-image: url(../resources/icons/fb-teal-dark.svg);
+  }
+
   .footer-banner {
     width: 100%;
     background-color: $black-gray;
