@@ -302,15 +302,15 @@ hr.white {
   border-radius: 10px;
   text-decoration: none;
   text-shadow: none;
-  color: rgba(0, 0, 0, 0.9);
-  background-color: #62C3A6;
+  color: white;
+  background-color: #414042;
   min-width: 140px; }
 
 .button:hover {
-  background-color: #5CB89C; }
+  background-color: #323133; }
 
 .button:active {
-  background-color: #51a289; }
+  background-color: #2c2b2d; }
 
 .slideshow {
   display: inline-block;
@@ -347,7 +347,9 @@ hr.white {
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+    border: 1px solid #414042;
+    background-color: white; }
   .contact-form textarea {
     resize: vertical;
     min-height: 200px; }

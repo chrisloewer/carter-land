@@ -8,6 +8,7 @@ $medium-gray-transluscent: rgba(187,187,187,0.8);
 $dark-gray: #414042;
 $dark-gray-transluscent: rgba(65,64,66, 0.8);
 $black-gray: #323133;
+$black-gray-darker: #2c2b2d;
 $black-gray-transluscent: rgba(50,49,51, 0.9);
 $off-black: rgba(0,0,0,0.9);
 $teal: #62C3A6;
@@ -351,15 +352,15 @@ hr.white {
   border-radius: 10px;
   text-decoration: none;
   text-shadow: none;
-  color: $off-black;
-  background-color: $teal;
+  color: white;
+  background-color: $dark-gray;
   min-width: 140px;
 }
 .button:hover {
-  background-color: $teal-medium;
+  background-color: $black-gray;
 }
 .button:active {
-  background-color: $teal-dark;
+  background-color: $black-gray-darker;
 }
 
 
@@ -405,6 +406,8 @@ hr.white {
     -moz-box-sizing: content-box;
     box-sizing: content-box;
     margin-bottom: 5px;
+    border: 1px solid $dark-gray;
+    background-color: white;
   }
   textarea {
     resize: vertical;
