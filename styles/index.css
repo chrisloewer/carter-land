@@ -313,20 +313,90 @@ hr.white {
   background-color: #2c2b2d; }
 
 .slideshow {
+  position: relative;
   display: inline-block;
   height: 300px;
-  width: 600px;
-  max-width: 80%;
   background-color: #414042;
-  margin: 0 30px 30px 30px;
+  margin-bottom: 30px;
+  font-size: 0;
+  overflow: hidden;
   -webkit-box-shadow: 2px 2px 10px -1px #323133;
   -moz-box-shadow: 2px 2px 10px -1px #323133;
   box-shadow: 2px 2px 10px -1px #323133; }
-
-.slideshow#featured-slideshow {
-  background-image: url(../resources/images/field2.jpg);
-  background-size: cover;
-  background-position: center center; }
+  .slideshow .image-container {
+    height: 100%;
+    white-space: nowrap;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+    .slideshow .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.3;
+      -webkit-transform: scale(0.9);
+      -moz-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      -o-transform: scale(0.9);
+      transform: scale(0.9);
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; }
+    .slideshow .image-container img.active {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1);
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s; }
+  .slideshow .slideshow-button {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    top: calc(50% - 30px);
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background-color: #414042;
+    color: white;
+    font-size: 30px;
+    line-height: 54px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+  .slideshow .slideshow-button:hover {
+    width: 90px;
+    height: 90px;
+    line-height: 82px;
+    font-size: 50px;
+    top: calc(50% - 45px);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+  .slideshow .slideshow-button.prev {
+    left: -30px; }
+  .slideshow .slideshow-button.prev:hover {
+    left: -45px; }
+  .slideshow .slideshow-button.next {
+    right: -30px; }
+  .slideshow .slideshow-button.next:hover {
+    right: -45px; }
 
 .contact-form {
   position: relative;

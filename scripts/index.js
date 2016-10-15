@@ -3,6 +3,7 @@ var mousePageX = 0;
 var mousePageY = 0;
 var headerNav;
 var mainSplash;
+var slideshow;
 
 // Initial Page Load
 window.addEventListener('load', function () {
@@ -33,6 +34,10 @@ window.addEventListener('load', function () {
   document.addEventListener('scroll', splashController, false);
   headerController();
   splashController();
+
+  // Initialize slideshow
+  slideshow = new Slideshow('featured-slideshow');
+  slideshow.initializeControls(slideshow);
 });
 
 
