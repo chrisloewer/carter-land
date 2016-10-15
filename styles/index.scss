@@ -49,11 +49,24 @@ $footer-height: 500px;
   border-radius: $r;
 }
 
-
 @mixin shadow($args...) {
   -webkit-box-shadow: $args;
   -moz-box-shadow: $args;
   box-shadow: $args;
+}
+
+@mixin disable-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin enable-select {
+  -webkit-user-select: text;
+  -moz-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
 }
 
 body {
@@ -95,6 +108,16 @@ h4 {
   font-size: 16px;
   text-transform: uppercase;
   color: $dark-gray;
+}
+
+a {
+  color: inherit;
+}
+a:hover {
+  color: $teal-medium;
+}
+a:active {
+  color: $teal-dark;
 }
 
 p {
@@ -372,6 +395,7 @@ hr.white {
   margin-bottom: 30px;
   font-size: 0;
   overflow: hidden;
+  @include disable-select;
   @include shadow(2px 2px 10px -1px $black-gray);
 
   .image-container {
@@ -406,6 +430,7 @@ hr.white {
     color: white;
     font-size: 30px;
     line-height: 54px;
+    @include disable-select;
     @include border-radius(50%);
     @include transition(all 0.3s);
   }
@@ -626,6 +651,10 @@ hr.white {
   .section {
     padding: 60px 0;
   }
+
+  .slideshow {
+    height: 400px;
+  }
 }
 
 
@@ -659,5 +688,9 @@ hr.white {
 
   .section {
     padding: 80px 0;
+  }
+
+  .slideshow {
+    height: 500px;
   }
 }
