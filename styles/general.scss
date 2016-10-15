@@ -231,19 +231,6 @@ hr.white {
     z-index: -1;
   }
 
-  .vc-content {
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    width: 90%;
-    max-width: 1000px;
-    margin: 50px 0;
-
-    h2 {
-      margin-top: 0;
-    }
-  }
-
   .vc-blurb {
     position: relative;
     display: inline-block;
@@ -267,19 +254,39 @@ hr.white {
   vertical-align: middle;
 }
 
+.vc-content {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 90%;
+  max-width: 1000px;
+  margin: 50px 0;
+
+  h2 {
+    margin-top: 0;
+  }
+}
+
 // Sections Containers for content
 .section {
   position: relative;
   min-height: $section-height;
   text-align: center;
-  background-color: white;
+  background-color: $white-gray;
   overflow: hidden;
   z-index: 5;
+}
+.section.full-page {
+  min-height: 100vh;
+
+  .vc-content {
+    margin: 0;
+  }
 }
 .section.top {
   @include shadow(0 1px 18px -1px $black-gray);
 }
-.section.bottom {
+.section.bottom, .section.full-page {
   @include shadow(0 6px 10px -1px $black-gray);
 }
 
@@ -521,6 +528,9 @@ hr.white {
   .section {
     padding: 60px 0;
   }
+  .section.full-page {
+    padding: 100px 0 60px 0;
+  }
 }
 
 
@@ -554,5 +564,8 @@ hr.white {
 
   .section {
     padding: 80px 0;
+  }
+  .section.full-page {
+    padding: 120px 0 80px 0;
   }
 }
