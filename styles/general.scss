@@ -474,6 +474,9 @@ hr.white {
       max-height: 70px;
       @include transition(all 0.3s);
     }
+    .menu-item.logo {
+      cursor: pointer;
+    }
     .menu-item.awkward-icon {
       position: absolute;
       left: 20px;
