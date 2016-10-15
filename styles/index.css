@@ -7,7 +7,8 @@ body {
   font-size: 18px;
   background-color: #414042;
   min-height: 100vh;
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'Raleway', sans-serif;
+  -webkit-tap-highlight-color: transparent; }
 
 h1 {
   font-family: 'Playfair Display SC', serif;
@@ -37,6 +38,19 @@ h4 {
   text-transform: uppercase;
   color: #414042; }
 
+.fake-link {
+  cursor: pointer;
+  color: #62C3A6; }
+
+.fake-link:hover {
+  color: #5CB89C; }
+
+.fake-link:active {
+  color: #43856d; }
+
+.teal {
+  color: #62C3A6; }
+
 a {
   color: inherit; }
 
@@ -44,7 +58,7 @@ a:hover {
   color: #5CB89C; }
 
 a:active {
-  color: #51a289; }
+  color: #43856d; }
 
 p {
   text-align: justify; }
@@ -148,6 +162,10 @@ hr.white {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -451,7 +469,7 @@ hr.white {
   .contact-form input[type=submit]:hover {
     background-color: #5CB89C; }
   .contact-form input[type=submit]:active {
-    background-color: #51a289; }
+    background-color: #43856d; }
 
 .footer {
   background-color: #414042;
@@ -478,15 +496,15 @@ hr.white {
     height: 40px;
     padding: 8px; }
   .footer .social-icon#fb {
-    background-image: url(../resources/icons/fb.svg);
+    background-image: url(../resources/icons/fb-teal.svg);
     background-repeat: no-repeat;
     -webkit-background-size: contain;
     background-position: center center;
     background-size: 40px 40px; }
   .footer .social-icon#fb:hover {
-    background-image: url(../resources/icons/fb-teal.svg); }
-  .footer .social-icon#fb:active {
     background-image: url(../resources/icons/fb-teal-dark.svg); }
+  .footer .social-icon#fb:active {
+    background-image: url(../resources/icons/fb-teal-darker.svg); }
   .footer .footer-banner {
     width: 100%;
     background-color: #323133;
@@ -565,6 +583,8 @@ hr.white {
       -o-transition: all 0.3s;
       transition: all 0.3s; }
     .header.mini .menu-item.awkward-icon {
+      display: inline-block;
+      cursor: pointer;
       opacity: 1;
       -webkit-transition: all 0.3s 0.3s;
       -moz-transition: all 0.3s 0.3s;

@@ -28,6 +28,9 @@ window.addEventListener('load', function () {
   var menuIcon = document.getElementById('hamburger-icon-body');
   menuIcon.addEventListener('click', toggleMenuPopup, false);
 
+  var headerIcon = document.getElementById('header-icon');
+  headerIcon.addEventListener('click', scrollToTop, false);
+
   // Resize header and hide splash screen if scrolling past a certain point
   headerNav = document.getElementById('header-nav');
   document.addEventListener('scroll', headerController, false);
@@ -156,3 +159,16 @@ function setScrollSpeed(element, speedMultiplier, parentElement, context) {
   doScroll();
 }
 
+
+// -------------------------------------------------------------------------------------------------------
+// Scroll to top of page
+function scrollToTop() {
+  var scrollSpeed = 30;
+  var scrollStep = -window.scrollY / scrollSpeed,
+      scrollInterval = setInterval(function(){
+        if ( window.scrollY != 0 ) {
+          window.scrollBy( 0, scrollStep );
+        }
+        else clearInterval(scrollInterval);
+      },15);
+}
