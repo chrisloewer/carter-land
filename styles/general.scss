@@ -216,7 +216,8 @@ hr.white {
 // Vertical Centered Container
 .vc-container {
 
-  img.bg, video.bg {
+  img.bg, video.bg, div.bg {
+    display: inline-block;
     object-fit: cover;
     position: absolute;
     height: 120%;
@@ -229,6 +230,12 @@ hr.white {
     margin:auto;
     transform: translate(-50%, 0);
     z-index: -1;
+  }
+  div.bg {
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 
   .vc-blurb {
