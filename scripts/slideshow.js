@@ -2,7 +2,7 @@
 function Slideshow(elementId) {
 
   var element = document.getElementById(elementId);
-  var images = element.getElementsByTagName('img');
+  var images = element.getElementsByClassName('slide');
   var imgCount = images.length;
   this.imageContainer = element.getElementsByClassName('image-container')[0];
   var prevButton = element.getElementsByClassName('prev')[0];
@@ -18,8 +18,6 @@ function Slideshow(elementId) {
       context.prevSlide();
     });
   };
-
-
 
   function translateElement(element, amount) {
     var translate = 'translateX(' + amount + ')';
@@ -47,4 +45,28 @@ function Slideshow(elementId) {
       addClass(images[currentPage], 'active');
     }
   };
+}
+
+// -------------------------------------------------------------------------------------------------------
+// Fallback for browser that don't support object-fit - replace images with divs with bg-img
+function replaceSlideshowImages(elementId) {
+  var element = document.getElementById(elementId);
+  var imageContainer = element.getElementsByClassName('image-container')[0];
+  var images = imageContainer.getElementsByTagName('img');
+  var len = images.length;
+
+  for(var i=0; i < len; i++) {
+    var src = images[0].getAttribute('src');
+    var div = document.createElement('div');
+    addClass(div, 'slide');
+    if(i==0) {
+      addClass(div, 'active');
+    }
+    div.style.backgroundImage = 'url(' + src + ')';
+    imageContainer.appendChild(div);
+
+    // This removes the element from the image array as well,
+    // so using the index of 1 instead of i removes the first element
+    imageContainer.removeChild(images[0]);
+  }
 }

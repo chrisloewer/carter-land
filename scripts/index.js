@@ -27,6 +27,11 @@ window.addEventListener('load', function () {
   // Initialize slideshow
   slideshow = new Slideshow('featured-slideshow');
   slideshow.initializeControls(slideshow);
+
+  // Update slideshow to use background-image if object-fit not supported
+  if(!Modernizr.objectfit || getBrowser() == 'Firefox') {
+    replaceSlideshowImages('featured-slideshow');
+  }
 });
 
 
