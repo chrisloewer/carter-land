@@ -416,7 +416,8 @@ hr.white {
     text-align: center;
 
     .logo {
-      max-width: 250px;
+      // max-width: 250px;
+      max-height: 65px;
     }
     img.awkward-icon {
       height: 120px;
@@ -492,12 +493,18 @@ hr.white {
 
     .menu-item {
       display: inline-block;
+      text-align: center;
       padding: 5px 15px;
       max-height: 70px;
       @include transition(all 0.3s);
     }
     .menu-item.logo {
       cursor: pointer;
+      height: 100%;
+
+      svg {
+        cursor: pointer;
+      }
     }
     .menu-item.awkward-icon {
       position: absolute;

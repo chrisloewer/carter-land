@@ -12,9 +12,9 @@ window.addEventListener('load', function () {
   var headerIcon = document.getElementById('header-icon');
   headerIcon.addEventListener('click', scrollToTop, false);
 
-  // Resize header and hide splash screen if scrolling past a certain point
+  // Resize header if scrolling past a certain point
   headerNav = document.getElementById('header-nav');
-  document.addEventListener('scroll', headerController, false);
+  window.addEventListener('scroll', headerController, false);
   headerController();
 });
 
@@ -24,7 +24,7 @@ window.addEventListener('load', function () {
 // Menu Resizing
 function headerController() {
   var breakpoint = 400;
-  var currentPosition = window.scrollY;
+  var currentPosition = getWindowScrollY();
 
   if(currentPosition > breakpoint) {
     addClass(headerNav, 'mini');
@@ -125,9 +125,9 @@ function setScrollSpeed(element, speedMultiplier, parentElement, context) {
 // Scroll to top of page
 function scrollToTop() {
   var scrollSpeed = 30;
-  var scrollStep = -window.scrollY / scrollSpeed,
-      scrollInterval = setInterval(function(){
-        if ( window.scrollY != 0 ) {
+  var scrollStep = -( getWindowScrollY() ) / scrollSpeed;
+  var scrollInterval = setInterval(function(){
+        if ( getWindowScrollY() > 0 ) {
           window.scrollBy( 0, scrollStep );
         }
         else clearInterval(scrollInterval);

@@ -43,6 +43,8 @@ function padInt(int, len){
   return str;
 }
 
+// ------------------------------------ BROWSER UTILITIES ------------------------------------ //
+
 function getBrowser() {
   // Opera 8.0+
   if ((window.opr && opr.addons) || window.opera || (navigator.userAgent.indexOf(' OPR/') >= 0))
@@ -67,4 +69,13 @@ function getBrowser() {
   // Chrome 1+
   if (window.chrome && window.chrome.webstore)
     return "Chrome";
+}
+
+  function getWindowScrollY() {
+  if(window.scrollY !== undefined) {
+    return window.scrollY;
+  }
+  else {
+    return document.documentElement.scrollTop;
+  }
 }
