@@ -16,6 +16,11 @@ window.addEventListener('load', function () {
   headerNav = document.getElementById('header-nav');
   window.addEventListener('scroll', headerController, false);
   headerController();
+
+  // Add override style sheet if a microsoft browser
+  if(getBrowser() == 'IE' || getBrowser()=='Edge') {
+    addMsOverrideStyles();
+  }
 });
 
 
@@ -133,3 +138,19 @@ function scrollToTop() {
         else clearInterval(scrollInterval);
       },15);
 }
+
+
+// -------------------------------------------------------------------------------------------------------
+// Add override stylesheet for IE and Edge
+function addMsOverrideStyles() {
+  var ls = document.createElement('link');
+  ls.type = 'text/css';
+  ls.rel = 'stylesheet';
+  ls.href = 'styles/ms-override.css';
+  document.getElementsByTagName('head')[0].appendChild(ls);
+
+  var bodyContainer = document.getElementById('body-container');
+  addClass(bodyContainer, 'ms');
+}
+
+
