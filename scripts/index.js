@@ -11,7 +11,6 @@ window.addEventListener('load', function () {
   // Shift background image focus on mouse move
   document.addEventListener('mousemove', adjustBg, false);
   window.addEventListener('resize', adjustBg, false);
-  // TODO add fallback for object-fit on Edge and IE
   // TODO disable this effect if on a phone
 
   // Add parallax on bg image
@@ -19,7 +18,6 @@ window.addEventListener('load', function () {
   var aboutUsImg = document.getElementById('about-us-img');
   setScrollSpeed(bgImg, 0.5, bodyContainer, {});
   setScrollSpeed(aboutUsImg, 0.15, aboutUsContainer, {});
-  // TODO Disable parallax if IE and garbage
 
   document.addEventListener('scroll', splashController, false);
   splashController();
@@ -27,6 +25,11 @@ window.addEventListener('load', function () {
   // Initialize slideshow
   slideshow = new Slideshow('featured-slideshow');
   slideshow.initializeControls(slideshow);
+
+  // Update slideshow to use background-image if object-fit not supported
+  if(!Modernizr.objectfit || getBrowser() == 'Firefox') {
+    replaceSlideshowImages('featured-slideshow');
+  }
 });
 
 
@@ -34,7 +37,7 @@ window.addEventListener('load', function () {
 // Splash Screen Hiding -- avoid overlap with footer
 function splashController() {
   var breakpoint = window.innerHeight + 650;
-  var currentPosition = window.scrollY;
+  var currentPosition = getWindowScrollY();
 
   if(currentPosition > breakpoint) {
     addClass(mainSplash, 'background');

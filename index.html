@@ -14,6 +14,7 @@
   <script type="application/javascript" src="scripts/general.js"></script>
   <script type="application/javascript" src="scripts/helpers.js"></script>
   <script type="application/javascript" src="scripts/slideshow.js"></script>
+  <script type="application/javascript" src="scripts/modernizr-custom.js"></script>
 
   <title>Carter Land</title>
 </head>
@@ -48,15 +49,15 @@
         <img src="resources/icons/texas-white.svg">
       </div>
       <div class="menu-item"><a href="/about.html">ABOUT</a></div>
+
       <img class="menu-item logo" src="resources/icons/logo-white.svg" onclick="window.open( '/','_top' ); return false;">
       <div class="menu-item"><a href="/land.html">LAND</a></div>
     </div>
 
 
     <!-- SPLASH SCREEN -->
-    <!-- TODO add fallback for no pseudo-element browsers -->
     <div class="splash-fullscreen-fixed vc-container" id="main-splash">
-      <img class="bg" id="bg-image" src="resources/images/pasture.jpg">
+      <div class="bg" id="bg-image" style="background-image: url(resources/images/pasture.jpg);"></div>
 
       <div class="vc-content">
         <h1 class="no-margin">Linda Carter</h1>
@@ -79,22 +80,21 @@
         <h3 class="lg-margin">Featured Property</h3>
         <div class="slideshow" id="featured-slideshow">
           <div class="image-container">
-            <img src="resources/images/gate.jpg">
-            <img src="resources/images/cattle.jpg">
-            <img src="resources/images/road.jpg">
+            <img class="slide" src="resources/images/gate.jpg">
+            <img class="slide" src="resources/images/cattle.jpg">
+            <img class="slide" src="resources/images/road.jpg">
           </div>
 
           <div class="slideshow-button prev">< <</div>
           <div class="slideshow-button next">> ></div>
         </div>
-        <!-- TODO Add link to  -->
       </div>
     </div>
 
 
     <!-- ABOUT US -->
     <div class="section vc-container" id="about-us">
-      <img class="bg" id="about-us-img" src="resources/images/letters.jpg">
+      <div class="bg" id="about-us-img" style="background-image: url(resources/images/letters.jpg);"></div>
       <div class="vc-blurb">
         <h2>A Personal Touch</h2>
         <p class="center">
@@ -137,6 +137,7 @@
 
       <div class="footer-body">
         <img class="logo" src="resources/icons/logo-teal.svg">
+
         <br>
         <img class="awkward-icon" src="resources/icons/texas.svg">
         <hr>

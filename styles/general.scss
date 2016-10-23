@@ -216,7 +216,8 @@ hr.white {
 // Vertical Centered Container
 .vc-container {
 
-  img.bg, video.bg {
+  img.bg, video.bg, div.bg {
+    display: inline-block;
     object-fit: cover;
     position: absolute;
     height: 120%;
@@ -229,6 +230,12 @@ hr.white {
     margin:auto;
     transform: translate(-50%, 0);
     z-index: -1;
+  }
+  div.bg {
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 
   .vc-blurb {
@@ -314,6 +321,7 @@ hr.white {
   position: relative;
   display: inline-block;
   height: 300px;
+  width: 100%;
   background-color: $dark-gray;
   margin-bottom: 30px;
   font-size: 0;
@@ -323,10 +331,11 @@ hr.white {
 
   .image-container {
     height: 100%;
+    width: 100%;
     white-space: nowrap;
     @include transition(all 0.3s);
 
-    img {
+    img, div.slide {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -334,10 +343,16 @@ hr.white {
       @include transform(scale(0.9));
       @include transition(all 0.3s);
     }
-    img.active {
+    img.active, div.slide.active {
       opacity: 1;
       @include transform(scale(1));
       @include transition(all 0.3s);
+    }
+    div.slide {
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
     }
   }
 
@@ -401,7 +416,8 @@ hr.white {
     text-align: center;
 
     .logo {
-      max-width: 250px;
+      // max-width: 250px;
+      max-height: 65px;
     }
     img.awkward-icon {
       height: 120px;
@@ -477,12 +493,18 @@ hr.white {
 
     .menu-item {
       display: inline-block;
+      text-align: center;
       padding: 5px 15px;
       max-height: 70px;
       @include transition(all 0.3s);
     }
     .menu-item.logo {
       cursor: pointer;
+      height: 100%;
+
+      svg {
+        cursor: pointer;
+      }
     }
     .menu-item.awkward-icon {
       position: absolute;
