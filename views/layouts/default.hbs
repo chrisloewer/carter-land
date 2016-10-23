@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link href="styles/general.css" type="text/css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC:700,900|Raleway:100,400" rel="stylesheet">
+  <!-- TODO Locally host fonts -->
+
+  <script type="application/javascript" src="scripts/general.js"></script>
+  <script type="application/javascript" src="scripts/helpers.js"></script>
+  <script type="application/javascript" src="scripts/modernizr-custom.js"></script>
+
+  {{{block 'head'}}}
+
+  <title>Carter Land {{{block 'title'}}}</title>
+</head>
+
+<body id="body">
+<!-- MENU POPUP -->
+<div class="popup" id="menu-popup">
+
+  <div class="popup-content">
+    <img class="menu-item logo" src="resources/icons/logo-teal.svg">
+    <div class="menu-item"><a href="/">HOME</a></div>
+    <div class="menu-item"><a href="/about">ABOUT US</a></div>
+    <div class="menu-item"><a href="/land">LAND</a></div>
+    <div class="menu-item">
+      <img src="resources/icons/texas.svg" class="awkward-icon">
+    </div>
+  </div>
+</div>
+
+<div class="body-container" id="body-container">
+
+
+  <!-- HEADER -->
+  <div class="header" id="header-nav">
+    <div class="hamburger-icon" id="hamburger-icon-body">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="menu-item awkward-icon" id="header-icon">
+      <img src="resources/icons/texas-white.svg">
+    </div>
+    <div class="menu-item"><a href="/about">ABOUT</a></div>
+
+    <img class="menu-item logo" src="resources/icons/logo-white.svg" onclick="window.open( '/','_top' ); return false;">
+    <div class="menu-item"><a href="/land">LAND</a></div>
+  </div>
+
+
+  <!-- STUFF GOES HERE -->
+  {{{body}}}
+
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-spacer"></div>
+
+    <div class="footer-body">
+      <img class="logo" src="resources/icons/logo-teal.svg">
+
+      <br>
+      <img class="awkward-icon" src="resources/icons/texas.svg">
+      <hr>
+      <div class="menu-item">Phone: <span class="teal">(903) 555 5555</span></div>
+      <div class="menu-item">Email: <span class="teal">admin@yoursite.com</span></div>
+      <div class="menu-item">Mailing Address: Some Street</div>
+      <div class="menu-item">City, State. 12345</div>
+      <hr>
+      <a href="https://www.facebook.com/lindastexasland/" target="_blank"><div class="social-icon" id="fb"></div></a>
+
+    </div>
+    <div class="footer-banner">
+      <div class="content">&copy; Chris Loewer 2016</div>
+    </div>
+  </div>
+
+
+</div>
+
+{{{block 'tail'}}}
+</body>
+</html>
