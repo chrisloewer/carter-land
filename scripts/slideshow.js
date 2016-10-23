@@ -66,7 +66,7 @@ function replaceSlideshowImages(elementId) {
     imageContainer.appendChild(div);
 
     // This removes the element from the image array as well,
-    // so using the index of 1 instead of i removes the first element
+    // so using the index of 0 instead of i removes the first element
     imageContainer.removeChild(images[0]);
   }
 }

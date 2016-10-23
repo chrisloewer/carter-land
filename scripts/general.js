@@ -24,7 +24,6 @@ window.addEventListener('load', function () {
 });
 
 
-
 // -------------------------------------------------------------------------------------------------------
 // Menu Resizing
 function headerController() {
@@ -152,5 +151,3 @@ function addMsOverrideStyles() {
   var bodyContainer = document.getElementById('body-container');
   addClass(bodyContainer, 'ms');
 }
-
-
