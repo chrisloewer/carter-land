@@ -6,10 +6,6 @@ window.addEventListener('load', function () {
   var slideshowOne= new Slideshow('prop-slideshow-1', true);
   slideshowOne.initializeControls(slideshowOne);
 
-  // Update slideshow to use background-image if object-fit not supported
-  if(!Modernizr.objectfit || getBrowser() == 'Firefox') {
-    replaceSlideshowImages('prop-slideshow-1');
-  }
 });
 
 function toggleSlideshow() {

@@ -326,7 +326,8 @@ hr.white {
 .slideshow {
   position: relative;
   display: inline-block;
-  height: 100%;
+  background-color: $black-gray-transluscent;
+  height: 300px;
   width: 100%;
   margin-bottom: 30px;
   font-size: 0;
@@ -381,6 +382,10 @@ hr.white {
       background-color: $white-tp-dark;
       @include transition(all 0.3s);
     }
+
+    .label {
+      display: none;
+    }
   }
 
   .slideshow-body {
@@ -415,8 +420,14 @@ hr.white {
   }
 
   .label {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
     font-size: 14px;
     padding: 10px;
+    cursor: pointer;
   }
 
   .slideshow-button {

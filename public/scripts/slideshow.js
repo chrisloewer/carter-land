@@ -26,6 +26,11 @@ function Slideshow(elementId, hasFullscreen) {
     nextButton.addEventListener('click', function () { context.nextSlide(); });
     prevButton.addEventListener('click', function() { context.prevSlide(); });
 
+    // Fallback for browsers with poor support
+    if(!Modernizr.objectfit || getBrowser() == 'Firefox') {
+      this.replaceSlideshowImages();
+    }
+
     if(hasFullscreen) {
       var fullscreenButton = element.getElementsByClassName('has-fullscreen')[0];
       this.bgModal = element.getElementsByClassName('modal-backdrop')[0];
@@ -35,15 +40,6 @@ function Slideshow(elementId, hasFullscreen) {
       this.closeIcon.addEventListener('click', function () { context.toggleFullscreen(); });
     }
   };
-
-  function translateElement(element, amount) {
-    var translate = 'translateX(' + amount + ')';
-    element.style['-webkit-transform'] = translate;
-    element.style['-moz-transform'] = translate;
-    element.style['-ms-transform'] = translate;
-    element.style['-o-transform'] = translate;
-    element.style.transform = translate;
-  }
 
   this.nextSlide = function() {
     if(currentPage < imgCount-1) {
@@ -70,30 +66,36 @@ function Slideshow(elementId, hasFullscreen) {
       toggleClass(this.bgModal, 'open');
       toggleClass(bodyContainer, 'modal-open');
     }
-
   };
-}
 
-// -------------------------------------------------------------------------------------------------------
-// Fallback for browser that don't support object-fit - replace images with divs with bg-img
-function replaceSlideshowImages(elementId) {
-  var element = document.getElementById(elementId);
-  var imageContainer = element.getElementsByClassName('image-container')[0];
-  var images = imageContainer.getElementsByTagName('img');
-  var len = images.length;
+  // Fallback for browser that don't support object-fit - replace images with divs with bg-img
+  this.replaceSlideshowImages = function() {
+    var images = this.imageContainer.getElementsByTagName('img');
+    var len = images.length;
 
-  for(var i=0; i < len; i++) {
-    var src = images[0].getAttribute('src');
-    var div = document.createElement('div');
-    addClass(div, 'slide');
-    if(i==0) {
-      addClass(div, 'active');
+    for(var i=0; i < len; i++) {
+      var src = images[0].getAttribute('src');
+      var div = document.createElement('div');
+      addClass(div, 'slide');
+      if(i==0) {
+        addClass(div, 'active');
+      }
+      div.style.backgroundImage = 'url(' + src + ')';
+      this.imageContainer.appendChild(div);
+
+      // This removes the element from the image array as well,
+      // so using the index of 0 instead of i removes the first element
+      this.imageContainer.removeChild(images[0]);
     }
-    div.style.backgroundImage = 'url(' + src + ')';
-    imageContainer.appendChild(div);
+  };
 
-    // This removes the element from the image array as well,
-    // so using the index of 0 instead of i removes the first element
-    imageContainer.removeChild(images[0]);
+  function translateElement(element, amount) {
+    var translate = 'translateX(' + amount + ')';
+    element.style['-webkit-transform'] = translate;
+    element.style['-moz-transform'] = translate;
+    element.style['-ms-transform'] = translate;
+    element.style['-o-transform'] = translate;
+    element.style.transform = translate;
   }
+
 }
