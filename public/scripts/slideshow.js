@@ -1,22 +1,39 @@
 
-function Slideshow(elementId) {
+function Slideshow(elementId, hasFullscreen) {
+
+  if(hasFullscreen === undefined) {
+    hasFullscreen = false;
+  }
 
   var element = document.getElementById(elementId);
   var images = element.getElementsByClassName('slide');
   var imgCount = images.length;
-  this.imageContainer = element.getElementsByClassName('image-container')[0];
   var prevButton = element.getElementsByClassName('prev')[0];
   var nextButton = element.getElementsByClassName('next')[0];
   var currentPage = 0;
+
+  // Persistent variables
+  this.imageContainer = element.getElementsByClassName('image-container')[0];
+  this.bgModal = undefined;
+  this.closeIcon = undefined;
+
+  // Set first image to active
   addClass(images[currentPage], 'active');
 
+
   this.initializeControls = function(context) {
-    nextButton.addEventListener('click', function () {
-      context.nextSlide();
-    });
-    prevButton.addEventListener('click', function() {
-      context.prevSlide();
-    });
+
+    nextButton.addEventListener('click', function () { context.nextSlide(); });
+    prevButton.addEventListener('click', function() { context.prevSlide(); });
+
+    if(hasFullscreen) {
+      var fullscreenButton = element.getElementsByClassName('has-fullscreen')[0];
+      this.bgModal = element.getElementsByClassName('modal-backdrop')[0];
+      this.closeIcon = element.getElementsByClassName('close-icon')[0];
+
+      fullscreenButton.addEventListener('click', function () { context.toggleFullscreen(); });
+      this.closeIcon.addEventListener('click', function () { context.toggleFullscreen(); });
+    }
   };
 
   function translateElement(element, amount) {
@@ -44,6 +61,16 @@ function Slideshow(elementId) {
       translateElement(this.imageContainer, currentPage*-100 + '%');
       addClass(images[currentPage], 'active');
     }
+  };
+
+  this.toggleFullscreen = function() {
+    var bodyContainer = document.getElementById('body-container');
+
+    if(this.bgModal !== undefined) {
+      toggleClass(this.bgModal, 'open');
+      toggleClass(bodyContainer, 'modal-open');
+    }
+
   };
 }
 

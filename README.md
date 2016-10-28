@@ -5,4 +5,4 @@ Static website for a small business
 npm install
 
 #### Run Directions
-node app.js
+node linda-carter.js
