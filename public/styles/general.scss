@@ -95,6 +95,12 @@ hr {
   width: 50%;
   margin: 10px auto;
 }
+hr.lg-margin {
+  margin: 50px auto;
+}
+hr.med-margin {
+  margin: 30px auto;
+}
 hr.white {
   background-color: white;
 }
@@ -349,6 +355,8 @@ hr.white {
 
   .modal-backdrop {
     height: 100%;
+    position: relative;
+    z-index: 5;
 
     .slideshow-body {
       height: 100%;
@@ -366,6 +374,7 @@ hr.white {
     right: 0;
     top: 0;
     bottom: 0;
+    z-index: 10;
     @include transition(all 0.3s);
 
     .slideshow-body {

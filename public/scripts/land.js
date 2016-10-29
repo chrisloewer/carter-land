@@ -3,9 +3,16 @@
 window.addEventListener('load', function () {
 
   // Initialize slideshow
-  var slideshowOne= new Slideshow('prop-slideshow-1', true);
-  slideshowOne.initializeControls(slideshowOne);
+  // var item = document.getElementById('prop-slideshow-1');
+  // var slideshowOne= new Slideshow(item, true);
+  // slideshowOne.initializeControls(slideshowOne);
 
+  var slideshows = document.getElementsByClassName('slideshow');
+  var len = slideshows.length;
+  for(var i=0; i< len; i++) {
+    var ss = new Slideshow(slideshows[i], true);
+    ss.initializeControls(ss);
+  }
 });
 
 function toggleDescription(elemId, root) {

@@ -1,11 +1,10 @@
 
-function Slideshow(elementId, hasFullscreen) {
+function Slideshow(element, hasFullscreen) {
 
   if(hasFullscreen === undefined) {
     hasFullscreen = false;
   }
 
-  var element = document.getElementById(elementId);
   var images = element.getElementsByClassName('slide');
   var imgCount = images.length;
   var prevButton = element.getElementsByClassName('prev')[0];

@@ -23,7 +23,8 @@ window.addEventListener('load', function () {
   splashController();
 
   // Initialize slideshow
-  slideshow = new Slideshow('featured-slideshow');
+  var ssElem = document.getElementById('featured-slideshow');
+  slideshow = new Slideshow(ssElem);
   slideshow.initializeControls(slideshow);
 
   // Update slideshow to use background-image if object-fit not supported

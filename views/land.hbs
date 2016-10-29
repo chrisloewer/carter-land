@@ -20,7 +20,10 @@
 
     <h2>East Texas</h2>
 
+    <hr class="lg-margin">
+
     {{#each properties}}
+      <h3>{{name}}</h3>
       <div class="row">
         <div class="col image">
 
@@ -44,17 +47,16 @@
 
         </div>
         <div class="col text-blurb">
-          <h3>{{name}}</h3>
           <span class="subtitle">Section: </span>{{section}}<br/>
           <span class="subtitle">Type: </span>{{type}}<br/>
           <span class="subtitle">County: </span>{{county}}<br/>
           <span class="subtitle">Acreage: </span>{{acreage}}<br/>
           <span class="subtitle">Price: </span>{{price}}<br/>
+          <span class="subtitle">Description: </span>
+          <p>{{{description}}}</p>
 
           <div class="view-description">
-            <div class="extra-data" id="prop-description-1">
-              <span class="subtitle">Description: </span>
-                <p>{{{description}}}</p>
+            <div class="extra-data" id="prop-description-{{id}}">
               <span class="subtitle">Improvements: </span>
                 <p>{{{improvements}}}</p>
               <span class="subtitle">Wildlife: </span>
@@ -71,7 +73,6 @@
         </div>
       </div>
 
-      <!-- Map -->
       <div class="view-map">
         <div class="map" id="prop-map-{{id}}">
           <iframe
@@ -86,7 +87,7 @@
           <span class="subtitle fake-link" data-active="false" onclick="toggleMap('prop-map-{{id}}', this)">View Map</span>
         </div>
       </div>
-      <hr>
+      <hr class="med-margin">
     {{/each}}
 
 
