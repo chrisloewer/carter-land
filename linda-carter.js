@@ -2,6 +2,7 @@
 var express = require('express');
 var hbs = require('express-hbs');
 var app = express();
+var MAPS_API_KEY = 'AIzaSyBIZqpNLWVMV6-8Twh64BLvvUAOyMITkR8';
 
 app.engine('hbs', hbs.express4( {
   defaultLayout: __dirname + '/views/layouts/default.hbs'
@@ -21,7 +22,33 @@ app.get('/about', function (req, res) {
 });
 
 app.get('/land', function (req, res) {
-  res.render('land');
+  var data = {
+    properties: [
+      {
+        id: 1,
+        images: [
+            'resources/images/gate.jpg',
+            'resources/images/cattle.jpg',
+            'resources/images/road.jpg'
+        ],
+        name: 'Deadwood Ranch',
+        section: 'East Texas',
+        type: 'Acreage with home',
+        county: 'Panola County',
+        acreage: '535',
+        price: '2,500,000',
+        description: 'This is beautiful rolling ranch land that offers improved grasses, 200 acres of marketable timber, three homes, working pens and corrals, large shop, three barns, Mill Creek runs on the East side of the ranch, four ponds, community water, and a well.',
+        improvements: 'The main home is 16 years old and is 6,000+ sq ft under roof and 4,500 sq ft of air conditioned space, it has 4 bed rooms and 3 1/2 baths, large living area, beautiful dining room, great kitchen, 3 car garage, paved drive with a gorgeous waterfall in front, and a concrete fence! The second home is a 2 bed room, 2 bath brick home built in 1978 and the third home is a small camp house.',
+        wildlife: 'Deer, hog, duck, and dove',
+        water: 'Mill Creek, 4 ponds, community water, and a well.',
+        directions: 'the Ranch is 17 miles from Carthage and exactly 1 hour from Shreveport. email-lindasland@gmail.com or call 903-236-0636',
+        mapsQuery: 'Panola+County,+TX',
+        mapsKey: MAPS_API_KEY
+      }
+    ]
+  };
+
+  res.render('land', data);
 });
 
 app.listen(3000, function () {

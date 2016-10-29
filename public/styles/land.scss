@@ -31,7 +31,6 @@ h3 {
   }
   .col.text-blurb {
     order: 2;
-    text-align: left;
   }
 
   .slideshow {
@@ -44,6 +43,10 @@ h3 {
     height: 0;
     overflow: hidden;
     @include transition(all 0.3s);
+
+    p {
+      text-align: center;
+    }
   }
   .extra-data.active {
     background-color: $medium-gray-transluscent;
@@ -103,6 +106,15 @@ h3 {
     .col.text-blurb {
       flex-grow: 3;
       order: inherit;
+      text-align: left;
+    }
+  }
+
+  .view-description {
+    .extra-data {
+      p {
+        text-align: left;
+      }
     }
   }
 }

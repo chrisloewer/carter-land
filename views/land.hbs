@@ -20,70 +20,76 @@
 
     <h2>East Texas</h2>
 
-    <!-- Property -->
-    <div class="row">
-      <div class="col image">
+    {{#each properties}}
+      <div class="row">
+        <div class="col image">
 
-        <div class="slideshow" id="prop-slideshow-1">
-          <div class="modal-backdrop">
-            <div class="slideshow-body">
-              <div class="image-container">
-                <img class="slide" src="resources/images/gate.jpg">
-                <img class="slide" src="resources/images/cattle.jpg">
-                <img class="slide" src="resources/images/road.jpg">
+          <div class="slideshow" id="prop-slideshow-{{id}}">
+            <div class="modal-backdrop">
+              <div class="slideshow-body">
+                <div class="image-container">
+                  {{#each images}}
+                    <img class="slide" src="{{this}}">
+                  {{/each}}
+                </div>
+
+                <div class="slideshow-button prev">< <</div>
+                <div class="slideshow-button next">> ></div>
+                <div class="close-icon">X</div>
               </div>
 
-              <div class="slideshow-button prev">< <</div>
-              <div class="slideshow-button next">> ></div>
-              <div class="close-icon">X</div>
+              <div class="label has-fullscreen">View Full-Screen</div>
             </div>
+          </div>
 
-            <div class="label has-fullscreen">View Full-Screen</div>
+        </div>
+        <div class="col text-blurb">
+          <h3>{{name}}</h3>
+          <span class="subtitle">Section: </span>{{section}}<br/>
+          <span class="subtitle">Type: </span>{{type}}<br/>
+          <span class="subtitle">County: </span>{{county}}<br/>
+          <span class="subtitle">Acreage: </span>{{acreage}}<br/>
+          <span class="subtitle">Price: </span>{{price}}<br/>
+
+          <div class="view-description">
+            <div class="extra-data" id="prop-description-1">
+              <span class="subtitle">Description: </span>
+                <p>{{{description}}}</p>
+              <span class="subtitle">Improvements: </span>
+                <p>{{{improvements}}}</p>
+              <span class="subtitle">Wildlife: </span>
+                <p>{{wildlife}}</p>
+              <span class="subtitle">Water: </span>
+                <p>{{water}}</p>
+              <span class="subtitle">Directions: </span>
+                <p>{{{directions}}}</p>
+            </div>
+            <div class="label fake-link">
+              <span class="subtitle fake-link" data-active="false" onclick="toggleDescription('prop-description-{{id}}', this)">View More Information</span>
+            </div>
           </div>
         </div>
-
       </div>
-      <div class="col text-blurb">
-        <h3>Deadwood Ranch</h3>
-        <span class="subtitle">Section: </span>East Texas<br/>
-        <span class="subtitle">Type: </span>Acreage with home<br/>
-        <span class="subtitle">County: </span>Panola County<br/>
-        <span class="subtitle">Acreage: </span>535<br/>
-        <span class="subtitle">Price: </span>2,500,000<br/>
 
-        <div class="view-description">
-          <div class="extra-data" id="prop-description-1">
-            <span class="subtitle">Description: </span>
-              <p>This is beautiful rolling ranch land that offers improved grasses, 200 acres of marketable timber, three homes, working pens and corrals, large shop, three barns, Mill Creek runs on the East side of the ranch, four ponds, community water, and a well.</p>
-            <span class="subtitle">Improvements: </span>
-              <p>The main home is 16 years old and is 6,000+ sq ft under roof and 4,500 sq ft of air conditioned space, it has 4 bed rooms and 3 1/2 baths, large living area, beautiful dining room, great kitchen, 3 car garage, paved drive with a gorgeous waterfall in front, and a concrete fence! The second home is a 2 bed room, 2 bath brick home built in 1978 and the third home is a small camp house.</p>
-            <span class="subtitle">Wildlife: </span>Deer, hog, duck, and dove.<br/>
-            <span class="subtitle">Water: </span>Mill Creek, 4 ponds, community water, and a well.<br/>
-            <span class="subtitle">Improvements: </span>
-              <p>the Ranch is 17 miles from Carthage and exactly 1 hour from Shreveport. email-lindasland@gmail.com or call 903-236-0636</p>
-          </div>
-          <div class="label fake-link">
-            <span class="subtitle fake-link" data-active="false" onclick="toggleDescription('prop-description-1', this)">View More Information</span>
-          </div>
+      <!-- Map -->
+      <div class="view-map">
+        <div class="map" id="prop-map-{{id}}">
+          <iframe
+                  frameborder="0" style="border:0"
+                  src="https://www.google.com/maps/embed/v1/place?key={{mapsKey}}
+                  &q={{mapsQuery}}
+                  &zoom=10"
+                  allowfullscreen>
+          </iframe>
+        </div>
+        <div class="label fake-link">
+          <span class="subtitle fake-link" data-active="false" onclick="toggleMap('prop-map-{{id}}', this)">View Map</span>
         </div>
       </div>
-    </div>
+      <hr>
+    {{/each}}
 
-    <!-- Map -->
-    <div class="view-map">
-      <div class="map" id="prop-map-1">
-        <iframe
-                frameborder="0" style="border:0"
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBIZqpNLWVMV6-8Twh64BLvvUAOyMITkR8
-                &q=Panola+county,+TX
-                &zoom=10"
-                allowfullscreen>
-        </iframe>
-      </div>
-      <div class="label fake-link">
-        <span class="subtitle fake-link" data-active="false" onclick="toggleMap('prop-map-1', this)">View Map</span>
-      </div>
-    </div>
+
   </div>
 
 </div>
