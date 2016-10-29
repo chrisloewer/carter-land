@@ -18,7 +18,9 @@
   <div class="vc-content">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tempor dapibus justo, imperdiet accumsan dui tincidunt et. Curabitur cursus, sapien at ullamcorper semper, sem lorem condimentum quam, malesuada vestibulum arcu tellus volutpat augue. Sed vel arcu luctus nisi semper consequat id in enim. Aenean vestibulum ultricies sem eu mattis. Vestibulum cursus, justo fermentum tristique malesuada, massa diam blandit massa, eu tristique nisl sem sit amet turpis. Mauris sagittis consectetur velit eget ullamcorper. Aliquam erat volutpat. Sed mattis facilisis enim quis vehicula. Cras sollicitudin, enim in faucibus elementum, est risus luctus leo, sed consequat arcu metus a metus. Nullam suscipit, elit dapibus tempus volutpat, dolor sem porta urna.</p>
 
-    <h3>Baller Property One</h3>
+    <h2>East Texas</h2>
+
+    <!-- Property -->
     <div class="row">
       <div class="col image">
 
@@ -42,12 +44,46 @@
 
       </div>
       <div class="col text-blurb">
-        <h3>All This Info</h3>
-        <p>Nulla finibus, tortor id lobortis molestie, justo metus sodales nisl, a rhoncus urna dui id ligula. In hac habitasse platea dictumst. Nunc nisl leo, facilisis ac pretium sit amet, rutrum sollicitudin nibh. Praesent lobortis, magna id volutpat auctor, sapien ante sagittis purus, vel facilisis quam erat sollicitudin nulla. In tristique cursus faucibus. Curabitur non neque aliquam, tincidunt augue vel, fringilla augue. Curabitur et dolor et enim pellentesque auctor vel vel arcu. Donec vitae ligula at urna cursus lobortis. Integer a ultricies diam. Proin ut ex id enim tincidunt viverra a eu dolor.</p>
+        <h3>Deadwood Ranch</h3>
+        <span class="subtitle">Section: </span>East Texas<br/>
+        <span class="subtitle">Type: </span>Acreage with home<br/>
+        <span class="subtitle">County: </span>Panola County<br/>
+        <span class="subtitle">Acreage: </span>535<br/>
+        <span class="subtitle">Price: </span>2,500,000<br/>
+
+        <div class="view-description">
+          <div class="extra-data" id="prop-description-1">
+            <span class="subtitle">Description: </span>
+              <p>This is beautiful rolling ranch land that offers improved grasses, 200 acres of marketable timber, three homes, working pens and corrals, large shop, three barns, Mill Creek runs on the East side of the ranch, four ponds, community water, and a well.</p>
+            <span class="subtitle">Improvements: </span>
+              <p>The main home is 16 years old and is 6,000+ sq ft under roof and 4,500 sq ft of air conditioned space, it has 4 bed rooms and 3 1/2 baths, large living area, beautiful dining room, great kitchen, 3 car garage, paved drive with a gorgeous waterfall in front, and a concrete fence! The second home is a 2 bed room, 2 bath brick home built in 1978 and the third home is a small camp house.</p>
+            <span class="subtitle">Wildlife: </span>Deer, hog, duck, and dove.<br/>
+            <span class="subtitle">Water: </span>Mill Creek, 4 ponds, community water, and a well.<br/>
+            <span class="subtitle">Improvements: </span>
+              <p>the Ranch is 17 miles from Carthage and exactly 1 hour from Shreveport. email-lindasland@gmail.com or call 903-236-0636</p>
+          </div>
+          <div class="label fake-link">
+            <span class="subtitle fake-link" data-active="false" onclick="toggleDescription('prop-description-1', this)">View More Information</span>
+          </div>
+        </div>
       </div>
     </div>
-    <div>MAP GOES HERE</div>
-    <!-- TODO Add maps -->
+
+    <!-- Map -->
+    <div class="view-map">
+      <div class="map" id="prop-map-1">
+        <iframe
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBIZqpNLWVMV6-8Twh64BLvvUAOyMITkR8
+                &q=Panola+county,+TX
+                &zoom=10"
+                allowfullscreen>
+        </iframe>
+      </div>
+      <div class="label fake-link">
+        <span class="subtitle fake-link" data-active="false" onclick="toggleMap('prop-map-1', this)">View Map</span>
+      </div>
+    </div>
   </div>
 
 </div>

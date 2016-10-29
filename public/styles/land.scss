@@ -1,9 +1,17 @@
- @import "variables";
+@import "variables";
 
+
+h3 {
+  margin: 0;
+  text-align: center;
+}
 
 .section.full-page {
   p {
-    margin-top: 0;
+    margin: 0;
+  }
+  h2 {
+    margin: 30px 0;
   }
 }
 
@@ -23,10 +31,58 @@
   }
   .col.text-blurb {
     order: 2;
+    text-align: left;
   }
 
   .slideshow {
     margin: 0;
+  }
+}
+
+.view-description {
+  .extra-data {
+    height: 0;
+    overflow: hidden;
+    @include transition(all 0.3s);
+  }
+  .extra-data.active {
+    background-color: $medium-gray-transluscent;
+    height: 400px;
+    overflow-y: scroll;
+    padding: 0 15px 0 5px;
+    margin: 5px 0;
+    @include transition(all 0.3s);
+  }
+
+  .label {
+    text-align: center;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.view-map {
+  .map {
+    height: 0;
+    overflow: hidden;
+    @include transition(all 0.3s);
+
+    iframe, embed {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .map.active {
+    background-color: $medium-gray-transluscent;
+    height: 400px;
+    margin: 5px 0;
+    @include transition(all 0.3s);
+  }
+
+  .label {
+    text-align: center;
+    cursor: pointer;
+    text-decoration: underline;
   }
 }
 

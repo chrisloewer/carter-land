@@ -8,10 +8,32 @@ window.addEventListener('load', function () {
 
 });
 
-function toggleSlideshow() {
-  var modalBgOne = document.getElementById('modal-bg-1');
-  var bodyContainer = document.getElementById('body-container');
+function toggleDescription(elemId, root) {
+  var elem = document.getElementById(elemId);
 
-  toggleClass(modalBgOne, 'open');
-  toggleClass(bodyContainer, 'modal-open');
+  if(root.dataset.active == 'false') {
+    addClass(elem, 'active');
+    root.innerText = 'View Less Information';
+    root.dataset.active = true;
+  }
+  else {
+    removeClass(elem, 'active');
+    root.innerText = 'View More Information';
+    root.dataset.active = false;
+  }
+}
+
+function toggleMap(elemId, root) {
+  var elem = document.getElementById(elemId);
+
+  if(root.dataset.active == 'false') {
+    addClass(elem, 'active');
+    root.innerText = 'Hide Map';
+    root.dataset.active = true;
+  }
+  else {
+    removeClass(elem, 'active');
+    root.innerText = 'View Map';
+    root.dataset.active = false;
+  }
 }
