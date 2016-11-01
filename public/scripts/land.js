@@ -3,16 +3,19 @@
 window.addEventListener('load', function () {
 
   // Initialize slideshow
-  // var item = document.getElementById('prop-slideshow-1');
-  // var slideshowOne= new Slideshow(item, true);
-  // slideshowOne.initializeControls(slideshowOne);
-
   var slideshows = document.getElementsByClassName('slideshow');
   var len = slideshows.length;
   for(var i=0; i< len; i++) {
-    var ss = new Slideshow(slideshows[i], true);
-    ss.initializeControls(ss);
+    var s = new Slideshow(slideshows[i], true);
+    s.initializeControls(s);
   }
+
+  // Lazy-load images
+  echo.init({
+    offset: 100,
+    throttle: 250,
+    unload: false
+  });
 });
 
 function toggleDescription(elemId, root) {
@@ -31,7 +34,7 @@ function toggleDescription(elemId, root) {
 }
 
 function toggleMap(elemId, root) {
-  var elem = document.getElementById(elemId);
+  var elem = document.getElementById('prop-map-' + elemId);
 
   if(root.dataset.active == 'false') {
     addClass(elem, 'active');
@@ -42,5 +45,11 @@ function toggleMap(elemId, root) {
     removeClass(elem, 'active');
     root.innerText = 'View Map';
     root.dataset.active = false;
+  }
+
+  // Load map if not loaded
+  var iframe = document.getElementById('map-frame-' + elemId);
+  if(iframe.src === "") {
+    iframe.src = iframe.dataset.src;
   }
 }

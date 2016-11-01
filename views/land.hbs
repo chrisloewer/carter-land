@@ -8,6 +8,7 @@
 
   <script type="application/javascript" src="scripts/land.js"></script>
   <script type="application/javascript" src="scripts/slideshow.js"></script>
+  <script type="application/javascript" src="scripts/echo.min.js"></script>
 {{/contentFor}}
 
 
@@ -32,7 +33,12 @@
               <div class="slideshow-body">
                 <div class="image-container">
                   {{#each images}}
-                    <img class="slide" src="{{this}}">
+                    {{#if @first}}
+                      <img class="slide active" src="resources/images/blank.gif" data-echo="{{this}}">
+                    {{else}}
+                      <img class="slide" src="resources/images/blank.gif" data-echo="{{this}}">
+                    {{/if}}
+
                   {{/each}}
                 </div>
 
@@ -74,17 +80,18 @@
       </div>
 
       <div class="view-map">
+        <div class="label fake-link">
+          <span class="subtitle fake-link" data-active="false" onclick="toggleMap('{{id}}', this)">View Map</span>
+        </div>
         <div class="map" id="prop-map-{{id}}">
           <iframe
-                  frameborder="0" style="border:0"
-                  src="https://www.google.com/maps/embed/v1/place?key={{mapsKey}}
+                  id="map-frame-{{id}}"
+                  frameborder="0"
+                  data-src="https://www.google.com/maps/embed/v1/place?key={{mapsKey}}
                   &q={{mapsQuery}}
                   &zoom=10"
                   allowfullscreen>
           </iframe>
-        </div>
-        <div class="label fake-link">
-          <span class="subtitle fake-link" data-active="false" onclick="toggleMap('prop-map-{{id}}', this)">View Map</span>
         </div>
       </div>
       <hr class="med-margin">
