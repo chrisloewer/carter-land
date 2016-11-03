@@ -383,7 +383,8 @@ hr.white {
 
     .slideshow-body {
       height: 80vh;
-      margin: 10vh 0;
+      margin: 10vh auto;
+      max-width: 1200px;
       @include transition(all 0.3s);
     }
 
@@ -392,12 +393,12 @@ hr.white {
       position: absolute;
       background-color: $white-tp-light;
       color: black;
-      font-size: 40px;
-      top: 20px;
-      right: 20px;
-      line-height: 80px;
-      width: 80px;
-      height: 80px;
+      font-size: 24px;
+      top: 15px;
+      right: 15px;
+      line-height: 50px;
+      width: 50px;
+      height: 50px;
       cursor: pointer;
       @include border-radius(50%);
       @include transition(all 0.3s);
@@ -406,6 +407,11 @@ hr.white {
     .close-icon:hover {
       background-color: $white-tp-dark;
       @include transition(all 0.3s);
+      font-weight: 700;
+    }
+
+    .slideshow-button {
+      border: 3px solid white;
     }
 
     .label {
@@ -427,7 +433,7 @@ hr.white {
         height: 100%;
         object-fit: cover;
         opacity: 0.3;
-        @include transform(scale(0.9));
+        @include transform(scale(0.8));
         @include transition(all 0.3s);
       }
       img.active, div.slide.active {
