@@ -135,6 +135,7 @@ hr.white {
 // Popup menu
 .popup.open {
   height: 100vh;
+  overflow-y: auto;
   @include transition(height 0.5s);
 
   .popup-content {

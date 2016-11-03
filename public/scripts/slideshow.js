@@ -1,7 +1,7 @@
 
 function Slideshow(element, hasFullscreen) {
 
-  if(hasFullscreen === undefined) {
+  if (hasFullscreen === undefined) {
     hasFullscreen = false;
   }
 
@@ -20,31 +20,39 @@ function Slideshow(element, hasFullscreen) {
   addClass(images[currentPage], 'active');
 
 
-  this.initializeControls = function(context) {
+  this.initializeControls = function (context) {
 
-    nextButton.addEventListener('click', function () { context.nextSlide(); });
-    prevButton.addEventListener('click', function() { context.prevSlide(); });
+    nextButton.addEventListener('click', function () {
+      context.nextSlide();
+    });
+    prevButton.addEventListener('click', function () {
+      context.prevSlide();
+    });
 
     // Fallback for browsers with poor support
-    if(!Modernizr.objectfit || getBrowser() == 'Firefox') {
+    if (!Modernizr.objectfit || getBrowser() == 'Firefox') {
       this.replaceSlideshowImages();
     }
 
-    if(hasFullscreen) {
+    if (hasFullscreen) {
       var fullscreenButton = element.getElementsByClassName('has-fullscreen')[0];
       this.bgModal = element.getElementsByClassName('modal-backdrop')[0];
       this.closeIcon = element.getElementsByClassName('close-icon')[0];
 
-      fullscreenButton.addEventListener('click', function () { context.toggleFullscreen(); });
-      this.closeIcon.addEventListener('click', function () { context.toggleFullscreen(); });
+      fullscreenButton.addEventListener('click', function () {
+        context.toggleFullscreen();
+      });
+      this.closeIcon.addEventListener('click', function () {
+        context.toggleFullscreen();
+      });
     }
   };
 
-  this.nextSlide = function() {
-    if(currentPage < imgCount-1) {
+  this.nextSlide = function () {
+    if (currentPage < imgCount - 1) {
       removeClass(images[currentPage], 'active');
       currentPage++;
-      translateElement(this.imageContainer, currentPage*-100 + '%');
+      translateElement(this.imageContainer, currentPage * -100 + '%');
       addClass(images[currentPage], 'active');
       if (echo !== undefined) {
         echo.render();
@@ -52,20 +60,20 @@ function Slideshow(element, hasFullscreen) {
     }
   };
 
-  this.prevSlide = function() {
-    if(currentPage > 0) {
+  this.prevSlide = function () {
+    if (currentPage > 0) {
       removeClass(images[currentPage], 'active');
       currentPage--;
-      translateElement(this.imageContainer, currentPage*-100 + '%');
+      translateElement(this.imageContainer, currentPage * -100 + '%');
       addClass(images[currentPage], 'active');
     }
   };
 
-  this.toggleFullscreen = function() {
+  this.toggleFullscreen = function () {
     var body = document.getElementById('body');
     var bodyContainer = document.getElementById('body-container');
 
-    if(this.bgModal !== undefined) {
+    if (this.bgModal !== undefined) {
       toggleClass(this.bgModal, 'open');
       toggleClass(bodyContainer, 'modal-open');
       toggleClass(body, 'scroll-lock');
@@ -73,15 +81,17 @@ function Slideshow(element, hasFullscreen) {
   };
 
   // Fallback for browser that don't support object-fit - replace images with divs with bg-img
-  this.replaceSlideshowImages = function() {
+  this.replaceSlideshowImages = function () {
     var images = this.imageContainer.getElementsByTagName('img');
     var len = images.length;
 
-    for(var i=0; i < len; i++) {
-      var src = images[0].getAttribute('src');
+    for (var i = 0; i < len; i++) {
+      // Check if image is lazy-loaded with echo
+      var src = (images[0].dataset.echo !== undefined) ? images[0].dataset.echo : images[0].getAttribute('src');
       var div = document.createElement('div');
+
       addClass(div, 'slide');
-      if(i==0) {
+      if (i == 0) {
         addClass(div, 'active');
       }
       div.style.backgroundImage = 'url(' + src + ')';
@@ -89,6 +99,7 @@ function Slideshow(element, hasFullscreen) {
 
       // This removes the element from the image array as well,
       // so using the index of 0 instead of i removes the first element
+
       this.imageContainer.removeChild(images[0]);
     }
   };
@@ -101,5 +112,4 @@ function Slideshow(element, hasFullscreen) {
     element.style['-o-transform'] = translate;
     element.style.transform = translate;
   }
-
 }
