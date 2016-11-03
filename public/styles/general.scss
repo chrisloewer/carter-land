@@ -410,10 +410,6 @@ hr.white {
       font-weight: 700;
     }
 
-    .slideshow-button {
-      border: 3px solid white;
-    }
-
     .label {
       display: none;
     }
@@ -658,6 +654,15 @@ hr.white {
   }
   .section.full-page {
     padding: 100px 0 60px 0;
+  }
+
+
+  .slideshow {
+    .modal-backdrop.open {
+      .slideshow-button {
+        border: 3px solid white;
+      }
+    }
   }
 }
 
