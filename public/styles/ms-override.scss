@@ -7,3 +7,34 @@
     }
   };
 }
+
+// Tablet and bigger
+// --------------------------------------------------------------------------------------------------------------
+@media (min-width: 720px) {
+  .header {
+    .menu-item.logo {
+      min-width: 270px;
+    }
+  }
+  .header.mini {
+    .menu-item.logo {
+      min-width: 155px;
+    }
+  }
+}
+
+
+// Laptops and bigger
+// --------------------------------------------------------------------------------------------------------------
+@media (min-width: 720px) {
+  .header {
+    .menu-item.logo {
+      min-width: 290px;
+    }
+  }
+  .header.mini {
+    .menu-item.logo {
+      min-width: 210px;
+    }
+  }
+}
