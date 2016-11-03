@@ -54,7 +54,7 @@ function Slideshow(element, hasFullscreen) {
       currentPage++;
       translateElement(this.imageContainer, currentPage * -100 + '%');
       addClass(images[currentPage], 'active');
-      if (echo !== undefined) {
+      if ('echo' in window && echo !== undefined) {
         echo.render();
       }
     }
