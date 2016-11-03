@@ -5,11 +5,18 @@ function Slideshow(element, hasFullscreen) {
     hasFullscreen = false;
   }
 
+  var slideshowBody = element.getElementsByClassName('slideshow-body')[0];
   var images = element.getElementsByClassName('slide');
   var imgCount = images.length;
   var prevButton = element.getElementsByClassName('prev')[0];
   var nextButton = element.getElementsByClassName('next')[0];
   var currentPage = 0;
+  var touches = {
+    "touchstart": {"x":-1, "y":-1},
+    "touchmove" : {"x":-1, "y":-1},
+    "touchend"  : false,
+    "direction" : "undetermined"
+  };
 
   // Persistent variables
   this.imageContainer = element.getElementsByClassName('image-container')[0];
@@ -28,6 +35,16 @@ function Slideshow(element, hasFullscreen) {
     prevButton.addEventListener('click', function () {
       context.prevSlide();
     });
+
+    slideshowBody.addEventListener('touchstart', function (e) {
+      touchHandler(e, context);
+    }, {passive: true});
+    slideshowBody.addEventListener('touchmove', function (e) {
+      touchHandler(e, context);
+    }, {passive: true});
+    slideshowBody.addEventListener('touchend', function (e) {
+      touchHandler(e, context);
+    }, {passive: true});
 
     // Fallback for browsers with poor support
     if (!Modernizr.objectfit || getBrowser() == 'Firefox') {
@@ -112,4 +129,48 @@ function Slideshow(element, hasFullscreen) {
     element.style['-o-transform'] = translate;
     element.style.transform = translate;
   }
+
+  function touchHandler(e, context) {
+    var touch;
+    var minTouchDistance = 50;
+    if (typeof e !== 'undefined'){
+      // e.preventDefault();
+      if (typeof e.touches !== 'undefined') {
+        touch = e.touches[0];
+        switch (e.type) {
+          case 'touchstart':
+          case 'touchmove':
+            touches[e.type].x = touch.pageX;
+            touches[e.type].y = touch.pageY;
+            break;
+          case 'touchend':
+            touches[e.type] = true;
+            if (touches.touchstart.y > -1 && touches.touchmove.y > -1) {
+              touches.direction = touches.touchstart.x < touches.touchmove.x ? "right" : "left";
+              var swipeDistX = Math.abs(touches.touchstart.x - touches.touchmove.x);
+              var swipeDistY = Math.abs(touches.touchstart.y - touches.touchmove.y);
+
+              if(touches.direction == 'left' && swipeDistX > minTouchDistance && swipeDistX > swipeDistY) {
+                context.nextSlide();
+              }
+              else if(touches.direction == 'right' && swipeDistX > minTouchDistance && swipeDistX > swipeDistY) {
+                context.prevSlide();
+              }
+            }
+
+            // Reset
+            touches = {
+              "touchstart": {"x":-1, "y":-1},
+              "touchmove" : {"x":-1, "y":-1},
+              "touchend"  : false,
+              "direction" : "undetermined"
+            };
+            break;
+          default:
+            break;
+        }
+      }
+    }
+  }
+
 }
