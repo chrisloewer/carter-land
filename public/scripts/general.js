@@ -42,9 +42,11 @@ function headerController() {
 // -------------------------------------------------------------------------------------------------------
 // Hamburger Menu
 function toggleMenuPopup() {
+  var body = document.getElementById('body');
   var menu = document.getElementById('menu-popup');
   var icon = document.getElementById('hamburger-icon-body');
-  if (menu !== undefined && icon !== undefined) {
+  if (body !== undefined && menu !== undefined && icon !== undefined) {
+    toggleClass(body, 'scroll-lock');
     toggleClass(menu, 'open');
     toggleClass(icon, 'open');
   }

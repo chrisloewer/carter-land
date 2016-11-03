@@ -59,11 +59,13 @@ function Slideshow(element, hasFullscreen) {
   };
 
   this.toggleFullscreen = function() {
+    var body = document.getElementById('body');
     var bodyContainer = document.getElementById('body-container');
 
     if(this.bgModal !== undefined) {
       toggleClass(this.bgModal, 'open');
       toggleClass(bodyContainer, 'modal-open');
+      toggleClass(body, 'scroll-lock');
     }
   };
 

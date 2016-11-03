@@ -12,6 +12,9 @@ body {
   font-family: 'Raleway', sans-serif;
   -webkit-tap-highlight-color: transparent;
 }
+body.scroll-lock {
+  overflow: hidden;
+}
 
 h1 {
   font-family: 'Playfair Display SC', serif;
