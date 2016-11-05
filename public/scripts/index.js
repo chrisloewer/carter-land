@@ -7,11 +7,16 @@ window.addEventListener('load', function () {
   var bodyContainer = document.getElementById('body-container');
   mainSplash = document.getElementById('main-splash');
   var aboutUsContainer = document.getElementById('about-us');
+  var splashBgImage = document.getElementById('bg-image');
 
   // Shift background image focus on mouse move
-  document.addEventListener('mousemove', adjustBg, false);
   window.addEventListener('resize', adjustBg, false);
-  // TODO disable this effect if on a phone
+  document.addEventListener('mousemove', adjustBg, false);
+  splashBgImage.addEventListener('touchend', function (e) {
+    if(e instanceof TouchEvent && e.cancelable) {
+      e.preventDefault();
+    }
+  }, false);
 
   // Add parallax on bg image
   var bgImg = document.getElementById('bg-image');
