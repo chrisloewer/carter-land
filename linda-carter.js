@@ -1,9 +1,21 @@
 
 var express = require('express');
 var hbs = require('express-hbs');
+var nodeMailer = require('nodemailer');
+var env = require('node-env-file');
 var echo = require('echo-js');
 var app = express();
 var MAPS_API_KEY = 'AIzaSyBIZqpNLWVMV6-8Twh64BLvvUAOyMITkR8';
+env(__dirname + '/.env');
+
+var smtpTransport = nodeMailer.createTransport({
+  service: 'gmail',
+  secure: false, // use SSL
+  auth: {
+    user: process.env.EMAILUSER,
+    pass: process.env.EMAILPW
+  }
+});
 
 app.engine('hbs', hbs.express4( {
   defaultLayout: __dirname + '/views/layouts/default.hbs'
@@ -14,6 +26,30 @@ app.set('views', __dirname + '/views');
 
 app.use(express.static('public'));
 
+
+// MAILER
+//------------------------------------------------------------
+app.get('/send',function(req,res){
+  var mailOptions={
+    to : 'chris.loewer@gmail.com',
+    subject : 'Test BLAST',
+    html : '<b>Dank</b> Test Message'
+  };
+  console.log(mailOptions);
+  smtpTransport.sendMail(mailOptions, function(error, response){
+    if(error){
+      console.log(error);
+      res.end("error");
+    }else{
+      console.log("Message sent: " + response.message);
+      res.end("sent");
+    }
+  });
+});
+
+
+// ROUTING
+//------------------------------------------------------------
 app.get('/', function (req, res) {
   res.render('home');
 });
@@ -73,6 +109,9 @@ app.get('/land', function (req, res) {
   res.render('land', data);
 });
 
+
+// START APP
+//------------------------------------------------------------
 app.listen(3000, function () {
   console.log('App listening on port 3000!');
 });
