@@ -63,14 +63,22 @@
 
           <div class="view-description">
             <div class="extra-data" id="prop-description-{{id}}">
-              <span class="subtitle">Improvements: </span>
-                <p>{{{improvements}}}</p>
-              <span class="subtitle">Wildlife: </span>
-                <p>{{wildlife}}</p>
-              <span class="subtitle">Water: </span>
-                <p>{{water}}</p>
-              <span class="subtitle">Directions: </span>
-                <p>{{{directions}}}</p>
+              {{#if improvements}}
+                <span class="subtitle">Improvements: </span>
+                  <p>{{{improvements}}}</p>
+              {{/if}}
+              {{#if wildlife}}
+                <span class="subtitle">Wildlife: </span>
+                  <p>{{wildlife}}</p>
+              {{/if}}
+              {{#if water}}
+                <span class="subtitle">Water: </span>
+                  <p>{{water}}</p>
+              {{/if}}
+              {{#if directions}}
+                <span class="subtitle">Directions: </span>
+                  <p>{{{directions}}}</p>
+              {{/if}}
             </div>
             <div class="label fake-link">
               <span class="subtitle fake-link" data-active="false" onclick="toggleDescription('prop-description-{{id}}', this)">View More Information</span>
