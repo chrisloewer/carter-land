@@ -506,6 +506,10 @@ hr.white {
   overflow: hidden;
   font-size: 14px;
 
+  a {
+    text-decoration: none;
+  }
+
   .footer-spacer {
     height: $footer-height;
   }
