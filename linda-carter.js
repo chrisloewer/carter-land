@@ -31,11 +31,10 @@ app.use(express.static('public'));
 //------------------------------------------------------------
 app.get('/send',function(req,res){
   var mailOptions={
-    to : 'chris.loewer@gmail.com',
+    to : process.env.EMAILRECIPIENT,
     subject : 'Test BLAST',
     html : '<b>Dank</b> Test Message'
   };
-  console.log(mailOptions);
   smtpTransport.sendMail(mailOptions, function(error, response){
     if(error){
       console.log(error);
