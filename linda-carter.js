@@ -4,7 +4,10 @@ var hbs = require('express-hbs');
 var nodeMailer = require('nodemailer');
 var env = require('node-env-file');
 var echo = require('echo-js');
+var fs = require('fs');
+
 var app = express();
+
 var MAPS_API_KEY = 'AIzaSyBIZqpNLWVMV6-8Twh64BLvvUAOyMITkR8';
 env(__dirname + '/.env');
 
@@ -62,11 +65,7 @@ app.get('/land', function (req, res) {
     properties: [
       {
         id: 1,
-        images: [
-            'resources/images/properties/270.jpg',
-            'resources/images/properties/272.jpg',
-            'resources/images/properties/279.jpg'
-        ],
+        images: getFilePaths('/resources/images/properties'),
         name: 'Deadwood Ranch',
         section: 'East Texas',
         type: 'Acreage with home',
@@ -116,3 +115,12 @@ app.listen(3000, function () {
 });
 
 
+// HELPER METHODS
+//------------------------------------------------------------
+function getFilePaths(folderPath) {
+  var files = fs.readdirSync('./public' + folderPath);
+  for(var i=0; i<files.length; i++) {
+    files[i] = folderPath + '/' + files[i];
+  }
+  return files;
+}
