@@ -173,6 +173,22 @@ app.get('/land', function (req, res) {
         directions: 'Titus County',
         mapsQuery: 'Titus+county,+TX',
         mapsKey: MAPS_API_KEY
+      },
+      {
+        id: 8,
+        images: getFilePaths('/resources/images/properties/fisher3684'),
+        name: 'Catfish Ranch',
+        section: 'West Texas',
+        type: 'Hunting and Ranch land',
+        county: 'Fisher  County',
+        acreage: '3,684',
+        price: '$1,000 per acre',
+        description: '****Price Reduced**** Owner Financing Available**** Catfish Ranch was established in the 1800s. This legendary family owned ranch is just North of Sweetwater, Texas. There are quail, turkey , dove and deer; this ranch has never been leased for hunting. There are interior roads with community water lines throughout the ranch. This provides an opportunity to install quail feeders with ease. The grasses are plush which provides abundant forage for the wildlife. China Creek runs directly through this ranch with occasional springs along with several ponds. There are large mesquite and post oak trees that provides cover for the wildlife. The fences, corrals, and grasses are excellent for a cattle operation.',
+        improvements: 'Fences, corrals, two old farm homes.',
+        wildlife: 'Quail, turkey, dove and deer.',
+        water: 'China Creek, several ponds, community water lines.',
+        mapsQuery: 'Fisher+county,+TX',
+        mapsKey: MAPS_API_KEY
       }
     ]
   };
