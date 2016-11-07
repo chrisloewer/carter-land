@@ -4,6 +4,7 @@
 
   <script type="application/javascript" src="scripts/index.js"></script>
   <script type="application/javascript" src="scripts/slideshow.js"></script>
+  <script type="application/javascript" src="scripts/echo.min.js"></script>
 {{/contentFor}}
 
 
@@ -29,15 +30,23 @@
     <p class="center">
       Welcome to Linda's Land: your official web site for everything you ever wanted in a Farm, Ranch, or piece of hunting land in East and West Texas. We work in counties from Harrison to Howard county.
     </p>
-    <h3 class="lg-margin">Featured Property</h3>
+    <h3 class="lg-margin-top">Featured Property</h3>
+
+    <p class="center">
+      A gorgeous 3,606 acre timber investment in Bowie County.  View <a href="land">properties</a> for more information.
+    </p>
 
     <div class="slideshow" id="featured-slideshow">
       <div class="modal-backdrop">
         <div class="slideshow-body">
           <div class="image-container">
-            <img class="slide" src="resources/images/gate.jpg">
-            <img class="slide" src="resources/images/cattle.jpg">
-            <img class="slide" src="resources/images/road.jpg">
+            {{#each images}}
+              {{#if @first}}
+                <img class="slide active" src="resources/images/blank.gif" data-echo="{{this}}">
+              {{else}}
+                <img class="slide" src="resources/images/blank.gif" data-echo="{{this}}">
+              {{/if}}
+            {{/each}}
           </div>
 
           <div class="slideshow-button prev">< <</div>

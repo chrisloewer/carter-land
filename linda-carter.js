@@ -53,7 +53,10 @@ app.get('/send',function(req,res){
 // ROUTING
 //------------------------------------------------------------
 app.get('/', function (req, res) {
-  res.render('home');
+  var data  = {
+    images: getFilePaths('/resources/images/properties/bowie3606'),
+  };
+  res.render('home', data);
 });
 
 app.get('/about', function (req, res) {

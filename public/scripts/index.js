@@ -32,10 +32,13 @@ window.addEventListener('load', function () {
   slideshow = new Slideshow(ssElem);
   slideshow.initializeControls(slideshow);
 
-  // Update slideshow to use background-image if object-fit not supported
-  if(!Modernizr.objectfit || getBrowser() == 'Firefox') {
-    replaceSlideshowImages('featured-slideshow');
-  }
+  // Lazy-load images
+  echo.init({
+    offset: 100,
+    throttle: 250,
+    unload: false
+  });
+
 });
 
 
