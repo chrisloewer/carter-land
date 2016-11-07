@@ -10,6 +10,7 @@ function Slideshow(element, hasFullscreen) {
   var imgCount = images.length;
   var prevButton = element.getElementsByClassName('prev')[0];
   var nextButton = element.getElementsByClassName('next')[0];
+  var slideCounter = element.getElementsByClassName('slide-counter')[0];
   var currentPage = 0;
   var touches = {
     "touchstart": {"x":-1, "y":-1},
@@ -28,6 +29,8 @@ function Slideshow(element, hasFullscreen) {
 
 
   this.initializeControls = function (context) {
+
+    slideCounter.innerHTML = (currentPage+1) + '/' + imgCount;
 
     nextButton.addEventListener('click', function () {
       context.nextSlide();
@@ -71,6 +74,7 @@ function Slideshow(element, hasFullscreen) {
       currentPage++;
       translateElement(this.imageContainer, currentPage * -100 + '%');
       addClass(images[currentPage], 'active');
+      slideCounter.innerHTML = (currentPage+1) + '/' + imgCount;
       if ('echo' in window && echo !== undefined) {
         echo.render();
       }
@@ -83,6 +87,7 @@ function Slideshow(element, hasFullscreen) {
       currentPage--;
       translateElement(this.imageContainer, currentPage * -100 + '%');
       addClass(images[currentPage], 'active');
+      slideCounter.innerHTML = (currentPage+1) + '/' + imgCount;
     }
   };
 

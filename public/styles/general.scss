@@ -414,6 +414,11 @@ hr.white {
     .label {
       display: none;
     }
+
+    .slide-counter {
+      font-size: 20px;
+      border: 2px solid white;
+    }
   }
 
   .slideshow-body {
@@ -456,6 +461,16 @@ hr.white {
     font-size: 14px;
     padding: 10px;
     cursor: pointer;
+  }
+
+  .slide-counter {
+    background-color: $dark-gray;
+    color: white;
+    position: absolute;
+    top: 0;
+    width: 50px;
+    font-size: 14px;
+    padding: 10px;
   }
 
   .slideshow-button {
