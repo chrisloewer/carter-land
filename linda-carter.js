@@ -151,9 +151,9 @@ app.get('/land', function (req, res) {
       {
         id: 6,
         images: getFilePaths('/resources/images/properties/marion95'),
-        name: 'Marion Homesite',
+        name: 'Marion Home site / Hunting Land',
         section: 'East Texas',
-        type: 'Homesite / Recreational',
+        type: 'Home site / Recreational',
         county: 'Marion  County',
         acreage: '95',
         price: '$3,500 per acre',
@@ -161,20 +161,6 @@ app.get('/land', function (req, res) {
         wildlife: 'Deer, hogs and turkey!',
         directions: 'Hwy 59 N to 49 E from Marshall, continue on 49 E for 7.4 miles until you reach a green and white sign that says Sand Country Road on the right hand side of the road, turn left on Sand Country Road/ FM 1195, go about 2 miles and the property will start on the left and right hand sides of the road.',
         mapsQuery: 'Marion,+TX',
-        mapsKey: MAPS_API_KEY
-      },
-      {
-        id: 7,
-        images: getFilePaths('/resources/images/properties/titus11'),
-        name: 'Red Roof Home',
-        section: 'East Texas',
-        type: 'Acreage with Home',
-        county: 'Titus  County',
-        acreage: '11',
-        price: '$250,000 total',
-        description: 'Seven year old home in Titus County. Red Metal Roof on dark brown wood siding. Open Living room, kitchen, and dining area with ceiling fans on pine wood high ceilings. Pine wood kitchen cabinets with beige granite counter tops and tile back splash. Electric cook top range with oven and microwave and hood, and new refrigerator! Wood floors in living and dinning area and kitchen. Beautiful large windows in living area next to magnificent brick fireplace. Three bedrooms and two bathrooms. Considerable master bedroom with high ceiling with ceiling fan, stupendous windows and carpet floor. Great master bathroom with tile floors, jacuzzi bath tub and shower. Hall bathroom with shower and tile floor. The other two bedrooms are fair sized with carpet floors, one has access to outside deck patio. Three deck patios, two partially covered in front and one covered in the back.',
-        directions: 'Titus County',
-        mapsQuery: 'Titus+county,+TX',
         mapsKey: MAPS_API_KEY
       },
       {
