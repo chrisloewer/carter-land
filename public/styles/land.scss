@@ -6,8 +6,12 @@ h3 {
   text-align: center;
 }
 
-hr {
+hr.med-margin {
   height: 2px;
+  margin: 50px auto;
+}
+hr.lg-margin {
+  margin: 80px auto;
 }
 
 .section.full-page {
