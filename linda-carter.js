@@ -54,7 +54,7 @@ app.get('/send',function(req,res){
 //------------------------------------------------------------
 app.get('/', function (req, res) {
   var data  = {
-    images: getFilePaths('/resources/images/properties/bowie3606'),
+    images: getFilePaths('/resources/images/properties/bowie3606')
   };
   res.render('home', data);
 });
