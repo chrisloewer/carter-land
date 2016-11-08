@@ -5,6 +5,7 @@ var nodeMailer = require('nodemailer');
 var env = require('node-env-file');
 var echo = require('echo-js');
 var fs = require('fs');
+var bodyParser = require('body-parser');
 
 var app = express();
 
@@ -28,27 +29,34 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 // MAILER
 //------------------------------------------------------------
-app.get('/send',function(req,res){
-  var mailOptions={
-    to : process.env.EMAILRECIPIENT,
-    subject : 'Test BLAST',
-    html : '<b>Dank</b> Test Message'
-  };
-  smtpTransport.sendMail(mailOptions, function(error, response){
-    if(error){
-      console.log(error);
-      res.end("error");
-    }else{
-      console.log("Message sent: " + response.message);
-      res.end("sent");
-    }
-  });
+app.post('/send', function (req, res) {
+  try {
+    var mailOptions = {
+      to: process.env.EMAILRECIPIENT,
+      subject: req.body.subject,
+      html: '<h4>Return Email: </h4>' + req.body.email
+      + '<h4>Body</h4>' +
+      '<p>' + req.body.body + '</p>'
+    };
+    smtpTransport.sendMail(mailOptions, function (error, response) {
+      if (error) {
+        console.log(error);
+        res.render('email-error');
+      } else {
+        res.render('email-success');
+      }
+    });
+  }
+  catch(e) {
+    console.log(e);
+    res.render('email-error');
+  }
 });
-
 
 // ROUTING
 //------------------------------------------------------------

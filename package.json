@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/chrisloewer/carter-land#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "echo-js": "^1.7.3",
     "express": "^4.14.0",
     "express-hbs": "^1.0.3",

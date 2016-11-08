@@ -52,6 +52,17 @@ h3.lg-margin-top {
     margin-top: 0;
   }
 
+  .error-msg {
+    display: none;
+  }
+
+  .error-msg.visible {
+    display: block;
+    font-size: 14px;
+    color: red;
+    text-align: center;
+  }
+
   input, select, textarea {
     padding: 15px;
     color: inherit;

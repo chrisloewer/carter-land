@@ -55,3 +55,28 @@ function splashController() {
     removeClass(mainSplash, 'background');
   }
 }
+
+// -------------------------------------------------------------------------------------------------------
+// Validate Form
+function validateForm() {
+  var form = document.forms['contact-form'];
+  var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  var emailAddress = form['email'].value;
+  var emailBody = form['body'].value;
+  var emailError = document.getElementById('email-error');
+  var bodyError = document.getElementById('body-error');
+
+  removeClass(emailError, 'visible');
+  removeClass(bodyError, 'visible');
+
+  if(!regex.test(emailAddress)) {
+    addClass(emailError, 'visible');
+    return false;
+  }
+  if(emailBody == null || emailBody == '') {
+    addClass(bodyError, 'visible');
+    return false;
+  }
+
+  return true;
+}

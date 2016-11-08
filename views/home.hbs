@@ -76,16 +76,18 @@
 </div>
 
 
-<!-- OTHER SECTION -->
+<!-- CONTACT US -->
 <div class="section vc-container bottom">
   <div class="vc-content">
     <h2>Drop Us a Line</h2>
     <p class="center">
       Whether you are looking to buy or sell, we would love to hear from you.
     </p>
-    <div class="contact-form">
+    <form name="contact-form" class="contact-form" onsubmit="return validateForm()" action="send" method="post">
       <h4>Email</h4>
       <input type="text" name="email" placeholder="Your Email Address Here">
+      <div class="error-msg" id="email-error">Please enter valid email</div>
+
       <h4>Subject</h4>
       <select name="subject" title="title">
         <option>Looking to BUY</option>
@@ -93,9 +95,12 @@
         <option>Request more information</option>
         <option>Other</option>
       </select>
+
       <h4>Body</h4>
       <textarea name="body" placeholder="Your Message Here"></textarea>
+      <div class="error-msg" id="body-error">Body cannot be blank</div>
+
       <input type="submit" value="Send" class="button">
-    </div>
+    </form>
   </div>
 </div>
