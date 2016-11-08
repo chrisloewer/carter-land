@@ -193,6 +193,11 @@ app.get('/land', function (req, res) {
   res.render('land', data);
 });
 
+// Generic Error page 404
+app.get('*', function(req, res){
+  res.render('404');
+});
+
 
 // START APP
 //------------------------------------------------------------
