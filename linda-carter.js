@@ -159,7 +159,7 @@ app.get('/land', function (req, res) {
       {
         id: 6,
         images: getFilePaths('/resources/images/properties/marion95'),
-        name: 'Marion Home site / Hunting Land',
+        name: 'Marion County Home Site',
         section: 'East Texas',
         type: 'Home site / Recreational',
         county: 'Marion  County',
