@@ -87,8 +87,9 @@ app.get('/land', function (req, res) {
         wildlife: 'Deer, hog, and ducks',
         water: 'Red River',
         directions: 'Access for Applewhite and Uncut Block is via the West from FM 2103. Access for Rifle Range tracts East and West is via the South from FM 2100. All boundaries are approximate and acres are rounded to the nearest whole acre!',
-        mapsQuery: 'Bowie+County,+TX',
-        mapsKey: MAPS_API_KEY
+        mapsQuery: '33.474435,+-94.375729',
+        mapsKey: MAPS_API_KEY,
+        zoom: 12
       },
       {
         id: 2,
@@ -105,7 +106,8 @@ app.get('/land', function (req, res) {
         water: 'Mill Creek, 4 ponds, community water, and a well.',
         directions: 'the Ranch is 17 miles from Carthage and exactly 1 hour from Shreveport. email-lindasland@gmail.com or call 903-236-0636',
         mapsQuery: 'Panola+County,+TX',
-        mapsKey: MAPS_API_KEY
+        mapsKey: MAPS_API_KEY,
+        zoom: 10
       },
       {
         id: 3,
@@ -120,8 +122,9 @@ app.get('/land', function (req, res) {
         improvements: 'Pine',
         wildlife: 'Deer, hogs',
         water: '10 Ponds',
-        mapsQuery: 'Red+River+County,+TX',
-        mapsKey: MAPS_API_KEY
+        mapsQuery: '33.602984,+-94.846660',
+        mapsKey: MAPS_API_KEY,
+        zoom: 12
       },
       {
         id: 4,
@@ -137,8 +140,9 @@ app.get('/land', function (req, res) {
         wildlife: 'Doves, duck, geese, turkey, deer and hogs.',
         water: '30 acre 18 feet deep lake, 20 ponds and community water.',
         directions: 'West of DeKalb on 82.',
-        mapsQuery: 'Bowie+County,+TX',
-        mapsKey: MAPS_API_KEY
+        mapsQuery: '33.534359,+-94.695002',
+        mapsKey: MAPS_API_KEY,
+        zoom: 10
       },
       {
         id: 5,
@@ -153,8 +157,9 @@ app.get('/land', function (req, res) {
         wildlife: 'Deer and hog are prevalent on the property.',
         water: 'Sabine River',
         directions: 'Fronts on HWY 149 and the Sabine River.',
-        mapsQuery: 'Lakeport,+TX',
-        mapsKey: MAPS_API_KEY
+        mapsQuery: '32.417063,+-94.710421',
+        mapsKey: MAPS_API_KEY,
+        zoom: 14
       },
       {
         id: 6,
@@ -168,8 +173,9 @@ app.get('/land', function (req, res) {
         description: 'This 95 acre piece of land is mostly wooded and a perfect place to build a home, ride ATVs and hunt for deer, hog and turkey. It is split by a paved road, 17 acres on one side and 78 acres on the other. There is a wet weather creek on the 17 acres and a spring fed creek on the 78 acres. Just between Caddo Lake and the historic town of Jefferson Texas. Very close to Big Cypress Creek and Black Cypress Creek.',
         wildlife: 'Deer, hogs and turkey!',
         directions: 'Hwy 59 N to 49 E from Marshall, continue on 49 E for 7.4 miles until you reach a green and white sign that says Sand Country Road on the right hand side of the road, turn left on Sand Country Road/ FM 1195, go about 2 miles and the property will start on the left and right hand sides of the road.',
-        mapsQuery: 'Marion,+TX',
-        mapsKey: MAPS_API_KEY
+        mapsQuery: '32.793661,+-94.251870',
+        mapsKey: MAPS_API_KEY,
+        zoom: 12
       },
       {
         id: 8,
@@ -184,8 +190,9 @@ app.get('/land', function (req, res) {
         improvements: 'Fences, corrals, two old farm homes.',
         wildlife: 'Quail, turkey, dove and deer.',
         water: 'China Creek, several ponds, community water lines.',
-        mapsQuery: 'Fisher+county,+TX',
-        mapsKey: MAPS_API_KEY
+        mapsQuery: '32.608798,+-100.315613',
+        mapsKey: MAPS_API_KEY,
+        zoom: 10
       }
     ]
   };
