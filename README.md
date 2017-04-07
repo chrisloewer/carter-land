@@ -11,4 +11,4 @@ node linda-carter.js
 
 Alternatively:
 
-Use pw2 to manage the app more conveniently
+Use pm2 to manage the app more conveniently
