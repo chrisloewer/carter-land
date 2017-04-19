@@ -1,0 +1,27 @@
+name: Carter Land
+version: 0.1.0
+description: Converting custom static website from existing carterland design
+icon: rebel
+author:
+  name: Chris Loewer
+  email: chris.loewer@gmail.com
+homepage: https://github.com/chris-loewer/grav-theme-carter-land
+demo: http://demo.yoursite.com
+keywords: grav, theme, etc
+bugs: https://github.com/chris-loewer/grav-theme-carter-land/issues
+readme: https://github.com/chris-loewer/grav-theme-carter-land/blob/develop/README.md
+license: MIT
+
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in Menu
+        highlight: 1
+        default: 1
+        options:
+          1: PLUGIN_ADMIN.ENABLED
+          0: PLUGIN_ADMIN.DISABLED
+        validate:
+          type: bool
