@@ -1,0 +1,11 @@
+email: chris.loewer@gmail.com
+fullname: 'Chris Loewer'
+title: Admin
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$Lkel6L/itIrSrGPj6iV6SunWKBV0ByZQzqt3Wil2ON4pHiFoMM6qK
