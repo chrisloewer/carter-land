@@ -4,62 +4,89 @@
 <head>
 {% block head %}
     <meta charset="utf-8" />
-    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+    <title>{% if header.title %} {{ header.title|e('html') }} | {%endif %} {{ site.title|e('html') }} </title>
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% include 'partials/metadata.html.twig' %}
-
-    <link rel="icon" type="image/png" href="{{ url('theme://images/logo.png') }}" />
-    <link rel="canonical" href="{{ page.url(true, true) }}" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     {% block stylesheets %}
-        {% do assets.addCss('http://yui.yahooapis.com/pure/0.6.0/pure-min.css', 100) %}
-        {% do assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', 99) %}
         {% do assets.addCss('theme://css/custom.css', 98) %}
     {% endblock %}
     {{ assets.css() }}
 
     {% block javascripts %}
-        {% do assets.addJs('jquery', 100) %}
     {% endblock %}
     {{ assets.js() }}
 
 {% endblock head%}
 </head>
-<body id="top" class="{{ page.header.body_classes }}">
+<body id="body" class="{{ page.header.body_classes }}">
 
-{% block header %}
-    <div class="header">
-        <div class="wrapper padding">
-            <a class="logo left" href="{{ base_url == '' ? '/' : base_url }}">
-                <i class="fa fa-rebel"></i>
-                {{ config.site.title }}
-            </a>
-            {% block header_navigation %}
-            <nav class="main-nav">
-                {% include 'partials/navigation.html.twig' %}
-            </nav>
-            {% endblock %}
+<!-- MENU POPUP -->
+<div class="popup" id="menu-popup">
+
+    <div class="popup-content">
+        TEAL LOGO
+        <div class="menu-item"><a href="/">HOME</a></div>
+        <div class="menu-item"><a href="/about">ABOUT US</a></div>
+        <div class="menu-item"><a href="/land">LAND</a></div>
+        <div class="menu-item">
+            TEXAS ICON
         </div>
     </div>
-{% endblock %}
+</div>
 
-{% block body %}
-    <section id="body">
-        <div class="wrapper padding">
+<div class="body-container" id="body-container">
+
+    <!-- HEADER -->
+    <div class="header" id="header-nav">
+        <div class="hamburger-icon" id="hamburger-icon-body">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="menu-item awkward-icon" id="header-icon">
+            HIcon
+        </div>
+        <div class="menu-item"><a href="/about">ABOUT</a></div>
+
+        LOGO-WHITE
+        <div class="menu-item"><a href="/land">LAND</a></div>
+    </div>
+
+
+    <!-- STUFF GOES HERE -->
+    {% block body %}
         {% block content %}{% endblock %}
-        </div>
-    </section>
-{% endblock %}
+    {% endblock %}
 
-{% block footer %}
-    <div class="footer text-center">
-        <div class="wrapper padding">
-            <p><a href="http://getgrav.org">Grav</a> was <i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by <a href="http://www.rockettheme.com">RocketTheme</a>.</p>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="footer-spacer"></div>
+
+        <div class="footer-body">
+            TEAL LOGO
+
+            <br>
+            TEXAS SVG
+            <hr>
+            <div class="menu-item">Email: <span class="teal"><a href="mailto:lindasland@gmail.com">lindasland@gmail.com</a></span></div>
+            <div class="menu-item">Phone: <span class="teal">(903) 236 0636</span></div>
+            <div class="menu-item">Fax: <span class="teal">(903) 234 0222</span></div>
+            <hr>
+            <a href="https://www.facebook.com/lindastexasland/" target="_blank"><div class="social-icon" id="fb"></div></a>
+
+        </div>
+        <div class="footer-banner">
+            <div class="content">&copy; Chris Loewer 2016</div>
         </div>
     </div>
-{% endblock %}
+
+
+</div>
 
 {% block bottom %}
     {{ assets.js('bottom') }}
