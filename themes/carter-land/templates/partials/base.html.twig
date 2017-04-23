@@ -15,7 +15,10 @@
     {% endblock %}
     {{ assets.css() }}
 
-    {% block javascripts %}
+    {% block javascriptHead %}
+        {% do assets.addJs('theme://js/general.js') %}
+        {% do assets.addJs('theme://js/helpers.js') %}
+        {% do assets.addJs('theme://js/modernizr-custom.js') %}
     {% endblock %}
     {{ assets.js() }}
 
@@ -23,7 +26,6 @@
 </head>
 <body id="body" class="{{ page.header.body_classes }}">
 
-<!-- MENU POPUP -->
 <div class="popup" id="menu-popup">
 
     <div class="popup-content">
@@ -57,7 +59,7 @@
     </div>
 
 
-    <!-- STUFF GOES HERE -->
+    <!-- BODY CONTENT -->
     {% block body %}
         {% block content %}{% endblock %}
     {% endblock %}
@@ -88,9 +90,10 @@
 
 </div>
 
-{% block bottom %}
-    {{ assets.js('bottom') }}
+{% block javascriptTail %}
+
 {% endblock %}
+{{ assets.js() }}
 
 </body>
 </html>

@@ -5,6 +5,9 @@ content:
     order:
         by: default
         dir: asc
+        custom:
+            - _splash
+            - _intro
 ---
 
 # Grav is Running!

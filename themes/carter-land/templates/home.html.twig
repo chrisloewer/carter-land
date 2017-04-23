@@ -1,0 +1,20 @@
+{% extends "partials/base.html.twig" %}
+
+{% set collection = page.collection() %}
+
+{% block stylesheets %}
+    {% do assets.addCss('theme://css/custom.css', 98) %}
+    {% do assets.addCss('theme://css/home.css', 98) %}
+{% endblock %}
+
+{% block content %}
+    {% for page in collection %}
+        {{ page.content }}
+    {% endfor %}
+{% endblock %}
+
+{% block javascriptTail %}
+    {% do assets.addJs('theme://js/home.js') %}
+    {% do assets.addJs('theme://js/slideshow.js') %}
+    {% do assets.addJs('theme://js/scho.min.js') %}
+{% endblock %}
