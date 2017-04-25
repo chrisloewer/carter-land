@@ -1,11 +1,11 @@
 ---
 title: 'About Us'
-containerId: 'about-us'
-imageId: 'about-us-img'
+containerId: about-us
+imageId: about-us-img
 ---
 
-# About Us
+## A Family Company
 
-Basically we do stuff
+Linda Carter Brokerage is a family owned and operated company that has always specialized in land. We have been in business since Linda was pregnant with Melanie 40 years ago. Melanie has been her assistant and they have been working together as a mother-daughter team for the past 19 years. We are a team of self-starters and take pride in the business that we have created.
 
-Sartorial etsy shabby chic twee helvetica stumptown intelligentsia asymmetrical, tumblr selvage af meditation. Farm-to-table synth hexagon brooklyn church-key. Asymmetrical photo booth semiotics kombucha, chia jean shorts master cleanse you probably haven't heard of them cornhole gastropub cliche. Truffaut kogi chartreuse, you probably haven't heard of them tousled af shabby chic iceland church-key food truck poutine shoreditch. Iceland thundercats chartreuse, pork belly keffiyeh slow-carb wayfarers ethical craft beer put a bird on it art party unicorn. Vaporware unicorn prism, pickled pork belly scenester vice forage. Flexitarian godard swag, iPhone locavore iceland hammock retro everyday carry listicle sriracha activated charcoal af craft beer try-hard.
+We believe that business is personal, and that is why we still handwrite all of our letters. We seal our envelopes and drop them in the mail ourselves. We guarantee a personal touch.
