@@ -355,6 +355,9 @@ hr.white {
   width: 100%;
   margin-bottom: 30px; }
 
+.slideshow-image-placeholder {
+  height: 300px; }
+
 .footer {
   background-color: #414042;
   position: relative;
