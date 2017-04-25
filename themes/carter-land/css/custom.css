@@ -351,9 +351,11 @@ hr.white {
   z-index: 5;
   background-color: #F9F9F9;
   display: inline-block;
-  height: 300px;
   width: 100%;
   margin-bottom: 30px; }
+  .grav-lightslider li img {
+    height: 300px;
+    object-fit: cover; }
 
 .slideshow-image-placeholder {
   height: 300px; }
@@ -491,7 +493,11 @@ hr.white {
     padding: 60px 0; }
 
   .section.full-page {
-    padding: 100px 0 60px 0; } }
+    padding: 100px 0 60px 0; }
+
+  .grav-lightslider li img {
+    height: 400px;
+    object-fit: cover; } }
 @media (min-width: 1000px) {
   h1 {
     font-size: 64px; }
@@ -515,7 +521,11 @@ hr.white {
     padding: 80px 0; }
 
   .section.full-page {
-    padding: 120px 0 80px 0; } }
+    padding: 120px 0 80px 0; }
+
+  .grav-lightslider li img {
+    height: 500px;
+    object-fit: cover; } }
 @media (max-height: 500px) {
   .footer .footer-spacer {
     height: 330px; }

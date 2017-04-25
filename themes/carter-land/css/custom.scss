@@ -349,9 +349,13 @@ hr.white {
   z-index: 5;
   background-color: $white-gray;
   display: inline-block;
-  height: 300px;
   width: 100%;
   margin-bottom: 30px;
+
+  li img {
+    height: 300px;
+    object-fit: cover;
+  }
 }
 
 .slideshow-image-placeholder {
@@ -508,6 +512,13 @@ hr.white {
     padding: 100px 0 60px 0;
   }
 
+  .grav-lightslider {
+    li img {
+      height: 400px;
+      object-fit: cover;
+    }
+  }
+
 }
 
 
@@ -544,6 +555,13 @@ hr.white {
   }
   .section.full-page {
     padding: 120px 0 80px 0;
+  }
+
+  .grav-lightslider {
+    li img {
+      height: 500px;
+      object-fit: cover;
+    }
   }
 }
 

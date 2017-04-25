@@ -76,11 +76,4 @@ h3.lg-margin-top {
   .contact-form input[type=submit]:active {
     background-color: #43856d; }
 
-@media (min-width: 720px) {
-  .grav-lightslider {
-    height: 400px; } }
-@media (min-width: 1000px) {
-  .grav-lightslider {
-    height: 500px; } }
-
 /*# sourceMappingURL=home.css.map */
