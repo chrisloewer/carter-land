@@ -8,11 +8,3 @@ lightslider:
     gallery: 'false'
     auto: 'false'
 ---
-
-# ONE
-### Test
-
----
-
-# TWO
-### Test
