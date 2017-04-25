@@ -9,5 +9,6 @@ content:
             - _splash
             - _intro
             - _about
+            - _contact
 ---
 
