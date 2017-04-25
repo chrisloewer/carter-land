@@ -346,6 +346,11 @@ hr.white {
 .button:active {
   background-color: #2c2b2d; }
 
+.grav-lightslider {
+  position: relative;
+  z-index: 5;
+  background-color: #F9F9F9; }
+
 .slideshow {
   position: relative;
   display: inline-block;

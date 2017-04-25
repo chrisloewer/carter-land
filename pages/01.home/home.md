@@ -8,6 +8,8 @@ content:
         custom:
             - _splash
             - _intro
+            - _slideshow
+            - _about
 ---
 
 # Grav is Running!
