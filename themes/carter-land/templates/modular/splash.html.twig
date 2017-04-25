@@ -1,5 +1,7 @@
+{% set image = page.media.images|first %}
+
 <div class="splash-fullscreen-fixed vc-container" id="main-splash">
-    <div class="bg" id="bg-image"></div>
+    <div class="bg" id="bg-image" style="background-image: url({{ image.url }});"></div>
     <div class="vc-content">
         <h1 class="no-margin">Linda Carter</h1>
         <hr class="white">
