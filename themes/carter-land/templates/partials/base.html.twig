@@ -30,12 +30,12 @@
 <div class="popup" id="menu-popup">
 
     <div class="popup-content">
-        TEAL LOGO
+        <img class="menu-item logo" src="{{ url('theme://images/logo-teal.svg') }}">
         <div class="menu-item"><a href="/">HOME</a></div>
         <div class="menu-item"><a href="/about">ABOUT US</a></div>
         <div class="menu-item"><a href="/land">LAND</a></div>
         <div class="menu-item">
-            TEXAS ICON
+            <img src="{{ url('theme://images/texas.svg') }}" class="awkward-icon">
         </div>
     </div>
 </div>
@@ -51,11 +51,11 @@
         </div>
 
         <div class="menu-item awkward-icon" id="header-icon">
-            HIcon
+            <img src="{{ url('theme://images/texas-white.svg') }}">
         </div>
         <div class="menu-item"><a href="/about">ABOUT</a></div>
 
-        LOGO-WHITE
+        <img class="menu-item logo" src="{{ url('theme://images/logo-white.svg') }}" onclick="window.open( '/','_top' ); return false;">
         <div class="menu-item"><a href="/land">LAND</a></div>
     </div>
 
@@ -71,16 +71,20 @@
         <div class="footer-spacer"></div>
 
         <div class="footer-body">
-            TEAL LOGO
+            <img class="logo" src="{{ url('theme://images/logo-teal.svg') }}">
 
             <br>
-            TEXAS SVG
+            <img class="awkward-icon" src="{{ url('theme://images/texas.svg') }}">
             <hr>
             <div class="menu-item">Email: <span class="teal"><a href="mailto:lindasland@gmail.com">lindasland@gmail.com</a></span></div>
             <div class="menu-item">Phone: <span class="teal">(903) 236 0636</span></div>
             <div class="menu-item">Fax: <span class="teal">(903) 234 0222</span></div>
             <hr>
-            <a href="https://www.facebook.com/lindastexasland/" target="_blank"><div class="social-icon" id="fb"></div></a>
+            <a href="https://www.facebook.com/lindastexasland/" target="_blank">
+                <div class="social-icon" id="fb">
+                    <img src="{{ url('theme://images/fb-teal.svg') }}">
+                </div>
+            </a>
 
         </div>
         <div class="footer-banner">
