@@ -1,5 +1,7 @@
 ---
 title: 'About Us'
+containerId: 'about-us'
+imageId: 'about-us-img'
 ---
 
 # About Us

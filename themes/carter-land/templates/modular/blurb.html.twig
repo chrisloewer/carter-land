@@ -1,7 +1,7 @@
 {% set image = page.media.images|first %}
 
-<div class="section vc-container">
-    <div class="bg" style="background-image: url({{ image.url }});"></div>
+<div class="section vc-container" id="{{ page.header.containerId }}">
+    <div class="bg" id="{{ page.header.imageId }}" style="background-image: url({{ image.url }});"></div>
     <div class="vc-blurb">
         {{ content }}
     </div>

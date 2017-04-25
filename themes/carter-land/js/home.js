@@ -21,16 +21,12 @@ window.addEventListener('load', function () {
   // Add parallax on bg image
   var bgImg = document.getElementById('bg-image');
   setScrollSpeed(bgImg, 0.5, bodyContainer, {});
-  // var aboutUsImg = document.getElementById('about-us-img');
-  // setScrollSpeed(aboutUsImg, 0.15, aboutUsContainer, {});
+  var aboutUsImg = document.getElementById('about-us-img');
+  setScrollSpeed(aboutUsImg, 0.2, aboutUsContainer, {});
 
   document.addEventListener('scroll', splashController, false);
   splashController();
 
-  // Initialize slideshow
-  // var ssElem = document.getElementById('featured-slideshow');
-  // slideshow = new Slideshow(ssElem);
-  // slideshow.initializeControls(slideshow);
 
   // Lazy-load images
   // echo.init({
