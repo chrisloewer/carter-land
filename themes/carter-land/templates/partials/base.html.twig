@@ -12,6 +12,7 @@
 
     {% block stylesheets %}
         {% do assets.addCss('theme://css/custom.css', 98) %}
+        {% do assets.addCss('https://fonts.googleapis.com/css?family=Raleway:100,400') %}
     {% endblock %}
     {{ assets.css() }}
 
