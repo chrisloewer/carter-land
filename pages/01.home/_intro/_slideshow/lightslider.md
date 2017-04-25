@@ -1,10 +1,10 @@
 ---
-title: Slider Content
+title: Featured Slider
 routable: false
 visible: false
 lightslider:
     slider_type: image
     mode: slide
-    gallery: 'false'
-    auto: 'false'
+    gallery: false
+    auto: false
 ---
