@@ -10,9 +10,11 @@
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    {% do assets.addCss('theme://css/custom.css', 98) %}
+    {% do assets.addCss('https://fonts.googleapis.com/css?family=Raleway:100,400') %}
+    {% do assets.addCss('https://fonts.googleapis.com/css?family=Playfair+Display+SC:400,700,900') %}
+
     {% block stylesheets %}
-        {% do assets.addCss('theme://css/custom.css', 98) %}
-        {% do assets.addCss('https://fonts.googleapis.com/css?family=Raleway:100,400') %}
     {% endblock %}
     {{ assets.css() }}
 

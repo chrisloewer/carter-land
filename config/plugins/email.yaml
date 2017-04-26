@@ -1,0 +1,15 @@
+enabled: true
+from: lindaslandwebsite@gmail.com
+to: lindaslandwebsite@gmail.com
+mailer:
+  engine: smtp
+  smtp:
+    server: smtp.gmail.com
+    port: 587
+    encryption: tls
+    user: lindaslandwebsite@gmail.com
+    password: WebsiteMailer
+  sendmail:
+    bin: /usr/sbin/sendmail
+content_type: text/html
+debug: true

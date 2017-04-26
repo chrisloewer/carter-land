@@ -44,12 +44,15 @@ h3.lg-margin-top {
   padding: 30px;
   margin: 10px auto;
 
-  h4 {
+  .form-label  {
     margin: 10px;
     text-align: left;
-  }
-  h4:first-of-type {
-    margin-top: 0;
+
+    label {
+      font-family: 'Playfair Display SC', serif;
+      font-size: 16px;
+      color: $dark-gray;
+    }
   }
 
   .error-msg {

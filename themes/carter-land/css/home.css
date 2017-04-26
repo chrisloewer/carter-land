@@ -35,11 +35,13 @@ h3.lg-margin-top {
   width: 80%;
   padding: 30px;
   margin: 10px auto; }
-  .contact-form h4 {
+  .contact-form .form-label {
     margin: 10px;
     text-align: left; }
-  .contact-form h4:first-of-type {
-    margin-top: 0; }
+    .contact-form .form-label label {
+      font-family: 'Playfair Display SC', serif;
+      font-size: 16px;
+      color: #414042; }
   .contact-form .error-msg {
     display: none; }
   .contact-form .error-msg.visible {
