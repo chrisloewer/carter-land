@@ -33,9 +33,9 @@
 
     <div class="popup-content">
         <img class="menu-item logo" src="{{ url('theme://images/logo-teal.svg') }}">
-        <div class="menu-item"><a href="/">HOME</a></div>
-        <div class="menu-item"><a href="/about">ABOUT US</a></div>
-        <div class="menu-item"><a href="/land">LAND</a></div>
+        <div class="menu-item"><a href="{{ base_url }}/">HOME</a></div>
+        <div class="menu-item"><a href="{{ base_url }}/about">ABOUT US</a></div>
+        <div class="menu-item"><a href="{{ base_url }}/land">LAND</a></div>
         <div class="menu-item">
             <img src="{{ url('theme://images/texas.svg') }}" class="awkward-icon">
         </div>
@@ -55,10 +55,10 @@
         <div class="menu-item awkward-icon" id="header-icon">
             <img src="{{ url('theme://images/texas-white.svg') }}">
         </div>
-        <div class="menu-item"><a href="/about">ABOUT</a></div>
+        <div class="menu-item"><a href="{{ base_url }}/about">ABOUT</a></div>
 
-        <img class="menu-item logo" src="{{ url('theme://images/logo-white.svg') }}" onclick="window.open( '/','_top' ); return false;">
-        <div class="menu-item"><a href="/land">LAND</a></div>
+        <img class="menu-item logo" src="{{ url('theme://images/logo-white.svg') }}" onclick="window.open( '{{ base_url }}/','_top' ); return false;">
+        <div class="menu-item"><a href="{{ base_url }}/land">LAND</a></div>
     </div>
 
 
