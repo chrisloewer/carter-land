@@ -1,6 +1,7 @@
 ---
 title: Contact
 cache_enable: false
+contentClass: 'center'
 form:
     name: contact-form
     classes: contact-form
