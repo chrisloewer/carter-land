@@ -304,6 +304,9 @@ hr.white {
   .vc-content h2 {
     margin-top: 0; }
 
+.vc-content.center p {
+  text-align: center; }
+
 .section {
   position: relative;
   min-height: 650px;

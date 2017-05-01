@@ -1,8 +1,18 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-    <div class="lead text-center">
-        <h1>Error!</h1>
-        {{ page.content }}
+    <div class="section full-page">
+        {% if page.header.headerText %}
+            <h1>{{ page.header.headerText }}</h1>
+        {% else %}
+            <h1>Error!</h1>
+        {% endif %}
+        <div class="vc-content center">
+            {{ page.content }}
+
+            <br>
+            <br>
+            <a href="{{ base_url }}/">Return to Home Page</a>
+        </div>
     </div>
 {% endblock %}
