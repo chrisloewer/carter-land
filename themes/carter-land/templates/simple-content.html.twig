@@ -5,9 +5,11 @@
         <div class="vc-content center">
             {{ page.content }}
 
-            <br>
-            <br>
-            <a href="{{ base_url }}/">Return to Home Page</a>
+            {% if page.header.homeLink == true %}
+                <br>
+                <br>
+                <a href="{{ base_url }}/">Return to Home Page</a>
+            {% endif %}
         </div>
     </div>
 {% endblock %}

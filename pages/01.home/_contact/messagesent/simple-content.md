@@ -1,5 +1,6 @@
 ---
 title: 'Message Sent'
+homeLink: true
 ---
 
 # Message Sent!
