@@ -1,5 +1,9 @@
 {% extends 'partials/base.html.twig' %}
 
+{% block stylesheets %}
+    {% do assets.addCss('theme://css/single-page.css', 98) %}
+{% endblock %}
+
 {% block content %}
     <div class="section full-page">
         <div class="vc-content center">
