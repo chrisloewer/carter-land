@@ -1,0 +1,29 @@
+{% extends "partials/base.html.twig" %}
+
+{% block stylesheets %}
+    {% do assets.addCss('theme://css/land.css', 98) %}
+    {% do assets.addCss('theme://css/slideshow.css', 97) %}
+{% endblock %}
+
+{% set collection = page.collection() %}
+
+{% block content %}
+    <div class="section full-page">
+        <div class="vc-content">
+            <p class="center">Browse our selection of properties for sale below.  For any questions or further inquiries, please email lindasland@gmail.com or call (903) 236 0636</p>
+
+            <hr class="lg-margin">
+
+            {% for page in collection %}
+                {{ page.content }}
+            {% endfor %}
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascriptTail %}
+    {% do assets.addJs('theme://js/land.js') %}
+    {% do assets.addJs('theme://js/slideshow.js') %}
+    {% do assets.addJs('theme://js/echo.min.js') %}
+{% endblock %}

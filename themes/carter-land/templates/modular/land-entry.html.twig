@@ -1,0 +1,31 @@
+
+<div class="row">
+
+    <div class="col image">
+
+        <div class="slideshow" id="prop-slideshow-{{id}}">
+            <div class="modal-backdrop">
+                <div class="slideshow-body">
+                    <div class="image-container">
+                        {% for image in page.media.images %}
+                            <img class="slide" src="{{ image.url }}" />
+                        {% endfor %}
+                    </div>
+
+                    <div class="slideshow-button prev">< <</div>
+                    <div class="slideshow-button next">> ></div>
+                    <div class="close-icon">X</div>
+                    <div class="slide-counter">/</div>
+                </div>
+
+                <div class="label has-fullscreen">View Full-Screen</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col text-blurb">
+        {{ page.content }}
+    </div>
+</div>
+
