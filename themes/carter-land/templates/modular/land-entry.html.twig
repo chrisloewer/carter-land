@@ -1,4 +1,5 @@
 
+<h3>{{ page.title }}</h3>
 <div class="row">
 
     <div class="col image">
@@ -26,6 +27,16 @@
 
     <div class="col text-blurb">
         {{ page.content }}
+    </div>
+</div>
+
+<div class="view-map">
+    <div class="label fake-link">
+        <span class="subtitle fake-link" data-active="false" onclick="toggleMap('1', this)">Show Map</span>
+    </div>
+    <div class="map" id="prop-map-1">
+        <iframe id="map-frame-1" frameborder="0" data-src="{{ page.header.mapUrl }}" allowfullscreen>
+        </iframe>
     </div>
 </div>
 
