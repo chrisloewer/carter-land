@@ -304,6 +304,12 @@ hr.white {
   .vc-content h2 {
     margin-top: 0; }
 
+.vc-content.wide {
+  max-width: 1300px; }
+  .vc-content.wide .narrow-container {
+    max-width: 800px;
+    margin: 0 auto; }
+
 .vc-content.center p {
   text-align: center; }
 

@@ -301,6 +301,15 @@ hr.white {
   }
 }
 
+.vc-content.wide {
+  max-width: 1300px;
+
+  .narrow-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
 .vc-content.center {
   p {
     text-align: center;

@@ -183,7 +183,9 @@
     right: -45px; }
 
 @media (min-width: 720px) {
-  .slideshow .modal-backdrop.open .slideshow-button {
-    border: 3px solid white; } }
+  .slideshow {
+    height: 350px; }
+    .slideshow .modal-backdrop.open .slideshow-button {
+      border: 3px solid white; } }
 
 /*# sourceMappingURL=slideshow.css.map */
