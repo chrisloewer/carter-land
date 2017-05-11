@@ -9,7 +9,11 @@
                 <div class="slideshow-body">
                     <div class="image-container">
                         {% for image in page.media.images %}
-                            <img class="slide" src="{{ image.url }}" />
+                            {% if loop.first %}
+                                <img class="slide active" src="{{ image.url }}" />
+                            {% else %}
+                                <img class="slide" data-echo="{{ image.url }}" src="{{ url('theme://images/blank.gif') }}" />
+                            {% endif %}
                         {% endfor %}
                     </div>
 
