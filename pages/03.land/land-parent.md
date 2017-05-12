@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Land
 content:
     items: '@self.modular'
     order:
