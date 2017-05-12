@@ -39,7 +39,7 @@
     <div class="label fake-link">
         <span class="subtitle fake-link" data-active="false" onclick="toggleMap('{{ unique_id }}', this)">Show Map</span>
     </div>
-    <div class="map" id="prop-map-{{ unique_id }}">
+    <div class="map" id="prop-map-{{ unique_id }}" onclick="enableScroll(this)" onmouseleave="disableScroll(this)">
         <iframe id="map-frame-{{ unique_id }}" frameborder="0" data-src="{{ page.header.mapUrl }}" allowfullscreen>
         </iframe>
     </div>

@@ -38,3 +38,11 @@ function toggleMap(elemId, root) {
     iframe.src = iframe.dataset.src;
   }
 }
+
+function enableScroll(root) {
+  addClass(root, 'scrollable');
+}
+
+function disableScroll(root) {
+  removeClass(root, 'scrollable');
+}
