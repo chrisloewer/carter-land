@@ -1,3 +1,4 @@
+{% set unique_id = random_string(10) %}
 
 <h3>{{ page.title }}</h3>
 <div class="row">
@@ -36,10 +37,10 @@
 
 <div class="view-map">
     <div class="label fake-link">
-        <span class="subtitle fake-link" data-active="false" onclick="toggleMap('1', this)">Show Map</span>
+        <span class="subtitle fake-link" data-active="false" onclick="toggleMap('{{ unique_id }}', this)">Show Map</span>
     </div>
-    <div class="map" id="prop-map-1">
-        <iframe id="map-frame-1" frameborder="0" data-src="{{ page.header.mapUrl }}" allowfullscreen>
+    <div class="map" id="prop-map-{{ unique_id }}">
+        <iframe id="map-frame-{{ unique_id }}" frameborder="0" data-src="{{ page.header.mapUrl }}" allowfullscreen>
         </iframe>
     </div>
 </div>

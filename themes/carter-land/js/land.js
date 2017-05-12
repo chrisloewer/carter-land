@@ -18,25 +18,10 @@ window.addEventListener('load', function () {
   });
 });
 
-function toggleDescription(elemId, root) {
-  var elem = document.getElementById(elemId);
-
-  if(root.dataset.active == 'false') {
-    addClass(elem, 'active');
-    root.innerText = 'View Less Information';
-    root.dataset.active = true;
-  }
-  else {
-    removeClass(elem, 'active');
-    root.innerText = 'View More Information';
-    root.dataset.active = false;
-  }
-}
-
 function toggleMap(elemId, root) {
   var elem = document.getElementById('prop-map-' + elemId);
 
-  if(root.dataset.active == 'false') {
+  if(root.dataset.active === 'false') {
     addClass(elem, 'active');
     root.innerText = 'Hide Map';
     root.dataset.active = true;
