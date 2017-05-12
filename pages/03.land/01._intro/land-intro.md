@@ -1,5 +1,5 @@
 ---
-title: Land Intro
+title: 'Land Intro'
 ---
 
 # Properties

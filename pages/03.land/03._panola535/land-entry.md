@@ -1,8 +1,7 @@
 ---
-title: Deadwood Ranch
-mapUrl: "https://www.google.com/maps/embed/v1/place?key=AIzaSyBIZqpNLWVMV6-8Twh64BLvvUAOyMITkR8&q=Panola+County,+TX&zoom=10"
+title: 'Deadwood Ranch'
+mapUrl: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyBIZqpNLWVMV6-8Twh64BLvvUAOyMITkR8&q=Panola+County,+TX&zoom=10'
 ---
-
 
 **Section:** East Texas
 

@@ -1,8 +1,7 @@
 ---
-title: Red River Timber
-mapUrl: "https://www.google.com/maps/embed/v1/place?key=AIzaSyBIZqpNLWVMV6-8Twh64BLvvUAOyMITkR8&q=33.602984,+-94.846660&zoom=12"
+title: 'Red River Timber'
+mapUrl: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyBIZqpNLWVMV6-8Twh64BLvvUAOyMITkR8&q=33.602984,+-94.846660&zoom=12'
 ---
-
 
 **Section:** East Texas
 

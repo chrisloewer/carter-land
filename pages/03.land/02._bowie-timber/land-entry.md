@@ -1,8 +1,7 @@
 ---
-title: Bowie County Timber Investment
-mapUrl: "https://www.google.com/maps/embed/v1/place?key=AIzaSyBIZqpNLWVMV6-8Twh64BLvvUAOyMITkR8&q=33.474435,+-94.375729&zoom=12"
+title: 'Bowie County Timber Investment'
+mapUrl: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyBIZqpNLWVMV6-8Twh64BLvvUAOyMITkR8&q=33.474435,+-94.375729&zoom=12'
 ---
-
 
 **Section:** East Texas
 

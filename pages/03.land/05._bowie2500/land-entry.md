@@ -1,8 +1,7 @@
 ---
-title: Rolling Ranch
-mapUrl: "https://www.google.com/maps/embed/v1/place?key=AIzaSyBIZqpNLWVMV6-8Twh64BLvvUAOyMITkR8&q=33.534359,+-94.695002&zoom=10"
+title: 'Rolling Ranch'
+mapUrl: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyBIZqpNLWVMV6-8Twh64BLvvUAOyMITkR8&q=33.534359,+-94.695002&zoom=10'
 ---
-
 
 **Section:** East Texas
 

@@ -1,8 +1,7 @@
 ---
-title: Commercial Investment
-mapUrl: "https://www.google.com/maps/embed/v1/place?key=AIzaSyBIZqpNLWVMV6-8Twh64BLvvUAOyMITkR8&q=32.417063,+-94.710421&zoom=14"
+title: 'Commercial Investment'
+mapUrl: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyBIZqpNLWVMV6-8Twh64BLvvUAOyMITkR8&q=32.417063,+-94.710421&zoom=14'
 ---
-
 
 **Section:** East Texas
 
