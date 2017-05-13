@@ -445,7 +445,7 @@ hr.white {
       transition: all 0.3s; }
     .header .menu-item.logo {
       cursor: pointer;
-      height: 100%; }
+      height: 75px; }
       .header .menu-item.logo svg {
         cursor: pointer; }
     .header .menu-item.awkward-icon {
