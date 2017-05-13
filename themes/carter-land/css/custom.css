@@ -286,8 +286,6 @@ hr.white {
   padding: 50px;
   margin: 90px 0;
   background-color: rgba(255, 255, 255, 0.6); }
-  .vc-container .vc-blurb h2, .vc-container .vc-blurb h3 {
-    margin-top: 0; }
 
 .vc-container::before {
   content: '';
@@ -301,8 +299,6 @@ hr.white {
   width: 90%;
   max-width: 1000px;
   margin: 50px 0; }
-  .vc-content h2 {
-    margin-top: 0; }
 
 .vc-content.wide {
   max-width: 1300px; }

@@ -276,10 +276,6 @@ hr.white {
     padding: 50px;
     margin: 90px 0;
     background-color: transparentize(white, 0.4);
-
-    h2, h3 {
-      margin-top: 0;
-    }
   }
 }
 .vc-container::before {
@@ -295,10 +291,6 @@ hr.white {
   width: 90%;
   max-width: 1000px;
   margin: 50px 0;
-
-  h2 {
-    margin-top: 0;
-  }
 }
 
 .vc-content.wide {

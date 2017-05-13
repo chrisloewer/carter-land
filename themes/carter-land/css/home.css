@@ -30,6 +30,9 @@ h3.lg-margin-top {
 .splash-fullscreen.vc-container::before {
   height: 100%; }
 
+.vc-container h2, .vc-container h3 {
+  margin-top: 0; }
+
 .contact-form {
   position: relative;
   width: 80%;
