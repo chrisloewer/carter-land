@@ -4,7 +4,6 @@ folders:
   - pages
 repository: 'https://github.com/chrisloewer/carter-land.git'
 user: chrisloewer
-password: gitsync-def502005f16460d63b359b6551df16436fe7ec599f632c7705b346f8db3f112e0e200ada748d656c9c72c3554168aace71d84bf209d4e5fb485cb93b26480837f372806a1469173ab03802807601b000f9a2992ca6a971f65cf9da358
 webhook: /_git-sync
 branch: grav-content
 remote:
@@ -16,3 +15,4 @@ git:
   email: git-sync@trilby.media
   bin: git
 logging: false
+password: gitsync-def50200ee05aacb449e11c577cf374fbc747ef721df7607f515cc5f1cb3d0842de35692306c2851718899e9ed32582658f14f3d7e661fb99e94592bee742483356f428fcbb29f34e77a2cea1f31a576784f98478e62659d127d520af4
