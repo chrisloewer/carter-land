@@ -4,3 +4,6 @@
 /data/contact-form/
 
 /plugins/
+
+/themes/carter-land/css/*.css
+/themes/carter-land/css/*.css.map

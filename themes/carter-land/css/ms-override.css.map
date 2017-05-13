@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAII,qDAAwB;EACtB,GAAG,EAAE,gBAAgB;;AAO3B,yBAA0B;EAEtB,uBAAgB;IACd,SAAS,EAAE,KAAK;;EAIlB,4BAAgB;IACd,SAAS,EAAE,KAAK;AAQtB,yBAA0B;EAEtB,uBAAgB;IACd,SAAS,EAAE,KAAK;;EAIlB,4BAAgB;IACd,SAAS,EAAE,KAAK",
-"sources": ["ms-override.scss"],
-"names": [],
-"file": "ms-override.css"
-}
