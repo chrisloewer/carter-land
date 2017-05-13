@@ -1,0 +1,23 @@
+{
+  "name": "chrisloewer",
+  "version": "1.0.0",
+  "description": "Use node for gulp to compile styles",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisloewer/carter-land.git"
+  },
+  "author": "ChrisLoewer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrisloewer/carter-land/issues"
+  },
+  "homepage": "https://github.com/chrisloewer/carter-land#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}

@@ -1,0 +1,9 @@
+{% extends "partials/base.html.twig" %}
+
+{% set collection = page.collection() %}
+
+{% block content %}
+    {% for page in collection %}
+        {{ page.content }}
+    {% endfor %}
+{% endblock %}

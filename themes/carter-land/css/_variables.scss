@@ -1,0 +1,71 @@
+// Colors
+$white-tp-light: rgba(255,255,255,0.4);
+$white-tp-dark: rgba(255,255,255,0.9);
+$neutral: #DDDDDD;
+$primary-1: #b1e1e6;
+$white-gray: #F9F9F9;
+$medium-gray: #BBBBBB;
+$medium-gray-transluscent: rgba(187,187,187,0.3);
+$dark-gray: #414042;
+$dark-gray-transluscent: rgba(65,64,66, 0.8);
+$black-gray: #323133;
+$black-gray-darker: #2c2b2d;
+$black-gray-transluscent: rgba(50,49,51, 0.9);
+$off-black: rgba(0,0,0,0.9);
+$teal: #62C3A6;
+$teal-medium: #5CB89C;
+$teal-dark: #43856d;
+
+
+// Layout Sizing
+$section-height: 650px;
+$footer-height: 500px;
+
+@mixin transition($arg...) {
+  -webkit-transition: $arg;
+  -moz-transition: $arg;
+  -ms-transition: $arg;
+  -o-transition: $arg;
+  transition: $arg;
+}
+@mixin transform($arg...) {
+  -webkit-transform: $arg;
+  -moz-transform: $arg;
+  -ms-transform: $arg;
+  -o-transform: $arg;
+  transform: $arg;
+}
+
+@mixin transform-origin($args...) {
+  -webkit-transform-origin: $args;
+  -moz-transform-origin: $args;
+  -ms-transform-origin: $args;
+  -o-transform-origin: $args;
+  transform-origin: $args;
+}
+
+@mixin border-radius($r) {
+  -webkit-border-radius: $r;
+  -moz-border-radius: $r;
+  border-radius: $r;
+}
+
+@mixin shadow($args...) {
+  -webkit-box-shadow: $args;
+  -moz-box-shadow: $args;
+  box-shadow: $args;
+}
+
+@mixin disable-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin enable-select {
+  -webkit-user-select: text;
+  -moz-user-select: all;
+  -ms-user-select: all;
+  user-select: all;
+}

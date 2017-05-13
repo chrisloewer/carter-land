@@ -1,0 +1,32 @@
+{% extends "partials/base.html.twig" %}
+
+{% block stylesheets %}
+    {% do assets.addCss('theme://css/land.css', 98) %}
+    {% do assets.addCss('theme://css/slideshow.css', 97) %}
+{% endblock %}
+
+{% set collection = page.collection() %}
+
+{% block content %}
+    <div class="section full-page">
+        <div class="vc-content wide">
+
+            {% for page in collection %}
+                {% if loop.first %}
+                    {{ page.content }}
+                    <hr class="lg-margin">
+                {% else %}
+                    {{ page.content }}
+                    <hr class="med-margin">
+                {% endif %}
+            {% endfor %}
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascriptTail %}
+    {% do assets.addJs('theme://js/land.js') %}
+    {% do assets.addJs('theme://js/slideshow.js') %}
+    {% do assets.addJs('theme://js/echo.min.js') %}
+{% endblock %}

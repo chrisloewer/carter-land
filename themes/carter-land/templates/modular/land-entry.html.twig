@@ -1,0 +1,48 @@
+{% set unique_id = random_string(10) %}
+
+<h3>{{ page.title }}</h3>
+<div class="row">
+
+    <div class="col image">
+
+        <div class="slideshow" id="prop-slideshow-{{id}}">
+            <div class="modal-backdrop">
+                <div class="slideshow-body">
+                    <div class="image-container">
+                        {% for image in page.media.images %}
+                            {% if loop.first %}
+                                <img class="slide active" src="{{ image.url }}" />
+                            {% else %}
+                                <img class="slide" data-echo="{{ image.url }}" src="{{ url('theme://images/blank.gif') }}" />
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+
+                    <div class="slideshow-button prev">< <</div>
+                    <div class="slideshow-button next">> ></div>
+                    <div class="close-icon">X</div>
+                    <div class="slide-counter">/</div>
+                </div>
+
+                <div class="label has-fullscreen">View Full-Screen</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col text-blurb">
+        {{ page.content }}
+    </div>
+</div>
+
+{% if page.header.mapUrl %}
+    <div class="view-map">
+        <div class="label fake-link">
+            <span class="subtitle fake-link" data-active="false" onclick="toggleMap('{{ unique_id }}', this)">Show Map</span>
+        </div>
+        <div class="map" id="prop-map-{{ unique_id }}" onclick="enableScroll(this)" onmouseleave="disableScroll(this)">
+            <iframe id="map-frame-{{ unique_id }}" frameborder="0" data-src="{{ page.header.mapUrl }}" allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+{% endif %}

@@ -1,0 +1,7 @@
+{% set collection = page.collection() %}
+
+<div class="row">
+    {% for p in collection %}
+        {{ p.content }}
+    {% endfor %}
+</div>

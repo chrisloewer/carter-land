@@ -1,0 +1,9 @@
+{% set collection = page.collection() %}
+
+<div class="section vc-container">
+    <div class="vc-content center">
+        {% for p in collection %}
+            {{ p.content }}
+        {% endfor %}
+    </div>
+</div>
