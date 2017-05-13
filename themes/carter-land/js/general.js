@@ -147,7 +147,7 @@ function addMsOverrideStyles() {
   var ls = document.createElement('link');
   ls.type = 'text/css';
   ls.rel = 'stylesheet';
-  ls.href = 'styles/ms-override.css';
+  ls.href = 'user/themes/carter-land/css/ms-override.css';
   document.getElementsByTagName('head')[0].appendChild(ls);
 
   var bodyContainer = document.getElementById('body-container');
