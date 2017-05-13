@@ -8,3 +8,5 @@ gulp.task('styles', function() {
       .pipe(sass().on('error', sass.logError))
       .pipe(gulp.dest('themes/carter-land/css/'));
 });
+
+gulp.task('default', ['styles']);
