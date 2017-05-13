@@ -7,7 +7,7 @@ title: 'Home Page Intro'
 Welcome to Linda's Land: your official web site for everything you ever wanted in a Farm, Ranch, or piece of hunting land in East and West Texas. We work in counties from Harrison to Howard county.
 
 # Git sync
-Follow up git sync test - change permissions
+Follow up git sync test - change permissions - 777
 
 ### Featured Property
 
