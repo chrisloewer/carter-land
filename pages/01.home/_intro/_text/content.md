@@ -8,4 +8,4 @@ Welcome to Linda's Land: your official web site for everything you ever wanted i
 
 ### Featured Property
 
-A gorgeous 3,606 acre timber investment in Bowie County. View [properties](/land) for more information.
+A gorgeous 535 acre ranch home in Panola County. View [properties](/land) for more information.
