@@ -121,7 +121,7 @@ media:
 session:
   enabled: true
   timeout: 1800
-  name: grav-site
+  name: carter-land
   secure: false
   httponly: true
   split: true

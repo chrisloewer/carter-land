@@ -4,8 +4,22 @@ title: Admin
 state: enabled
 access:
   admin:
-    login: true
-    super: true
+    super: 'true'
+    login: 'true'
+    cache: 'true'
+    configuration: 'true'
+    configuration_system: 'true'
+    configuration_site: 'true'
+    configuration_media: 'true'
+    configuration_info: 'true'
+    settings: 'true'
+    pages: 'true'
+    maintenance: 'true'
+    statistics: 'true'
+    plugins: 'true'
+    themes: 'true'
+    users: 'true'
   site:
-    login: true
-hashed_password: $2y$10$Lkel6L/itIrSrGPj6iV6SunWKBV0ByZQzqt3Wil2ON4pHiFoMM6qK
+    login: 'true'
+hashed_password: $2y$10$AuH0UbuASjfEw39Xp5.7aOZtpzU9QIm57VkTsKbBIsSt6oiJxAmDy
+language: en
